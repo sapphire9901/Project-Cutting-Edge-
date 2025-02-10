@@ -1,26 +1,120 @@
+/*Custom properties, makes it easier to change the color later on*/
+:root{
+    /*Colors*/
+    --clr--primary--200:#e6d5bf;
+
+    /*Fonts*/
+    --ff-bold:"Oswald", serif;
+    --ff-accent: 'Playfair Display', serif;
+
+
 *{
     margin: 0; /*Removes default margin & padding*/
     padding: 0;  
 }
 
 body{
-    
 min-height: 100vh;
 /*100% of the height on the screen or browser. Ensures the content occupies the whole screen*/
-background-image: url('../media/Background_image.png');
-background-size: cover; /*image cover the entire container*/
-background-repeat: no-repeat; /*no repetitions of the image*/
-background-position: center; /*centering the image*/
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--clr--primary--200);
+font-family: var(--ff-primary);
+font-weight: 400;
+font-size: 1.3125rem;
+line-height: 1.6;;
 }
 
+/*Main banner*/
+header{
+    width:100wv;
+    height:100vh;
+    background-image: url('../media/MainBannerOnIndex.webp');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*The white transparent box on top of the main banner*/
+.transparent-box{
+    width: 100wv;
+    background: rgba(255, 255, 255, 0.4); /* Transparent white */
+    padding:8rem 10rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.header-content a{
+text-decoration: none;
+}
+
+.header-content{
+    margin-bottom: 12rem;
+    color: #000000;
+}
+
+.header-content h1{
+    font-family: "Oswald", serif;
+    font-size: 12vmin;
+    margin-bottom: 8%;
+}
+
+.btn{
+    padding: 1.25rem 6.25rem;
+    background-color: #43718b;
+    border-radius: 40px;
+    color: whitesmoke;
+    transition: background-color 0.5s ease; /* Add transition for background color */
+}
+
+.btn:hover{
+   background-color:#ee751c;
+}
+
+
+a.btn{
+    font-family: "Roboto", serif;
+    font-size: 3vmin;
+    letter-spacing: 1.1px;
+}
+
+
+
+h1,h2,h3{
+    font-family: var(--ff-accent);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+
+p{
+margin-bottom: 1em;
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/*The navigation bar starts here*/
+
+#s7vendeLogo{
+    width:60%;
+    height:auto;
+    }
+    
+
 nav{
-    background-color: #ffffff;
+    background-color: #718080;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /*shadow right, left, blur radius, and shadow color black 10% transparency*/
 }
 
 nav ul{
-    width: 100%; /*expand the full width of the container*/
+    width: 95%; /*expand the full width of the container*/
     list-style: none; /*removes bullet points*/ 
     display: flex; /*ul becomes flex container, and li elements (child elements) are arranged in a row by default*/
     justify-content: flex-end; /*Placing the elements horizontally at the end of the container*/
@@ -28,21 +122,36 @@ nav ul{
 }
 
 nav li{
-    height: 80px; /*height of the links*/
+    height:9rem;
+    white-space:nowrap; /*Prevents line break så "Om oss" is in one line, and not 2*/
+
 }
+
+
 
 nav a{
     height: 100%; 
-    padding: 0 30px; /*space around text, horizontally 0, 30 vertically*/
+    padding: 0rem 1.3rem; /*space around text, horizontally 0, 30 vertically*/
     text-decoration: none; /*removes default styling*/
     display: flex; /*Utilizing flex box*/
     align-items: center; 
-    color: #000000;
+    color: #fcf1de;
+    font-size: 1.5rem;
+    text-decoration-color: transparent; /*Underline not visible initially*/
+    font-family:var(--ff-primary);
+
 }
 
 nav a:hover{
-    background-color: #f0f0f0;
+    text-decoration: underline;
+    text-decoration-color: #feac1c;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.5rem; /* Moves underline lower */
+    transition: text-decoration-color 0.5s ease-in-out; /*Underline will be animated, duration of animation is 0.5 s, ease in out means 
+    it starts slow, speeds up in the middle and slows down at the end*/
 }
+
+
 
 nav li:first-child{
     margin-right: auto; /*Choosing the first child of the li-list and pushing it as far as possible to the right side.*/
@@ -51,8 +160,6 @@ nav li:first-child{
 .sidebar{
     display: none;
     position: fixed; /*So it will not move when scrolling*/
-    top: 0%; /*Aligns it to the top*/
-    right: 0%; /*Position at the right side*/
     height: 100vh; /*Covers 100% of the entire screen of the screen/browser.*/
     width: 20%; /*sidebar width*/
     z-index: 999; /*Puts it on top off all other elements*/
@@ -60,7 +167,6 @@ nav li:first-child{
     backdrop-filter: blur(10px);/*blurs the background*/
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
     flex-direction: column; /*Aligns items in a column, so the items are stacked in a vertical list*/
-    align-items: top;/*Aligns items to the top*/
     justify-content: center; /*aligns items to the left*/
 }
 
@@ -82,28 +188,117 @@ nav li:first-child{
     display: none;
 }
 
+.menu-button:hover a{
+    background-color: transparent; /*Removes the hover effect from link*/
+}
+
+
+.hideOnMobile{
+    font-family: "Playfair Display", serif;
+}
+
+/*Navigation bar ends here*/
+
+
+
+
+
+/*Adjustsments for mobile version starts here*/
 @media(max-width:800px){
+
+    /*Navigation bar starts here*/
+    #s7vendeLogo{
+    width:100%;
+    height:auto;
+    }
+  
+
     .hideOnMobile{
         display:none;
     }
 
     .menu-button{
-        display:block;
+        display:flex;
+      
     }
+
+    .close-button{
+        position: absolute;
+        top: 1%;
+        left: 75%;
+    }
+
+    .close-button:hover a{
+        background-color: transparent; /*Removes the hover effect from link*/
+    }
+
     .sidebar{
         width: 100%;
+        background-color: #eae1d8;
     } 
     .sidebar li a{
-        justify-content:center;
-        align-items: center;
+        font-size: 3rem;
+        font-family: "Playfair Display", serif;
+        letter-spacing: 0%;
     }
     
+    nav a{
+        height: 100%; 
+        padding: 1rem 2rem; /*space around text, horizontally 0, 30 vertically*/
+        text-decoration: none; /*removes default styling*/
+        text-decoration-color: transparent; /*Underline not visible initially*/
+        display: flex; /*Utilizing flex box*/
+        align-items: center; 
+        color: #000000;
+        transition: color 0.3s ease; 
+    }
+
+    nav ul{
+        width: 100%; /*expand the full width of the container*/
+    }
+    
+    nav li{
+        height:5rem;
+        padding-bottom: 10px;
+        white-space:nowrap; /*Prevents line break så "Om oss" is in one line, and not 2*/
+    }
+
+  /*Navigation bar ends here*/
+
+
+ /*Header content starts here*/
+    .transparent-box{
+        width: 50vw;
+        height:50vw;
+        padding: 4rem 5rem 4.5rem 5rem;
+    }
+
+    .header-content h1{
+        font-size: 12vmin;
+        text-align: center;
+        letter-spacing: nowrap;
+        margin-bottom: 25%;
+    }
+
+    .btn{
+        padding: 1rem 1.5rem;
+        background-color: #43718b;
+        border-radius: 40px;
+        color: whitesmoke;
+        white-space: nowrap;
+    }
+
+    a.btn{
+        font-family: "Roboto", serif;
+        font-size: 6vmin;
+        letter-spacing: 1.2px;
+    }
+     /*Header content ends here*/
+
+    
+/*Adjustsments for mobile version ends here*/
+
+
 }
 
-
-    /**********************************************CSS for Main page***********************************************/
-
-
-
-
-
+}
