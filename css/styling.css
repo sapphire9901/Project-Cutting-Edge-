@@ -1,5 +1,191 @@
+/* universal elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Sørger for at padding og border er inkludert i elementets totale bredde/høyde */
+}
+
+h1 {
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 50px;
+
+}
+
+html, body {
+    height: 100%; /* Sørger for at html og body tar opp hele høyden på skjermvinduet */
+    margin: 0; /* Fjerner standardmargin */
+    display: flex;
+    flex-direction: column; /* Stabler innholdet vertikalt */
+}
+
+.content_top {
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin-left: 26%;
+    margin-right: 26%;
+}
+
+
 body{
     /* background */
-    background-color: magenta;
-    margin-top: 50px;
+    background-color: #E6D5BF;
+
+}
+
+#logo img{
+    width: 300px; /* Settes til bildets reelle bredde*/
+    height: auto; /* bevarer aspektforholdet ved skalering */
+    max-width: 100%; /* Sørger for at logoen aldri blir større enn sin container */
+}
+
+.navbar{
+    background-color: #718080;
+    list-style-type: none; /* removes bullet points from the list */
+    width: 100%;
+    height: 60;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-right: 20px; 
+    padding-left: 20px;
+    align-items: center; /* Aligns the items vertically */
+    display: flex; /* displays the elements horisontally */ 
+    justify-content: space-around; 
+}
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar li a:hover {
+    text-decoration: underline #FEAC1C;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #718080;
+    align-items: flex-start; /* Starter elementene på toppen av containeren */
+    padding: 30px 40px; /* Padding top and sides */
+    width: 100%; /* Sørger for at footer strekker seg over hele bredden */
+    color: white;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+footer h3, footer ul {
+    margin: 0 10px; /* Gir litt margin på sidene */
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+footer h3{
+    color: #E6D5BF;
+    font-family:sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+footer li a {
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover{
+    text-decoration: underline #FEAC1C;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Sprer innholdet i footeren jenvt utover bredden*/
+    line-height: 1.8;
+}
+
+
+
+/* Stiler for små skjermer (mobiltelefoner) */
+@media (max-width: 768px) {
+    #logo img {
+        width: 120px; /* Mindre bredde for mobiltelefoner */
+    }
+    footer {
+        flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+        align-items: center;
+        text-align: center;
+    }
+    .content img {
+        width: 100%; /* På svært små skjermer tar hvert bilde full bredde av containeren */
+    }
+}
+
+
+
+/******************* Knapper ****************/
+
+
+/* Stiler for mellomstore skjermer (nettbrett) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #logo img {
+        width: 150px; /* Tilpasset bredde for nettbrett */
+    }
+}
+
+/* Stiler for store skjermer (desktop) */
+@media (min-width: 1025px) {
+    #logo img {
+        width: 300px; /* Større bredde for desktop-skjermer */
+    }
+
+    /********************* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+    
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 84%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 40px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin-bottom: 60px;
+        margin-top: 40px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+    
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 60px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+ 
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 60px;
+        border-radius: 5%;
+    }
+
+
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
+    }
 }
