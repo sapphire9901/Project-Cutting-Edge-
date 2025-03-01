@@ -1,185 +1,246 @@
-*{
-    margin: 0; /*Removes default margin & padding*/
-    padding: 0;  
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
+    min-height: 100vh;
+    background-color: #E6D5BF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Navigation */
+nav {
+    background-color: #718080;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 70px;
+}
+
+nav a {
+    height: 130px;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    transition: background 0.3s;
+}
+
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+
+/* Logo Styling */
+.logo {
+    height: 80px; /* Adjust size */
+    cursor: pointer; /* Show clickable effect */ 
+    width: 100%;
+    max-width: 200px;
     
-min-height: 100vh;
-/*100% of the height on the screen or browser. Ensures the content occupies the whole screen*/
-background-image: url('../media/Background_image.png');
-background-size: cover; /*image cover the entire container*/
-background-repeat: no-repeat; /*no repetitions of the image*/
-background-position: center; /*centering the image*/
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
-    background-color: #ffffff;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /*shadow right, left, blur radius, and shadow color black 10% transparency*/
-}
 
-nav ul{
-    width: 100%; /*expand the full width of the container*/
-    list-style: none; /*removes bullet points*/ 
-    display: flex; /*ul becomes flex container, and li elements (child elements) are arranged in a row by default*/
-    justify-content: flex-end; /*Placing the elements horizontally at the end of the container*/
-    align-items: center;/*align items vertically in the container*/
-}
 
-nav li{
-    height: 80px; /*height of the links*/
-}
 
-nav a{
-    height: 100%; 
-    padding: 0 30px; /*space around text, horizontally 0, 30 vertically*/
-    text-decoration: none; /*removes default styling*/
-    display: flex; /*Utilizing flex box*/
-    align-items: center; 
-    color: #000000;
-}
-
-nav a:hover{
-    background-color: #f0f0f0;
-}
-
-nav li:first-child{
-    margin-right: auto; /*Choosing the first child of the li-list and pushing it as far as possible to the right side.*/
-}
-
-.sidebar{
+/* Sidebar Menu */
+.sidebar {
     display: none;
-    position: fixed; /*So it will not move when scrolling*/
-    top: 0%; /*Aligns it to the top*/
-    right: 0%; /*Position at the right side*/
-    height: 100vh; /*Covers 100% of the entire screen of the screen/browser.*/
-    width: 20%; /*sidebar width*/
-    z-index: 999; /*Puts it on top off all other elements*/
-    background-color: rgba(255, 232, 165, 0.7); /* Semi-transparent */
-    backdrop-filter: blur(10px);/*blurs the background*/
-    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-    flex-direction: column; /*Aligns items in a column, so the items are stacked in a vertical list*/
-    align-items: top;/*Aligns items to the top*/
-    justify-content: center; /*aligns items to the left*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    z-index: 999;
+    background-color: rgba(255, 232, 165, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
 }
 
-
-.sidebar.show{
+.sidebar.show {
     display: flex;
 }
 
-
-.sidebar li{
-    width:100%;
-}
-
-.sidebar a{
+.sidebar li {
     width: 100%;
+    padding: 15px;
+    text-align: center;
 }
 
-.menu-button{
+.sidebar a {
+    font-size: 18px;
+    color: black;
+}
+
+.menu-button {
     display: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
-@media(max-width:800px){
-    .hideOnMobile{
-        display:none;
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
     }
-
-    .menu-button{
-        display:block;
+    .menu-button {
+        display: block;
     }
-    .sidebar{
+    .sidebar {
         width: 100%;
-    } 
-    .sidebar li a{
-        justify-content:center;
-        align-items: center;
     }
+}
+
+main h1 {
+    text-align: center;  /* Centers the text inside the h1 */
+    margin-top: 30px;      /* Centers the h1 itself (if it has a defined width) */
+  
+}
+
+
+/* Pricing Section */
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20 px;
+    padding: 40px 20px;
+}
+
+.category {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 60px;
+    width: 100%; /* Ensures boxes are responsive */
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black; /* Ensures text remains fully opaque */
     
 }
 
 
-    /**********************************************CSS for Main page***********************************************/
+.main-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
+.category ul {
+    list-style: none;
+    padding: 0;
+}
 
+.category li {
+    font-size: 18px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
 
+/* Button Styling */
+#bookButton {
+    background-color: #43718B;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+/* Last item should not have a border */
+.category li:last-child {
+    border-bottom: none;
+}
 
-
-
-
-
-
-
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    /****************************CSS for footer ***********************************/
-
-    /*Footer Container*/
-    .footer{
-        background-color:#101B37 ;
-        color: white;
-        padding: 40px 20px;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .category {
+        width: 100%;
     }
+}
+#bookButton:hover {
+    background-color: #338d90;
+}
 
-    .footer-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 1200px ;
-        margin: 0 auto;
-        gap: 20px;
-    }
+/* Footer */
+.footer {
+    background-color: #718080;
+    color: white;
+    padding: 40px 20px;
+}
 
-    .footer-container > div {
-        flex: 1 1 calc(20% - 10 px);  /* fordeler plass jevnt  */
-        min-width: 150px;
-    }
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-container > div {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+}
 
 ul {
     list-style: none;
     padding: 0;
-  }
-  
-  li {
+    
+}
+
+li {
     margin-bottom: 8px;
-  }
-  
-  a {
+}
+
+a {
     color: white;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-
-  h2, h3, h4, h5, h6{
-    font-size: 20px;
-  }
-  
-
-    @media (max-width: 800px){
-        .footer-container{
-            flex-direction: column;
-        }
-
-        .footer-container > div {
-            flex: 1 1 100%;
-        }
-    }
-
+    text-decoration-color: #FFE5C3;
     
+   
+}
+
+.footer-title{
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #FFE5C3;
+}
+
+@media (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-container > div {
+        flex: 1 1 100%;
+    }
+}

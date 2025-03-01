@@ -7,40 +7,107 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0">
     </head>
     <body>
-
+      <header>
+        
         <nav>
           <ul class="sidebar">
             <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#">Salongen</a></li>
-            <li><a href="#">Frisøren</a></li>
+            <li><a href="#">Bestill time</a></li>
+            <li><a href="#">Prisliste</a></li>
             <li><a href="#">Behandlinger</a></li>
-            <li><a href="#">Priser</a></li>
-            <li><a href="#">Før-og etter</a></li>
+            <li><a href="#">Galleri</a></li>
+            <li><a href="#">Om oss</a></li>
             <li><a href="#">Kontakt</a></li>
         
-        </ul>
-      
-      
+          </ul>
           <ul>
-            <li><a href="#">S7vende Hårsalong</a></li>
-            <li class="hideOnMobile"><a href="#">Salongen</a></li>
-            <li class="hideOnMobile"><a href="#">Frisøren</a></li>
+            <li><img src="media/syvende_logo.PNG" alt="Syvende Logo" class="logo" onclick="handleLogoClick()"></li>
+            <li class="hideOnMobile"><a href="#">Bestill time</a></li>
+            <li class="hideOnMobile"><a href="#">Prisliste</a></li>
             <li class="hideOnMobile"><a href="#">Behandlinger</a></li>
-            <li class="hideOnMobile"><a href="#">Priser</a></li>
-            <li class="hideOnMobile"><a href="#">Før-og etter</a></li>
+            <li class="hideOnMobile"><a href="#">Galleri</a></li>
+            <li class="hideOnMobile"><a href="#">Om oss</a></li>
             <li class="hideOnMobile"><a href="#">Kontakt</a></li>
             <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-            
-        </ul>
-
-
+          
+          </ul>
         </nav>
+        
+      </header>
+      <main>
+        <h1>Priser</h1>
 
-        <footer class = "footer">
-            <div class="footer-container">
-              <!---Menu section-->
-              <div>
-                <h2 class="footer-title">Meny</h2>
+        <section class="pricing">
+          <div class="category">
+            <h2>Klipp</h2>
+            <ul>
+              <li>Dame <span>1050,-</span></li>
+              <li>Herre <span>850,-</span></li>
+              <li>Barn (0-12 år) <span>450,-</span></li>
+              <li>Lugg <span>250,-</span></li>
+              <li>Skjeggtrim <span>200,-</span></li>
+            </ul>
+
+          </div>
+          <div class="category">
+            <h3 class="main-title">Klipp</h3>
+            <ul>
+              <li>Dame <span>1050,-</span></li>
+              <li>Herre <span>850,-</span></li>
+              <li>Barn (0-12 år) <span>450,-</span></li>
+              <li>Lugg <span>250,-</span></li>
+              <li>Skjeggtrim <span>200,-</span></li>
+            </ul>
+
+          </div>
+          <div class="category">
+            <h4 class="main-title">Farge</h4>
+            <ul>
+              <li>Dame <span>1050,-</span></li>
+              <li>Herre <span>850,-</span></li>
+              <li>Barn (0-12 år) <span>450,-</span></li>
+              <li>Lugg <span>250,-</span></li>
+              <li>Skjeggtrim <span>200,-</span></li>
+            </ul>
+
+          </div>
+          <div class="category">
+            <h5 class="main-title">Behandling</h5>
+            <ul>
+              <li>Dame <span>1050,-</span></li>
+              <li>Herre <span>850,-</span></li>
+              <li>Barn (0-12 år) <span>450,-</span></li>
+              <li>Lugg <span>250,-</span></li>
+              <li>Skjeggtrim <span>200,-</span></li>
+            </ul>
+
+          </div>
+          <div class="category">
+            <h6 class="main-title">Klipp</h6>
+            <ul>
+              <li>Dame <span>1050,-</span></li>
+              <li>Herre <span>850,-</span></li>
+              <li>Barn (0-12 år) <span>450,-</span></li>
+              <li>Lugg <span>250,-</span></li>
+              <li>Skjeggtrim <span>200,-</span></li>
+            </ul>
+
+          </div>
+        
+          <button id="bookButton">Bestill time</button>
+          
+        </section>
+
+
+      </main>
+
+      
+    
+      <footer class = "footer">
+          <div class="footer-container">
+            <!---Menu section-->
+            <div>
+                <h6 class="footer-title">Meny</h6>
                 <ul>
                   <li><a href="#">Hjem</a></li>
                   <li><a href="#">Bestill time</a></li>
@@ -48,52 +115,52 @@
                   <li><a href="#">Behandlinger</a></li>
                   <li><a href="#">Galleri</a></li>
                 </ul>
-              </div>
+            </div>
         
-              <!--Organization Section-->
-              <div>
-                <h3 class="footer-title">Organisasjon</h3>
+            <!--Organization Section-->
+            <div>
+                <h6 class="footer-title">Organisasjon</h6>
                 <ul>
-                  <li><a href="#">Om meg</a></li>
+                  <li><a href="#">Om oss</a></li>
                   <li><a href="#">Vilkår</a></li>
                   <li><a href="#">Karriere</a></li>
           
                 </ul>
-              </div>
+            </div>
         
               
-              <!--Contact Section-->
-              <div>
-                <h4 class="footer-title">Kontakt</h4>
+            <!--Contact Section-->
+            <div>
+              <h6 class="footer-title">Kontakt</h6>
                 <ul>
-                  <li>+47 12 34 56 78</li>
-                  <li><a href="mailto:epost@xxxx.no">epost@xxxx.no</a></li>
-                  <li><a href="#">Adresseveien 12 1234 Bergen</a></li>
+                  <li><a href="tel:+4755318445">+47 55 31 84 45</a></li>
+                  <li><a href="mailto:ehtaxhair@gmail.com">ehtaxhair@gmail.com</a></li>
+                  <li><a href="https://www.google.com/maps?q=Lille+Øvregaten+11+5018+Bergen" target="_blank">Lille Øvregaten 11 5018 Bergen</a></li>
           
                 </ul>
-              </div>
+            </div>
         
               <!--Follow Us Section-->
-              <div>
-                <h5 class="footer-title">Følg oss</h5>
+            <div>
+               <h6 class="footer-title">Følg oss</h6>
                 <ul>
                   <li><a href="#">Instagram</a></li>
                   <li><a href="#">Facebook</a></li>
                   <li><a href="#">TikTok</a></li>
           
                 </ul>
-              </div>
+             </div>
         
         
               <!--Opening hours section-->
-              <div>
+            <div>
                 <h6 class="footer-title">Åpningstider</h6>
                 <ul>
-                  <li>Mandag - Fredag: 09:00 - 18:00</li>
-                  <li>Lørdag: 10:00 - 16:00</li>
+                  <li>Ukedager: 09:00 - 18:00</li>
+                  <li>Lørdag: 10:00 - 18:00</li>
                   <li>Søndag: Stengt</li>
                 </ul>
-              </div>
+            </div>
         
             </div>
           </footer>

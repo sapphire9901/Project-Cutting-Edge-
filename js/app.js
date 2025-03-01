@@ -8,3 +8,7 @@ function hideSidebar(){
      sidebar.style.display = 'none'
 
 }
+
+function handleLogoClick() {
+    window.location.href = "index.html"; // Change this to your desired page or action
+}
