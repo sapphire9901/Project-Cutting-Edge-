@@ -10,25 +10,41 @@
       <header>
         
         <nav>
+           <!-- Sidebar that will be hidden initially -->
           <ul class="sidebar">
-            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="close-button" onclick="hideSidebar()">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff">
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+              </a>
+            </li>
             <li><a href="#">Bestill time</a></li>
-            <li><a href="#">Prisliste</a></li>
+            <li><a href="testside.html">Prisliste</a></li>
             <li><a href="#">Behandlinger</a></li>
             <li><a href="#">Galleri</a></li>
             <li><a href="#">Om oss</a></li>
             <li><a href="#">Kontakt</a></li>
         
           </ul>
+           <!-- Main navigation for desktop (hidden on mobile) -->
           <ul>
-            <li><img src="media/syvende_logo.PNG" alt="Syvende Logo" class="logo" onclick="handleLogoClick()"></li>
+            <li><img src="media/syvende_logo.PNG" alt="Syvende Logo" class="logo" onclick="handleLogoClick()"><a href="index.html"></a></li>
             <li class="hideOnMobile"><a href="#">Bestill time</a></li>
-            <li class="hideOnMobile"><a href="#">Prisliste</a></li>
+            <li class="hideOnMobile"><a href="testside.html">Prisliste</a></li>
             <li class="hideOnMobile"><a href="#">Behandlinger</a></li>
             <li class="hideOnMobile"><a href="#">Galleri</a></li>
             <li class="hideOnMobile"><a href="#">Om oss</a></li>
             <li class="hideOnMobile"><a href="#">Kontakt</a></li>
-            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+             <!-- Hamburger Menu Icon -->
+            <li class="menu-button" onclick="showSidebar()">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fffff">
+                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg>
+              </a>
+            </li>
           
           </ul>
         </nav>
@@ -50,7 +66,7 @@
 
           </div>
           <div class="category">
-            <h3 class="main-title">Klipp</h3>
+            <h3 class="main-title">Farge</h3>
             <ul>
               <li>Dame <span>1050,-</span></li>
               <li>Herre <span>850,-</span></li>
@@ -61,7 +77,7 @@
 
           </div>
           <div class="category">
-            <h4 class="main-title">Farge</h4>
+            <h4 class="main-title">Behandling</h4>
             <ul>
               <li>Dame <span>1050,-</span></li>
               <li>Herre <span>850,-</span></li>
@@ -72,7 +88,7 @@
 
           </div>
           <div class="category">
-            <h5 class="main-title">Behandling</h5>
+            <h5 class="main-title">xxx</h5>
             <ul>
               <li>Dame <span>1050,-</span></li>
               <li>Herre <span>850,-</span></li>
@@ -83,7 +99,7 @@
 
           </div>
           <div class="category">
-            <h6 class="main-title">Klipp</h6>
+            <h6 class="main-title">xxx</h6>
             <ul>
               <li>Dame <span>1050,-</span></li>
               <li>Herre <span>850,-</span></li>
