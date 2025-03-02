@@ -1,8 +1,14 @@
-/* universal elements */
+/***************************** COMMON CODE FOR ALL PAGES *****************************/
+
+/* universal elements */ 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Sørger for at padding og border er inkludert i elementets totale bredde/høyde */
+    box-sizing: border-box; /* Makes sure padding and border is included in total hight/width */
+}
+
+body{
+    background-color: #E6D5BF;
 }
 
 h1 {
@@ -10,137 +16,521 @@ h1 {
     padding-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 100;
-    font-size: 50px;
-
 }
 
-html, body {
-    height: 100%; /* Sørger for at html og body tar opp hele høyden på skjermvinduet */
-    margin: 0; /* Fjerner standardmargin */
-    display: flex;
-    flex-direction: column; /* Stabler innholdet vertikalt */
-}
-
-.content_top {
-    text-align: center;
-    justify-content: center;
-    font-size: large;
-    font-family: sans-serif;
-    line-height: 1.6;
-    margin-left: 26%;
-    margin-right: 26%;
+.navbar img{
+    width: 100%; 
+    height: auto;
+    
 }
 
 
-body{
-    /* background */
-    background-color: #E6D5BF;
-
-}
-
-#logo img{
-    width: 300px; /* Settes til bildets reelle bredde*/
-    height: auto; /* bevarer aspektforholdet ved skalering */
-    max-width: 100%; /* Sørger for at logoen aldri blir større enn sin container */
-}
-
+/* navbar */
 .navbar{
     background-color: #718080;
-    list-style-type: none; /* removes bullet points from the list */
+    display: flex; /* displays the elements horizontally */
+    justify-content: center;
+    padding: 35px 20px;
+    padding-bottom: 15px;
+    align-items: center;
     width: 100%;
-    height: 60;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    padding-right: 20px; 
-    padding-left: 20px;
-    align-items: center; /* Aligns the items vertically */
-    display: flex; /* displays the elements horisontally */ 
-    justify-content: space-around; 
+    height: auto;
 }
-.navbar li a {
-    color: white;
-    text-decoration: none;
+
+.nav-links ul{
+    max-width: 2000px; /* Begrenser maksimal bredde for store skjermer */
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Sentrerer elementene vertikalt */
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none; /* Removes bullet points from the list */
     font-size: 20px;
 }
 
-.navbar li a:hover {
-    text-decoration: underline #FEAC1C;
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
 }
 
-footer{
-    display: flex;
-    justify-content: space-around;
-    background-color: #718080;
-    align-items: flex-start; /* Starter elementene på toppen av containeren */
-    padding: 30px 40px; /* Padding top and sides */
-    width: 100%; /* Sørger for at footer strekker seg over hele bredden */
-    color: white;
-    justify-content: center;
-    padding-bottom: 40px;
+.navbar li a:hover {
+    text-decoration: underline #FFD3AC;
 }
-footer h3, footer ul {
-    margin: 0 10px; /* Gir litt margin på sidene */
+
+/* footer */
+footer {
+    justify-content: space-between;
+    display: flex;
+    background-color: #718080;
+    color: white;
+}
+
+/* wrapper for the sections in the footer*/
+.footer_content {
+    display: flex;
+    max-width: 2000px;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* for each column in the footer */
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+
+/* styling for unordered list in footer */
+footer ul {
     list-style-type: none;
     font-family: sans-serif;
     font-size: 15px;
 }
+
+/* styling for headers in footer */
 footer h3{
     color: #E6D5BF;
     font-family:sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
+/* styling links in footer (under "Meny")*/
 footer li a {
     text-decoration: none;
     color: white;
 }
 footer li a:hover{
-    text-decoration: underline #FEAC1C;
-}
-
-.footer-section{
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Sprer innholdet i footeren jenvt utover bredden*/
-    line-height: 1.8;
+    text-decoration: underline #FFD3AC;
 }
 
 
+/* Mobile Screen */
+@media (min-width: 320px) and (max-width: 480px){
+   
 
-/* Stiler for små skjermer (mobiltelefoner) */
-@media (max-width: 768px) {
-    #logo img {
-        width: 120px; /* Mindre bredde for mobiltelefoner */
+    .navbar img{
+        margin-left: 10%;
+        max-width:79%;
+        height: auto;
     }
+   
+    /*  Hamburger menu */
+    h1 {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    
+   
     footer {
+        display: flex;
         flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
         align-items: center;
         text-align: center;
     }
+    .footer_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*Hamburger menu*/
+    /*https://www.youtube.com/watch?v=aNDqzlAKmZc*/
+    .nav-links{
+        background-color: #718080;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+    .nav-links ul {
+        /* add styling av utssende for lenkene her!*/
+        flex-direction: column;
+    }
+    .nav-links.active {
+        right: 0;
+    }
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: 	#FFD3AC ;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .ham-menu.ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+
+
+}
+
+/* iPads and Tablets */
+@media (min-width:481px) and (max-width:768px){
+    h1 {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column; /* Stabler elementene vertikalt på små skjermer */
+        align-items: center;
+        text-align: center;
+    }
+    .footer_content{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar {
+        align-items: center;
+    }
+
+    /*https://www.youtube.com/watch?v=aNDqzlAKmZc*/
+    .nav-links{
+        background-color: #718080;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+    .nav-links ul {
+        /* add styling av utssende for lenkene her!*/
+        flex-direction: column;
+    }
+    .nav-links.active {
+        right: 0;
+    }
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #FFD3AC;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .ham-menu.ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+    }
+    footer{
+        padding: 30px 40px;
+    }
+
+
+}
+/* Medium Screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    .navbar img {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .footer_content{
+        width: 98%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links{
+        width: 92%;
+        margin-top: 30px;
+    }
+    .footer{
+        width: 85%;
+    }
+    footer{
+        padding: 30px 40px;
+        padding-bottom: 80px;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 49px;
+    }
+    .nav-links{
+        width: 70%;
+    }
+    footer{
+        padding: 30px 80px;
+        padding-bottom: 80px;
+    }
+   
+}
+
+
+
+
+/***************************** CODE FOR galleri.html *****************************/
+
+.content_top { /* Bestemmer paragrafet under headeren */
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+/* Styles for mobile screen */
+@media (min-width: 320px) and (max-width: 480px){
+   
+    .content_top p{
+        font-size: 18px;
+    }
     .content img {
         width: 100%; /* På svært små skjermer tar hvert bilde full bredde av containeren */
     }
+    .content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-top: 20px;
+    }
+    .content_top {
+        width: 90%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 0 20px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
+        padding-bottom: 30px;
+        
+
+    }
 }
 
 
+/* Styles for iPads and Tablets */
+@media (min-width:481px) and (max-width:768px){
 
-/******************* Knapper ****************/
+    .content_top p{
+        font-size: 16px;
+    }
+    
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+    }
+
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 86%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        margin-bottom: 60px;
+        margin-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 20px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 30px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 20px;
+        border-radius: 5%;
+    }
 
 
-/* Stiler for mellomstore skjermer (nettbrett) */
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
+    }
+    
+
+}
+
+
+/* Styles for medium screens */
 @media (min-width: 769px) and (max-width: 1024px) {
-    #logo img {
-        width: 150px; /* Tilpasset bredde for nettbrett */
+    
+    
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 86%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        margin-bottom: 60px;
+        margin-top: 30px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 50px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 50px;
+        border-radius: 5%;
+    }
+
+
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
     }
 }
 
-/* Stiler for store skjermer (desktop) */
+/* Styles for large screens */
 @media (min-width: 1025px) {
-    #logo img {
-        width: 300px; /* Større bredde for desktop-skjermer */
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 23%;
+        margin-right: 23%;
     }
 
-    /********************* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
     .parent-container {
     
         width: 100%; /* Juster dette basert på ditt design */
@@ -164,7 +554,6 @@ footer li a:hover{
 
     .content {
         display: flex;
-    
         justify-content: center; /* Sentrerer bildene horisontalt */
         align-items: center; /* Sentrerer bildene vertikalt */
         gap: 60px; /* Angir mellomrom mellom bildene */

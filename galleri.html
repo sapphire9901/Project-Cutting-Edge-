@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="no">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styling.css">
-  <title>Title of the document</title>
+  <title>S7vende Galleri</title>
 </head>
 
 <body>
-  <ul class="navbar">
-    <li id="logo"><a href="index.html"><img src="images/logo.PNG" alt="S7vende logo"></a></li>
-    <li><a href="index.html">Hjem</a></li>
-    <li><a href="bestill_time.html">Bestill time</a></li>
-    <li><a href="prisliste.html">Prisliste</a></li>
-    <li><a href="behandlinger.html">Behandlinger</a></li>
-    <li><a href="galleri.html">Galleri</a></li>
-    <li><a href="om_oss.html">Om oss</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
+  <nav class="navbar">
+    <a href="index.html"><img src="images/logo.PNG" width="300px" height="auto" alt="S7vende logo"></a>
+    <div class="nav-links">
+      <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="bestill_time.html">Bestill time</a></li>
+          <li><a href="prisliste.html">Prisliste</a></li>
+          <li><a href="behandlinger.html">Behandlinger</a></li>
+          <li><a href="galleri.html">Galleri</a></li>
+          <li><a href="om_oss.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 
   <div class="parent-container">
     <div class="large-box">
@@ -25,19 +36,19 @@
         <p>Her får du et glimt av vårt kreative arbeid på S7vende hårsalong, salongen hvor kreativitet og unikhet går hånd i hånd for å gi deg den ypperste kvaliteten. Vil du se mer? Følg oss på Facebook, Instagram og TikTok for mer innhold.</p>
       </div>
       <div class="content">
-        <img src="images/IMG_7971.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_9361.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_9459.jpg" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_7971.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_9361.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_9459.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
       </div>
       <div class="content">
-        <img src="images/IMG_8499.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_9511.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_9721.jpg" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_8499.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_9511.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_9721.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
       </div>
       <div class="content">
-        <img src="images/IMG_5727.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_0543.jpg" width="375px" height="auto" alt="hårklipp">
-        <img src="images/IMG_3306.jpg" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_5727.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_0543.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
+        <img src="images/IMG_3306.jpg" class="reveal" width="375px" height="auto" alt="hårklipp">
       </div>
     </div>
     <div class="small-box">
@@ -53,8 +64,7 @@
       
     </div>
   </div>
-
-
+  
   <footer>
     <div class="footer-section">
       <h3>Meny</h3>
@@ -68,7 +78,7 @@
         <li><a href="">Kontakt</a></li>
       </ul>
     </div>
-
+  
     <div class="footer-section">
       <h3>Kontakt</h3>
       <ul>
@@ -78,7 +88,7 @@
         <li>5018 Bergen</li>
       </ul>
     </div>
-
+  
     <div class="footer-section">
       <h3>Følg oss</h3>
       <!-- sett inn sosiale medier ikoner her med lenker -->
@@ -99,8 +109,7 @@
     </div>
     
   </footer>
+  <script src="js/app.js"></script>
 </body>
-
-
-
 </html>
+
