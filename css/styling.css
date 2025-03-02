@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/*BODY*/
 body {
     min-height: 100vh;
     background-color: #E6D5BF;
@@ -133,6 +134,11 @@ nav li:first-child {
     }
 }
 
+.main-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 main h1 {
     text-align: center;
     margin-top: 30px;
@@ -147,32 +153,7 @@ main h1 {
     padding: 40px 20px;
 }
 
-.behandlinger{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-
-}
-
-.behandlinger .category{
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 60px 1px;
-    width: 100%;
-    max-width: 1000px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: black;
-
-}
-
-.category p{
-    padding: 20px 50px;
-}
-
+/*Category box for Pricing page*/
 .pricing .category {
     background-color: rgba(255, 255, 255, 0.6);
     padding: 60px 1px;
@@ -183,11 +164,6 @@ main h1 {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: black;
-}
-
-.main-title {
-    font-size: 24px;
-    margin-bottom: 10px;
 }
 
 .category ul {
@@ -225,6 +201,109 @@ main h1 {
     background-color: #338d90;
 }
 
+/*Styling for Behandling page*/
+
+/* General styling for .behandlinger section */
+.behandlinger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center all items horizontally */
+    justify-content: flex-start; /* Align items to the top of the container */
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+/* General styling for .category */
+.behandlinger .category {
+    display: flex;
+    flex-direction: column; /* Stack content and image vertically by default */
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 40px 10px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center; /* Center all content */
+}
+
+/* Ensure content is always on top */
+.behandlinger .category .content {
+    width: 100%; /* Content (heading + paragraph) will take full width */
+}
+
+.behandlinger .category h2,
+.behandlinger .category h3,
+.behandlinger .category h4 {
+    margin-top: 0;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styling for paragraphs inside .category */
+.behandlinger .category p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0;
+    text-align: left;
+    padding-right: 20px;  /* Increase the right padding */
+    padding-left: 60px;   /* Increase the left padding */
+    width: 100%;
+}
+
+/* Styling for images inside .category */
+.category .image img {
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+/* Media query for smaller screens (Mobile/Tablet) */
+@media (max-width: 768px) {
+    .behandlinger .category {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Make image take full width on smaller screens and be below content */
+    .category .image img {
+        margin-top: 20px;
+        width: 80%; /* Adjust image size on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+    /* Make category items align side by side */
+    .behandlinger .category {
+        display: flex;
+        flex-direction: row; /* Arrange items side by side */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .behandlinger .category .content {
+        width: 45%;  /* Allow paragraph to take 45% of the space */
+        text-align: left; /* Align text to the left for paragraph */
+    }
+
+    .behandlinger .category .image {
+        width: 40%; /* Allow image to take 40% of the space */
+        margin-left: 20px; /* Add some space between paragraph and image */
+    }
+}
 /* Footer */
 .footer {
     background-color: #718080;
