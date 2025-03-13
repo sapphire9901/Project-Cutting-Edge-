@@ -278,6 +278,21 @@ main h1 {
     margin-right: 30px;
 }
 
+/*reveal stling*/
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+
 /* Media query for smaller screens (Mobile/Tablet) */
 @media (max-width: 768px) {
     .behandlinger .category {

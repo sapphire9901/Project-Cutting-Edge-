@@ -13,7 +13,7 @@ function handleLogoClick() {
     window.location.href = "index.html"; // Change this to your desired page or action
 }
 
-
+window.addEventListener('scroll', reveal);
 function reveal(){
     var reveals = document.querySelectorAll('.reveal');
 
@@ -32,3 +32,4 @@ function reveal(){
         }
     }
 }
+
