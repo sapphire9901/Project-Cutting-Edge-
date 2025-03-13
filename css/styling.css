@@ -6,7 +6,8 @@
     /*Fonts*/
     --ff-bold:"Oswald", serif;
     --ff-accent: 'Playfair Display', serif;
-
+    --ff-text:"Raleway";
+}
 
 *{
     margin: 0; /*Removes default margin & padding*/
@@ -20,14 +21,15 @@ background-color: var(--clr--primary--200);
 font-family: var(--ff-primary);
 font-weight: 400;
 font-size: 1.3125rem;
-line-height: 1.6;;
+line-height: 1.6;
+
 }
 
 /*Main banner*/
 header{
     width:100wv;
     height:100vh;
-    background-image: url('../media/MainBannerOnIndex.webp');
+    background-image: url('../media/index_html/Bakgrunnsbilde.webp');
     background-position: bottom;
     background-size: cover;
     display: flex;
@@ -38,7 +40,7 @@ header{
 /*The white transparent box on top of the main banner*/
 .transparent-box{
     width: 100wv;
-    background: rgba(255, 255, 255, 0.4); /* Transparent white */
+    background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
     padding:8rem 10rem;
     border-radius: 20px;
     text-align: center;
@@ -54,7 +56,7 @@ text-decoration: none;
 }
 
 .header-content h1{
-    font-family: "Oswald", serif;
+    font-family: var(--ff-bold);
     font-size: 12vmin;
     margin-bottom: 8%;
 }
@@ -81,7 +83,7 @@ a.btn{
 
 
 h1,h2,h3{
-    font-family: var(--ff-accent);
+    font-family: var(--ff-text);
     font-weight: 600;
     line-height: 1;
     margin-bottom: 1em;
@@ -90,12 +92,7 @@ h1,h2,h3{
 
 p{
 margin-bottom: 1em;
-}
-
-
-img{
-    display: block;
-    max-width: 100%;
+font-family: var(--ff-text);
 }
 
 
@@ -111,6 +108,7 @@ img{
 nav{
     background-color: #718080;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /*shadow right, left, blur radius, and shadow color black 10% transparency*/
+    
 }
 
 nav ul{
@@ -168,6 +166,7 @@ nav li:first-child{
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
     flex-direction: column; /*Aligns items in a column, so the items are stacked in a vertical list*/
     justify-content: center; /*aligns items to the left*/
+    border-bottom-right-radius: 30%;
 }
 
 
@@ -194,22 +193,340 @@ nav li:first-child{
 
 
 .hideOnMobile{
-    font-family: "Playfair Display", serif;
+    font-family: var(--ff-accent);
 }
 
 /*Navigation bar ends here*/
 
 
+/*Main content CSS*/
+
+.ctn{
+    max-width: fit-content;
+    padding: 8px 20px;
+    background-color: #bf6651;
+    color: #fffff4;
+    border-radius:320px;
+    text-decoration: none;
+}
+
+.ctn:hover{
+    background-color: #4e6060; /*Changing background color when hovered*/
+    transition: background-color 0.6s ease-in-out;
+   
+}
+
+
+.article{
+    width:100%;
+    background-color: #e6d5bf;
+    margin-top: 150px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto; /*Centers the content*/
+    justify-content: space-between;
+    background-color: #e6d5bf;
+    gap: 100px; /*Space between elements*/
+}
+
+
+.quote{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
 
 
 
-/*Adjustsments for mobile version starts here*/
-@media(max-width:800px){
+.quote p{
+    font-size: 5rem;
+    font-family: "Oooh Baby", cursive;
+}
+
+
+.camera-icon{
+    bottom: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.row .txt-first-img-second{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.article-image img{
+    width: 600px;
+    border-radius: 1rem;
+   
+}
+
+
+/*For the reverse version with image first, then text*/
+
+
+
+.img-first-txt-second{
+    order: 1;
+}
+
+.img-first-txt-second p{
+    color: #4b4b4b;
+}
+
+.article-img-reverse{
+    order:2;
+    width: 600px;
+    border-radius: 1rem;
+}
+
+
+.row .img-first-txt-second{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image-reverse img{
+    width: 600px;
+    border-radius: 1rem;
+}
+
+
+/*For the gallery*/
+
+.gallery-section{
+    display: flex;
+    width:100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../media/index_html/Bakgrunn_bak_galleri.webp');
+    padding-bottom: 100px;
+}
+
+.slide-container{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    border: 3px solid #e6d5bf;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.1); /*Some shadow around the border of the slider*/
+    background-color: #fff;
+    padding: 50px 30px 100px 30px;
+}
+
+.slide-container .slides{
+    width:100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next{
+    right: 20px;
+}
+
+span.prev{
+    left: 20px;
+}
+
+span.next:hover, span.prev:hover{
+    background-color: #ffffff;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer{
+    position: absolute;
+    bottom: 60px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 4px;
+    border: 3px solid #bbb;
+    border-radius: 50%; /*Make circles*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active{
+    background-color: #4f6060;
+}
+
+@keyframes next1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }    
+}
+
+
+
+@keyframes next2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }    
+}
+
+
+
+
+@keyframes prev1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }    
+}
+
+
+
+@keyframes prev2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }    
+}
+
+
+
+/*For the fading effect*/
+
+.reveal{
+    position: relative; /*Allows movement relative to its original position. So it will first be pushed back 150 px and is invisible,
+    then it will jump to its original position over 2 seconds*/
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);/*Moves back to its original position*/
+    opacity: 1; /*Becomes visible*/
+}
+
+
+
+/*Index-Gallery CSS starts here*/
+/*Index-Gallery CSS ends here*/
+
+/*Footer starts here*/
+
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #718080;
+    align-items: flex-start; /* Starter elementene på toppen av containeren */
+    padding: 70px 40px 100px 30px;
+    width: 100%; /* Sørger for at footer strekker seg over hele bredden */
+    color: white;
+
+   
+}
+footer h3, footer ul {
+    margin: 0 10px; /* Gir litt margin på sidene */
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+footer ul li {
+    margin: 10px 0; /* Adds space above and below each link */
+    font-size: 1rem;
+}
+
+footer h3{
+    color: #E6D5BF;
+    font-family:"Indie Flower", serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+
+}
+footer li a:hover{
+    text-decoration: underline #FEAC1C;
+    text-underline-offset: 0.4rem; 
+    transition:  0.6s ease-in-out;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 1.8;
+    margin: 0 50px;
+}
+
+
+
+
+/*Footer ends here*/
+
+
+
+/*Adjustments for mobile version starts here*/
+@media(max-width:768px){
 
     /*Navigation bar starts here*/
     #s7vendeLogo{
-    width:100%;
-    height:auto;
+        width:100%;
+        height:auto;
     }
   
 
@@ -234,11 +551,12 @@ nav li:first-child{
 
     .sidebar{
         width: 100%;
+        height:100%;
         background-color: #eae1d8;
     } 
     .sidebar li a{
         font-size: 3rem;
-        font-family: "Playfair Display", serif;
+        font-family: var(--ff-accent);
         letter-spacing: 0%;
     }
     
@@ -255,6 +573,7 @@ nav li:first-child{
 
     nav ul{
         width: 100%; /*expand the full width of the container*/
+    
     }
     
     nav li{
@@ -295,8 +614,133 @@ nav li:first-child{
     }
      /*Header content ends here*/
 
+
+     /*Main content starts here*/
+  
+    .row{
+        flex-direction: column;
+    }
+
+    .txt-first-img-second{
+        order: 1;
+    }
+
+    .article{
+        margin-top: 80px;
+    }
     
+    .article img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+    
+
+    .quote{
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    
+    
+    .quote p{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+
+    
+    .camera-icon{
+        display: flex;
+        width: 15%;
+        margin: 0 auto;
+    }
+
+
+    .gallery-section{
+        padding-bottom: 0px;
+    }
+
+
+    .slide-container{
+        width: 500px;
+        height: 600px;
+        padding: 50px 15px 80px 15px;
+    }
+
+
+
+
+     /*Main content ends here*/
+
+
+
+     /*Footer content starts here*/
+
+     footer{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 50px 0;
+
+     }
+    
+     .footer-section{
+        margin: 20px auto;
+        width: 40%;
+        padding: 0 5px;
+      
+    }
+    
+    
+    footer ul li {
+        margin: 5px 0; /* Adds space above and below each link */
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    footer a{
+        font-size: 1rem;
+    }
+
+   
+
+    footer h3{
+        margin-bottom:20px;
+        padding-top: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+        
+}
+
+/*Footer content ends here*/
+
 /*Adjustsments for mobile version ends here*/
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+
+    .row{
+        flex-direction: column;
+    }
+   
+    .txt-first-img-second{
+        order: 1;
+    }
+
+
+        
+
+    
+    }
+
+   
+    
+
+    
+
 
 
 }
