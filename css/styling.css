@@ -1,6 +1,7 @@
 *{
     margin: 0; /*Removes default margin & padding*/
-    padding: 0;  
+    padding: 0;
+    box-sizing: border-box; /* Makes sure padding and border is included in total hight/width */
 }
 
 
