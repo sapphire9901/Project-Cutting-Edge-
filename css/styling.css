@@ -535,6 +535,9 @@ footer li a:hover{
 
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
+    .navbar{
+        height: 100%;
+    }
 
     .navbar img{
         margin-left: 10%;
@@ -586,12 +589,14 @@ footer li a:hover{
         transform: translate(-50%, -50%);
         transition: .3s ease;
     }
+    /* menu ham lines */
     .ham-menu span:nth-child(1) {
         top: 25%;
     }
     .ham-menu span:nth-child(3) {
         top: 75%;
     }
+    /* cross hambar */
     .ham-menu.active span:nth-child(1) {
         top: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
