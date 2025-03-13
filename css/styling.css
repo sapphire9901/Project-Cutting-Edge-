@@ -46,7 +46,6 @@
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
    
-
     .navbar img{
         margin-left: 10%;
         max-width:79%;
@@ -84,6 +83,7 @@
         width: 50px;
         margin-left: auto;
         position: relative;
+        margin-right: 2rem;
     }
     .ham-menu span {
         height: 5px;
@@ -155,6 +155,7 @@
         width: 50px;
         margin-left: auto;
         position: relative;
+        margin-right: 2rem;
     }
     .ham-menu span {
         height: 5px;
