@@ -40,6 +40,387 @@
     text-decoration: underline #FFD3AC;
 }
 
+/*navbar ends here*/
+
+
+
+/*Main banner*/
+header{
+    width:100wv;
+    height:100vh;
+    background-image: url('../media/index_html/Bakgrunnsbilde.webp');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*The white transparent box on top of the main banner*/
+.transparent-box{
+    width: 100wv;
+    background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
+    padding:8rem 10rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.header-content a{
+text-decoration: none;
+}
+
+.header-content{
+    margin-bottom: 12rem;
+    color: #000000;
+}
+
+.header-content h1{
+    font-family: var(--ff-bold);
+    font-size: 12vmin;
+    margin-bottom: 8%;
+}
+
+.btn{
+    padding: 1.25rem 6.25rem;
+    background-color: #43718b;
+    border-radius: 40px;
+    color: whitesmoke;
+    transition: background-color 0.5s ease; /* Add transition for background color */
+}
+
+.btn:hover{
+   background-color:#ee751c;
+}
+
+
+a.btn{
+    font-family: "Roboto", serif;
+    font-size: 3vmin;
+    letter-spacing: 1.1px;
+}
+
+
+
+h1,h2,h3{
+    font-family: var(--ff-text);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+
+p{
+margin-bottom: 1em;
+font-family: var(--ff-text);
+}
+
+
+/*Main content CSS*/
+
+.ctn{
+    max-width: fit-content;
+    padding: 8px 20px;
+    background-color: #bf6651;
+    color: #fffff4;
+    border-radius:320px;
+    text-decoration: none;
+}
+
+.ctn:hover{
+    background-color: #4e6060; /*Changing background color when hovered*/
+    transition: background-color 0.6s ease-in-out;
+   
+}
+
+
+.article{
+    width:100%;
+    background-color: #e6d5bf;
+    margin-top: 150px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto; /*Centers the content*/
+    justify-content: space-between;
+    background-color: #e6d5bf;
+    gap: 100px; /*Space between elements*/
+}
+
+
+.quote{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+.quote p{
+    font-size: 5rem;
+    font-family: "Oooh Baby", cursive;
+}
+
+
+.camera-icon{
+    bottom: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.row .txt-first-img-second{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.article-image img{
+    width: 600px;
+    border-radius: 1rem;
+   
+}
+
+
+/*For the reverse version with image first, then text*/
+
+
+
+.img-first-txt-second{
+    order: 1;
+}
+
+.img-first-txt-second p{
+    color: #4b4b4b;
+}
+
+.article-img-reverse{
+    order:2;
+    width: 600px;
+    border-radius: 1rem;
+}
+
+
+.row .img-first-txt-second{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image-reverse img{
+    width: 600px;
+    border-radius: 1rem;
+}
+
+
+/*For the gallery*/
+
+.gallery-section{
+    display: flex;
+    width:100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../media/index_html/Bakgrunn_bak_galleri.webp');
+    padding-bottom: 100px;
+}
+
+.slide-container{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    border: 3px solid #e6d5bf;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.1); /*Some shadow around the border of the slider*/
+    background-color: #fff;
+    padding: 50px 30px 100px 30px;
+}
+
+.slide-container .slides{
+    width:100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next{
+    right: 20px;
+}
+
+span.prev{
+    left: 20px;
+}
+
+span.next:hover, span.prev:hover{
+    background-color: #ffffff;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer{
+    position: absolute;
+    bottom: 60px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 4px;
+    border: 3px solid #bbb;
+    border-radius: 50%; /*Make circles*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active{
+    background-color: #4f6060;
+}
+
+@keyframes next1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }    
+}
+
+
+
+@keyframes next2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }    
+}
+
+
+
+
+@keyframes prev1 {
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }    
+}
+
+
+
+@keyframes prev2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }    
+}
+
+
+/*Index-Gallery CSS starts here*/
+/*Index-Gallery CSS ends here*/
+
+/*Footer starts here*/
+
+
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #718080;
+    align-items: flex-start; /* Starter elementene på toppen av containeren */
+    padding: 70px 40px 100px 30px;
+    width: 100%; /* Sørger for at footer strekker seg over hele bredden */
+    color: white;
+
+   
+}
+footer h3, footer ul {
+    margin: 0 10px; /* Gir litt margin på sidene */
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+footer ul li {
+    margin: 10px 0; /* Adds space above and below each link */
+    font-size: 1rem;
+}
+
+footer h3{
+    color: #E6D5BF;
+    font-family:"Indie Flower", serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+
+}
+footer li a:hover{
+    text-decoration: underline #FEAC1C;
+    text-underline-offset: 0.4rem; 
+    transition:  0.6s ease-in-out;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 1.8;
+    margin: 0 50px;
+}
+
+
+/*Footer ends here*/
+
+
+
+
+
+
+
+
 
 
 
@@ -114,8 +495,148 @@
         transform: translate(-50%, 50%) rotate(-45deg);
     }
 
-
+    /*Media queries for index.html*/
+    
+ /*Header content starts here*/
+ .transparent-box{
+    width: 50vw;
+    height:50vw;
+    padding: 4rem 5rem 4.5rem 5rem;
 }
+
+.header-content h1{
+    font-size: 12vmin;
+    text-align: center;
+    letter-spacing: nowrap;
+    margin-bottom: 25%;
+}
+
+.btn{
+    padding: 1rem 1.5rem;
+    background-color: #43718b;
+    border-radius: 40px;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+
+a.btn{
+    font-family: "Roboto", serif;
+    font-size: 6vmin;
+    letter-spacing: 1.2px;
+}
+ /*Header content ends here*/
+
+
+ /*Main content starts here*/
+
+.row{
+    flex-direction: column;
+}
+
+.txt-first-img-second{
+    order: 1;
+}
+
+.article{
+    margin-top: 80px;
+}
+
+.article img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+.quote{
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+.quote p{
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+
+
+.camera-icon{
+    display: flex;
+    width: 15%;
+    margin: 0 auto;
+}
+
+
+.gallery-section{
+    padding-bottom: 0px;
+}
+
+
+.slide-container{
+    width: 500px;
+    height: 600px;
+    padding: 50px 15px 80px 15px;
+}
+
+
+
+
+ /*Main content ends here*/
+
+
+
+ /*Footer content starts here*/
+
+ footer{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px 0;
+
+ }
+
+ .footer-section{
+    margin: 20px auto;
+    width: 40%;
+    padding: 0 5px;
+  
+}
+
+
+footer ul li {
+    margin: 5px 0; /* Adds space above and below each link */
+    text-align: left;
+    font-size: 1rem;
+}
+
+footer a{
+    font-size: 1rem;
+}
+
+
+
+footer h3{
+    margin-bottom:20px;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+    
+}
+
+/*Footer content ends here*/
+
+/*Adjustments for mobile version ends here*/
+
+
+
+
+
+
+
 
 
 
