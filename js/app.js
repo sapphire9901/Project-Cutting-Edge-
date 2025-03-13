@@ -20,31 +20,32 @@ hamMenu.addEventListener('click', () => {
 // fade-in effect for the images
 // from https://www.youtube.com/watch?v=VplDlwLTR50
 // also added a check to only apply the reveal logic when the hamburger menu is closed
+window.addEventListener('scroll', reveal);
 
-/* SCROLLING EFFECT*/
+function reveal() {
+    if (!offScreenMenu.classList.contains('active')) {
+        var reveals = document.querySelectorAll('.reveal');
 
-window.addEventListener('scroll', reveal); /*Calls the function reveal when it detects scrolling*/
+        for (var i = 0; i < reveals.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
 
-function reveal(){
-    var reveals = document.querySelectorAll('.reveal'); /*Collects all elements from class reveal and puts them in variable reveals*/
-
-    for(var i = 0; i < reveals.length; i++){    /*Create a for-loop that will go through all reveal-elements*/
-        var windowheight = window.innerHeight;  /*Height of the browser window, the visible part*/
-        var revealtop = reveals[i].getBoundingClientRect().top; /*getBoundingClientRect returns an object containing information about
-        an element's position and size, relative to the visible screen area. So top will return the distance from the top of the elemnent
-        to the top of the viewport. The values will change as you scroll*/
-        var revealpoint = 150; 
-
-        if(revealtop < windowheight - revealpoint){ /*If the element is visible, including extra buffer (revealpoint 150px), 
-            active class (look for active in the CSS) is added*/ 
-            reveals[i].classList.add('active');
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            } 
         } 
-        else{ /*If it is out of view, active class is removed*/
-            reveals[i].classList.remove('active');
-        }/*Animation is triggered by scrolling down and reset when scrolling up*/
     }
-
 }
+
+
+function unreveal(){
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i = 0; i < reveals.length; i++) {
+        reveals[i].classList.remove('active');
+    }
+}
+
 
 
 

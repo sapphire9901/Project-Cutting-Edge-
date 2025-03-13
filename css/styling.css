@@ -535,6 +535,7 @@ footer li a:hover{
 
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
+
     .navbar img{
         margin-left: 10%;
         max-width:79%;
@@ -606,32 +607,23 @@ footer li a:hover{
     /*Media queries for index.html*/
     
     /*Header content starts here*/
+    /* css for index page starts here */
     .transparent-box{
-        width: 50vw;
-        height:50vw;
-        padding: 4rem 5rem 4.5rem 5rem;
+        width: 80vw;
+        height: 90vw;
+        padding: 2rem 3rem 2.5rem;
     }
-
-    .header-content h1{
-        font-size: 12vmin;
-        text-align: center;
-        letter-spacing: nowrap;
-        margin-bottom: 25%;
-    }
-
     .btn{
-        padding: 1rem 1.5rem;
-        background-color: #43718b;
-        border-radius: 40px;
-        color: whitesmoke;
-        white-space: nowrap;
+        padding: 1.5rem;
     }
-
+    .header-content h1{
+        font-size: 14vmin;
+        padding-bottom: 25px;
+    }
     a.btn{
-        font-family: "Roboto", serif;
-        font-size: 6vmin;
-        letter-spacing: 1.2px;
+        font-size: 7vmin;
     }
+    /* css for index page starts here */
     /*Header content ends here*/
 
 
@@ -785,6 +777,20 @@ footer li a:hover{
 
 /* iPads and Tablets */
 @media (min-width:481px) and (max-width:768px){
+    /* css for index page starts here */
+    .transparent-box{
+        width: 80vw;
+        height: 50vw;
+        padding: 4rem 5rem 4.5rem;
+    }
+    .btn{
+        padding: 1rem;
+    }
+    .header-content h1{
+        font-size: 11vmin;
+    }
+    /* css for index page starts here */
+
     .navbar {
         align-items: center;
     }
@@ -914,6 +920,18 @@ footer li a:hover{
 
 /* Medium Screens */
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    /* css for index page starts here */
+    .transparent-box{
+        width: 90vw;
+        height: 40vw;
+        padding: 4rem 5rem 4.5rem;
+    }
+    .header-content h1{
+        font-size: 11vmin;
+    }
+    /* css for index page ends here */
+    
     
     .navbar img {
         width: 250px;
