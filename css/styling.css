@@ -240,7 +240,7 @@ font-family: var(--ff-text);
 }
 
 
-/*For the gallery*/
+/*Index gallery starts here */
 
 .gallery-section{
     display: flex;
@@ -377,9 +377,35 @@ span.next:hover, span.prev:hover{
     }    
 }
 
-
-/*Index-Gallery CSS starts here*/
 /*Index-Gallery CSS ends here*/
+
+
+/* css for galleri.html starts here */
+.content_top { /* Bestemmer paragrafet under headeren */
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+} */
+/* css for galleri.html ends here */
 
 /*Pricing starts here*/
 
@@ -508,7 +534,6 @@ footer li a:hover{
 
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
-   
     .navbar img{
         margin-left: 10%;
         max-width:79%;
@@ -579,132 +604,167 @@ footer li a:hover{
 
     /*Media queries for index.html*/
     
- /*Header content starts here*/
- .transparent-box{
-    width: 50vw;
-    height:50vw;
-    padding: 4rem 5rem 4.5rem 5rem;
-}
+    /*Header content starts here*/
+    .transparent-box{
+        width: 50vw;
+        height:50vw;
+        padding: 4rem 5rem 4.5rem 5rem;
+    }
 
-.header-content h1{
-    font-size: 12vmin;
-    text-align: center;
-    letter-spacing: nowrap;
-    margin-bottom: 25%;
-}
+    .header-content h1{
+        font-size: 12vmin;
+        text-align: center;
+        letter-spacing: nowrap;
+        margin-bottom: 25%;
+    }
 
-.btn{
-    padding: 1rem 1.5rem;
-    background-color: #43718b;
-    border-radius: 40px;
-    color: whitesmoke;
-    white-space: nowrap;
-}
+    .btn{
+        padding: 1rem 1.5rem;
+        background-color: #43718b;
+        border-radius: 40px;
+        color: whitesmoke;
+        white-space: nowrap;
+    }
 
-a.btn{
-    font-family: "Roboto", serif;
-    font-size: 6vmin;
-    letter-spacing: 1.2px;
-}
- /*Header content ends here*/
-
-
- /*Main content starts here*/
-
-.row{
-    flex-direction: column;
-}
-
-.txt-first-img-second{
-    order: 1;
-}
-
-.article{
-    margin-top: 80px;
-}
-
-.article img{
-    width: 100%;
-    border-radius: 1rem;
-}
+    a.btn{
+        font-family: "Roboto", serif;
+        font-size: 6vmin;
+        letter-spacing: 1.2px;
+    }
+    /*Header content ends here*/
 
 
-.quote{
-    width: 80%;
-    justify-content: center;
-    margin: 0 auto;
-}
+    /*Main content starts here*/
+
+    .row{
+        flex-direction: column;
+    }
+
+    .txt-first-img-second{
+        order: 1;
+    }
+
+    .article{
+        margin-top: 80px;
+    }
+
+    .article img{
+        width: 100%;
+        border-radius: 1rem;
+    }
 
 
-
-.quote p{
-    font-size: 3.5rem;
-    text-align: center;
-}
+    .quote{
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
 
 
 
-.camera-icon{
-    display: flex;
-    width: 15%;
-    margin: 0 auto;
-}
-
-
-.gallery-section{
-    padding-bottom: 0px;
-}
-
-
-.slide-container{
-    width: 500px;
-    height: 600px;
-    padding: 50px 15px 80px 15px;
-}
+    .quote p{
+        font-size: 3.5rem;
+        text-align: center;
+    }
 
 
 
-
- /*Main content ends here*/
-
-
-
- /*Footer content starts here*/
-
- footer{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 50px 0;
-
- }
-
- .footer-section{
-    margin: 20px auto;
-    width: 40%;
-    padding: 0 5px;
-  
-}
+    .camera-icon{
+        display: flex;
+        width: 15%;
+        margin: 0 auto;
+    }
 
 
-footer ul li {
-    margin: 5px 0; /* Adds space above and below each link */
-    text-align: left;
-    font-size: 1rem;
-}
+    .gallery-section{
+        padding-bottom: 0px;
+    }
 
-footer a{
-    font-size: 1rem;
-}
+
+    .slide-container{
+        width: 500px;
+        height: 600px;
+        padding: 50px 15px 80px 15px;
+    }
 
 
 
-footer h3{
-    margin-bottom:20px;
-    padding-top: 20px;
-    text-align: left;
-    font-size: 1.5rem;
-}
+
+    /*Main content ends here*/
+
+
+
+    /*Footer content starts here*/
+
+    footer{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 50px 0;
+
+    }
+
+    .footer-section{
+        margin: 20px auto;
+        width: 40%;
+        padding: 0 5px;
+    
+    }
+
+
+    footer ul li {
+        margin: 5px 0; /* Adds space above and below each link */
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    footer a{
+        font-size: 1rem;
+    }
+
+
+
+    footer h3{
+        margin-bottom:20px;
+        padding-top: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+
+    /* css for galleri.html starts here */
+    .content_top p{
+        font-size: 18px;
+    }
+    .content img {
+        width: 100%; /* På svært små skjermer tar hvert bilde full bredde av containeren */
+    }
+    .content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-top: 20px;
+    }
+    .content_top {
+        width: 90%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 0 20px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
+        padding-bottom: 30px;
+        
+
+    }
+    /* css for galleri.html ends here */
 
     
 }
@@ -788,6 +848,67 @@ footer h3{
         top: 50%;
         transform: translate(-50%, 50%) rotate(-45deg);
     }
+
+    /* css for galleri.html starts here */
+
+    .content_top p{
+        font-size: 16px;
+    }
+    
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+    }
+
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 86%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        margin-bottom: 60px;
+        margin-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 20px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 30px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 20px;
+        border-radius: 5%;
+    }
+
+
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
+    }
+    /* css for galleri.html ends here */
+    
+
 }
 
 /* Medium Screens */
@@ -811,6 +932,57 @@ footer h3{
         width: 92%;
         margin-top: 30px;
     }
+
+    /* css for galleri.html starts here */
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 86%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        margin-bottom: 60px;
+        margin-top: 30px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 50px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 50px;
+        border-radius: 5%;
+    }
+
+
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
+    }
+    /* css for galleri.html ends here */
 }
 
 /* Large Screen */
@@ -819,4 +991,63 @@ footer h3{
     .nav-links{
         width: 70%;
     }
+
+    /* css for galleri.html starts here */
+    .content_top{ /* Bestemmer paragrafet under h1*/
+        margin-left: 23%;
+        margin-right: 23%;
+    }
+
+    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    .parent-container {
+    
+        width: 100%; /* Juster dette basert på ditt design */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dette sentrerer boksene vertikalt */
+    }
+    .large-box {
+        width: 84%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 40px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin-bottom: 60px;
+        margin-top: 40px;
+        padding-bottom: 60px;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center; /* Sentrerer bildene horisontalt */
+        align-items: center; /* Sentrerer bildene vertikalt */
+        gap: 60px; /* Angir mellomrom mellom bildene */
+    }
+
+    .content img {
+ 
+        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
+        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
+        height: auto; /* Bevarer bildets aspektforhold */
+        margin-top: 60px;
+        border-radius: 5%;
+    }
+
+
+    .small-box {
+        width: 40%; /* Juster disse prosentene basert på ditt behov */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 10px; /* Innvendig plass */
+        margin-bottom: 150px;
+    }
+    /* css for galleri.html ends here */
 }
+
+
+
+
