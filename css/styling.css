@@ -99,7 +99,7 @@ text-decoration: none;
 }
 
 .header-content h1{
-    font-family: var(--ff-bold);
+    font-family:"Oswald", serif;
     font-size: 12vmin;
     margin-bottom: 8%;
 }
@@ -118,24 +118,27 @@ text-decoration: none;
 
 
 a.btn{
-    font-family: "Roboto", serif;
+    font-family:"Raleway";
     font-size: 3vmin;
     letter-spacing: 1.1px;
 }
 
 
 
-h1,h2,h3{
-    font-family: var(--ff-text);
+h2{
+    font-family: "Oswald", serif;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 1em;
+    font-size: 2rem;
 }
 
 
 p{
-margin-bottom: 1em;
-font-family: var(--ff-text);
+font-size: 1.3rem;
+margin-bottom: 2rem;
+font-family: "Oswald", serif;
+line-height: 1.6;
 }
 
 
@@ -148,6 +151,7 @@ font-family: var(--ff-text);
     color: #fffff4;
     border-radius:320px;
     text-decoration: none;
+    font-size: 1.3rem;
 }
 
 .ctn:hover{
@@ -161,6 +165,7 @@ font-family: var(--ff-text);
     width:100%;
     background-color: #e6d5bf;
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .row{
@@ -219,9 +224,7 @@ font-family: var(--ff-text);
     order: 1;
 }
 
-.img-first-txt-second p{
-    color: #4b4b4b;
-}
+
 
 .article-img-reverse{
     order:2;
@@ -463,12 +466,36 @@ span.next:hover, span.prev:hover{
 }
 
 
-
 /*Pricing ends here*/
 
 /*Behandlinger starts here*/
 
 /*Behandlinger ends here*/
+
+
+/*About us starts here*/
+.about-us-header{
+    width:100wv;
+    height:100vh;
+    background-image: url('../media/omOss.html/Bakgrunnsbilde_omOss.webp');
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/*About us ends here*/
+
+
+
+
+
+
+
 
 
 
@@ -523,6 +550,11 @@ footer li a:hover{
     width: 100%;
     line-height: 1.8;
     margin: 0 50px;
+}
+
+
+ul li svg path {
+    fill: white; /* Change the color of the icons to white */
 }
 
 /*Footer ends here*/
