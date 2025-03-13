@@ -36,11 +36,14 @@ nav ul {
 
 nav li {
     height: 70px;
+    font-size: 1.5vw;
+    white-space: nowrap;
+    padding: 0 5px;
 }
 
 nav a {
     height: 130px;
-    padding: 0 25px;
+    padding: 0 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -53,14 +56,16 @@ nav li:first-child {
 
 /* Logo Styling */
 .logo {
-    height: 70px;
+    height: 60px;
     cursor: pointer;
-    width: 100px;
-    max-width: 200px;
-    margin-left: 130px;
+    width: auto;
+    max-width: 100%;
+    margin-left: 60px;
     margin-bottom: 60px;
-    transform: scale(2.5);  /* Adjust the scale for better responsiveness */
+    transform: scale(3.0);  /* Adjust the scale for better responsiveness */
     display: flex;
+    justify-content: center;
+    
 }
 
 /* Sidebar Menu */
@@ -68,7 +73,7 @@ nav li:first-child {
     display: none;
     position: fixed;
     top: 0;
-    left: 0; /* Change right: 0 to left: 0 */
+    left: 90px; /* Change right: 0 to left: 0 */
     height: 100vh;
     width: 20%;  /* Adjusted for larger screens */
     z-index: 999;
@@ -79,6 +84,9 @@ nav li:first-child {
     align-items: top;
     justify-content: center;
     transition: 0.3s ease-in-out; /* Smooth transition */
+
+    
+    
 }
 
 .sidebar.show {
@@ -93,7 +101,7 @@ nav li:first-child {
 .close-button {
     position: absolute;
     top: 20px;
-    right: 20px;  /* Adjust for better positioning */
+    left: 150px;
     cursor: pointer;
 }
 
@@ -112,11 +120,11 @@ nav li:first-child {
     display: none;
     cursor: pointer;
     padding: 0;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 20px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 700px) {
     nav {
         justify-content: center;
     }
@@ -132,6 +140,11 @@ nav li:first-child {
     .sidebar {
         width: 100%;  /* Full-width sidebar on smaller screens */
     }
+    
+   
+    
+    
+    
 }
 
 .main-title {
@@ -190,7 +203,7 @@ main h1 {
     border: none;
     padding: 12px 20px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: 0.3s;
     display: block;
@@ -198,7 +211,7 @@ main h1 {
 }
 
 #bookButton:hover {
-    background-color: #338d90;
+    background-color: #e67f26;
 }
 
 /*Styling for Behandling page*/
@@ -236,9 +249,7 @@ main h1 {
     width: 100%; /* Content (heading + paragraph) will take full width */
 }
 
-.behandlinger .category h2,
-.behandlinger .category h3,
-.behandlinger .category h4 {
+.behandlinger .category h2{
     margin-top: 0;
     padding-bottom: 50px;
     text-align: center;
@@ -303,6 +314,8 @@ main h1 {
         width: 40%; /* Allow image to take 40% of the space */
         margin-left: 20px; /* Add some space between paragraph and image */
     }
+
+    
 }
 /* Footer */
 .footer {
@@ -341,7 +354,8 @@ a {
 
 a:hover {
     text-decoration: underline;
-    text-decoration-color: #FFE5C3;
+    text-decoration-color: #e67f26;
+    
 }
 
 .footer-title {
