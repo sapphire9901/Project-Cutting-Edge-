@@ -295,11 +295,15 @@ main h1 {
 
 /* Media query for smaller screens (Mobile/Tablet) */
 @media (max-width: 768px) {
+    
+   
+
     .behandlinger .category {
         flex-direction: column; /* Stack elements vertically */
         align-items: center;
         text-align: center;
     }
+    
 
     /* Make image take full width on smaller screens and be below content */
     .category .image img {
