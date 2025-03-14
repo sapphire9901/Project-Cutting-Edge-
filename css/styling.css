@@ -410,20 +410,8 @@ span.next:hover, span.prev:hover{
     align-items: center;
 }
 
-/* .reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-}
-.reveal.active{
-    transform: translateY(0px);
-    opacity: 1;
-} */
-/* css for galleri.html ends here */
 
 /*Pricing starts here*/
-
 /* Pricing Section */
 .pricing {
     display: flex;
@@ -495,9 +483,6 @@ span.next:hover, span.prev:hover{
     align-items: center;
     justify-content: center;
 }
-
-
-
 
 /*About us ends here*/
 
@@ -787,11 +772,16 @@ ul li svg path {
 
 
     /* css for galleri.html starts here */
+    .content_top h1{
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 5% 0;
+    }
     .content_top p{
-        font-size: 18px;
+        font-size: 20px;
     }
     .content img {
-        width: 100%; /* På svært små skjermer tar hvert bilde full bredde av containeren */
+        width: 100%; 
     }
     .content {
         padding: 0 20px;
@@ -806,17 +796,14 @@ ul li svg path {
         margin-top: 20px;
     }
     .content_top {
-        width: 90%; /* Juster disse prosentene basert på ditt behov */
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        width: 90%;
+        max-width: 1500px;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.3);
         border-radius: 30px; /* Avrundede hjørner */
-        padding: 0 20px; /* Innvendig plass */
-        box-sizing: border-box; /* Inkluder padding i bredden */
-        margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
-        padding-bottom: 30px;
-        
-
+        padding: 5px 30px;
+        margin: 20px auto;
+        margin-bottom: 0;
     }
     /* css for galleri.html ends here */
 
@@ -878,7 +865,7 @@ ul li svg path {
         flex-direction: column;
     }
     .nav-links li a { 
-        font-size: 30px;
+        font-size: 22px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .nav-links li{
@@ -924,31 +911,37 @@ ul li svg path {
         transform: translate(-50%, 50%) rotate(-45deg);
     }
 
-    /* css for galleri.html starts here */
 
+
+
+    /* css for galleri.html starts here */
+    .content_top h1{
+        font-size: 32px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10% 0;
+    }
     .content_top p{
-        font-size: 16px;
+        font-size: 18px;
     }
     
-    .content_top{ /* Bestemmer paragrafet under h1*/
+    .content_top{ 
         margin-left: 10%;
         margin-right: 10%;
-        margin-bottom: 3%;
     }
 
-    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
+    /* White transparent boxes */
     .parent-container {
-        width: 100%; /* Juster dette basert på ditt design */
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Dette sentrerer boksene vertikalt */
+        align-items: center;
     }
     .large-box {
-        width: 86%; /* Juster disse prosentene basert på ditt behov */
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
+        width: 86%;
+        max-width: 1500px;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.3); 
+        border-radius: 30px;
         margin-bottom: 60px;
         margin-top: 30px;
         padding-left: 15px;
@@ -959,16 +952,16 @@ ul li svg path {
 
     .content {
         display: flex;
-        justify-content: center; /* Sentrerer bildene horisontalt */
-        align-items: center; /* Sentrerer bildene vertikalt */
-        gap: 20px; /* Angir mellomrom mellom bildene */
+        justify-content: center;
+        align-items: center;
+        gap: 5%; /* Gap between images*/
     }
 
     .content img {
         flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
         max-width: calc(33.333% - 30px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
         height: auto; /* Bevarer bildets aspektforhold */
-        margin-top: 20px;
+        margin-top: 5%;
         border-radius: 5%;
     }
 
@@ -1021,6 +1014,14 @@ ul li svg path {
     }
 
     /* css for galleri.html starts here */
+    .content_top h1{
+        font-size: 37px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10% 0;
+    }
+    .content_top p{
+        font-size: 22px;
+    }
     .content_top{ /* Bestemmer paragrafet under h1*/
         margin-left: 15%;
         margin-right: 15%;
@@ -1080,6 +1081,16 @@ ul li svg path {
     }
 
     /* css for galleri.html starts here */
+
+    .content_top h1{
+        font-size: 42px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 9% 0;
+    }
+    .content_top p{
+        font-size: 24px;
+    }
+
     .content_top{ /* Bestemmer paragrafet under h1*/
         margin-left: 23%;
         margin-right: 23%;
