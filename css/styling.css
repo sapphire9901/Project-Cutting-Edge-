@@ -567,6 +567,7 @@ ul li svg path {
 
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
+    /* navbar and hamburger menu mobile view starts here */
     .navbar{
         height: 100%;
     }
@@ -576,9 +577,7 @@ ul li svg path {
         max-width:79%;
         height: auto;
     }
-    
-    /*Hamburger menu*/
-    /*https://www.youtube.com/watch?v=aNDqzlAKmZc*/
+    /* code for ham-menu is from this video https://www.youtube.com/watch?v=aNDqzlAKmZc */
     .nav-links{
         background-color: #718080;
         height: 100vh;
@@ -596,7 +595,6 @@ ul li svg path {
         transition: .3s ease;
     }
     .nav-links ul {
-        /* add styling av utssende for lenkene her!*/
         flex-direction: column;
     }
     .nav-links li a { 
@@ -647,6 +645,7 @@ ul li svg path {
         top: 50%;
         transform: translate(-50%, 50%) rotate(-45deg);
     }
+    /* navbar and hamburger menu mobile view ends here */
 
 
 
@@ -788,10 +787,7 @@ ul li svg path {
         display: flex;
         flex-direction: column;
     }
-    .content img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .content img {  
         border-radius: 40px;
         margin-top: 20px;
     }
@@ -800,10 +796,43 @@ ul li svg path {
         max-width: 1500px;
         height: auto; 
         background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 30px; /* Avrundede hjørner */
+        border-radius: 30px;
         padding: 5px 30px;
         margin: 20px auto;
         margin-bottom: 0;
+    }
+    .parent-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .small-box {
+        width: 90%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 3%;
+        padding-bottom: 8%;
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+    .small-box .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .small-box .content a{
+        margin: 2%;
+    }
+    .small-box h2{
+        font-size: 28px;
+    }
+    .content a{
+        font-size: 20px;
+    }
+    .content h2{
+        font-size: 28px;
+        margin-top: 10px;
+        margin-bottom: 17px;
     }
     /* css for galleri.html ends here */
 
@@ -837,13 +866,16 @@ ul li svg path {
     .header-content h1{
         font-size: 11vmin;
     }
-    /* css for index page starts here */
+    /* css for index page ends here */
 
+
+
+    /* navbar and hamburger menu for ipad/tablets starts here */
     .navbar {
         align-items: center;
     }
 
-    /*https://www.youtube.com/watch?v=aNDqzlAKmZc*/
+    /* code for ham-menu is from this video https://www.youtube.com/watch?v=aNDqzlAKmZc */
     .nav-links{
         background-color: #718080;
         height: 100vh;
@@ -861,7 +893,6 @@ ul li svg path {
         transition: .3s ease;
     }
     .nav-links ul {
-        /* add styling av utssende for lenkene her!*/
         flex-direction: column;
     }
     .nav-links li a { 
@@ -910,6 +941,7 @@ ul li svg path {
         top: 50%;
         transform: translate(-50%, 50%) rotate(-45deg);
     }
+    /* navbar and hamburger menu for ipad/tablets ends here */
 
 
 
@@ -936,18 +968,18 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
     }
+    /* holding content_top and all of the images */
     .large-box {
         width: 86%;
         max-width: 1500px;
         height: auto; 
         background-color: rgba(255, 255, 255, 0.3); 
         border-radius: 30px;
-        margin-bottom: 60px;
+        margin-bottom: 25px;
         margin-top: 30px;
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 60px;
-
     }
 
     .content {
@@ -958,21 +990,31 @@ ul li svg path {
     }
 
     .content img {
-        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
-        max-width: calc(33.333% - 30px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
-        height: auto; /* Bevarer bildets aspektforhold */
+        flex: 1 0 calc(33.333% - 60px); /* we measure width, -60px because of the gaps */
+        max-width: calc(33.333% - 60px); /* we make sure the image do not exceed this width */
+        height: auto;  /* hight is adjusted by width */
         margin-top: 5%;
         border-radius: 5%;
     }
 
 
     .small-box {
-        width: 40%; /* Juster disse prosentene basert på ditt behov */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 10px; /* Innvendig plass */
-        margin-bottom: 150px;
+        width: 70%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 5%;
+        margin-bottom: 50px;
+    }
+    .small-box .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .small-box .content a{
+        margin: 2%;
+    }
+    .small-box h2{
+        font-size: 28px;
     }
     /* css for galleri.html ends here */
     
@@ -1022,24 +1064,22 @@ ul li svg path {
     .content_top p{
         font-size: 22px;
     }
-    .content_top{ /* Bestemmer paragrafet under h1*/
+    .content_top{
         margin-left: 15%;
         margin-right: 15%;
     }
-
-    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
     .parent-container {
-        width: 100%; /* Juster dette basert på ditt design */
+        width: 100%; 
         display: flex;
         flex-direction: column;
-        align-items: center; /* Dette sentrerer boksene vertikalt */
+        align-items: center;
     }
     .large-box {
-        width: 86%; /* Juster disse prosentene basert på ditt behov */
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
+        width: 86%; 
+        max-width: 1500px;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
         margin-bottom: 60px;
         margin-top: 30px;
         padding-bottom: 60px;
@@ -1048,27 +1088,35 @@ ul li svg path {
 
     .content {
         display: flex;
-        justify-content: center; /* Sentrerer bildene horisontalt */
-        align-items: center; /* Sentrerer bildene vertikalt */
-        gap: 50px; /* Angir mellomrom mellom bildene */
+        justify-content: center;
+        align-items: center; 
+        gap: 40px;
     }
 
     .content img {
-        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
-        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
-        height: auto; /* Bevarer bildets aspektforhold */
-        margin-top: 50px;
+        flex: 1 0 calc(33.333% - 60px); /* we measure width, -60px because of the gaps */
+        max-width: calc(33.333% - 60px); /* we make sure the image do not exceed this width */
+        height: auto;  /* hight is adjusted by width */
+        margin-top: 40px;
         border-radius: 5%;
     }
 
-
     .small-box {
-        width: 40%; /* Juster disse prosentene basert på ditt behov */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 10px; /* Innvendig plass */
-        margin-bottom: 150px;
+        width: 70%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 8%;
+        margin-bottom: 70px;
+    }
+    .small-box .content {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+    }
+    .small-box h2{
+        font-size: 32px;
+        margin-bottom: 9px;
     }
     /* css for galleri.html ends here */
 }
@@ -1081,67 +1129,70 @@ ul li svg path {
     }
 
     /* css for galleri.html starts here */
-
     .content_top h1{
         font-size: 42px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        padding: 9% 0;
+        padding-top: 8%;
+        padding-bottom: 4%;
     }
     .content_top p{
         font-size: 24px;
     }
 
-    .content_top{ /* Bestemmer paragrafet under h1*/
+    .content_top{
         margin-left: 23%;
         margin-right: 23%;
     }
 
-    /* Seksjoner i galleriet med de to gjennomsiktige boksene og innhold **************************/
     .parent-container {
-    
-        width: 100%; /* Juster dette basert på ditt design */
+        width: 100%; 
         display: flex;
         flex-direction: column;
-        align-items: center; /* Dette sentrerer boksene vertikalt */
+        align-items: center; 
     }
     .large-box {
-        width: 84%; /* Juster disse prosentene basert på ditt behov */
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 40px; /* Innvendig plass */
-        box-sizing: border-box; /* Inkluder padding i bredden */
+        width: 84%; 
+        max-width: 1500px; 
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.3); 
+        border-radius: 30px;
+        padding: 40px; 
         margin-bottom: 60px;
         margin-top: 40px;
         padding-bottom: 60px;
-
     }
 
     .content {
         display: flex;
-        justify-content: center; /* Sentrerer bildene horisontalt */
-        align-items: center; /* Sentrerer bildene vertikalt */
-        gap: 60px; /* Angir mellomrom mellom bildene */
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
     }
 
     .content img {
  
-        flex: 1 0 calc(33.333% - 60px); /* Beregner bredde, trekker fra 60px for gap */
-        max-width: calc(33.333% - 60px); /* Sørger for at bildet ikke overstiger sin beregnede bredde */
-        height: auto; /* Bevarer bildets aspektforhold */
+        flex: 1 0 calc(33.333% - 60px);
+        max-width: calc(33.333% - 60px);
+        height: auto;
         margin-top: 60px;
         border-radius: 5%;
     }
-
-
     .small-box {
-        width: 40%; /* Juster disse prosentene basert på ditt behov */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 10px; /* Innvendig plass */
-        margin-bottom: 150px;
+        width: 50%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 5rem 2rem;
+        margin-bottom: 70px;
+    }
+    .small-box .content {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+    }
+    .small-box h2{
+        font-size: 38px;
+        margin-bottom: 9px;
     }
     /* css for galleri.html ends here */
 }
