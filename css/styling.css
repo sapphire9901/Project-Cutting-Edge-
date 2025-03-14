@@ -64,9 +64,19 @@ body{
 .navbar li a:hover {
     text-decoration: underline #FFD3AC;
 }
-
 /*navbar ends here*/
 
+/* when hamburger menu is open, we do not want scrolling available */
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+}
+.no-scroll .ham-menu {
+    position: fixed; 
+    top: 30px; 
+    right: 20px; 
+}
 
 
 /*Main banner*/
@@ -604,6 +614,13 @@ ul li svg path {
         /* add styling av utssende for lenkene her!*/
         flex-direction: column;
     }
+    .nav-links li a { 
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .nav-links li{
+        padding: 5%;
+    }
     .nav-links.active {
         right: 0;
     }
@@ -645,6 +662,8 @@ ul li svg path {
         top: 50%;
         transform: translate(-50%, 50%) rotate(-45deg);
     }
+
+
 
     /*Media queries for index.html*/
     
@@ -857,6 +876,13 @@ ul li svg path {
     .nav-links ul {
         /* add styling av utssende for lenkene her!*/
         flex-direction: column;
+    }
+    .nav-links li a { 
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .nav-links li{
+        padding: 4%;
     }
     .nav-links.active {
         right: 0;

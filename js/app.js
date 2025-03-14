@@ -1,19 +1,21 @@
 // hamburger menu
 // from https://www.youtube.com/watch?v=aNDqzlAKmZc
+// also added a no-scroll when hamburger menu is active
 const hamMenu = document.querySelector('.ham-menu');
-
 const offScreenMenu = document.querySelector('.nav-links');
+const body = document.body;  // Variable to get access to the body element
 
 hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     offScreenMenu.classList.toggle('active');
-    if(offScreenMenu.classList.contains('active')){ // added a check to see if hamburger menu is open
-        unreveal(); // if it is open, we want to unreveal the images
-    }
-    else{
+
+    if(offScreenMenu.classList.contains('active')) {
+        unreveal();  // Deactivation of the revealing of images
+        body.classList.add('no-scroll');  // We do not want the page to be scrollable when ham is open
+    } else {
         reveal();
+        body.classList.remove('no-scroll');  // Else remove no-scroll, and images can be revealed
     }
-    
 })
 
 
