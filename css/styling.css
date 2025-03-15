@@ -437,32 +437,58 @@ span.next:hover, span.prev:hover{
     margin-bottom: 10px;
 }
 
-.pricing .category {
-    background-color: rgba(255, 255, 255, 0.6);
+.pricing .category_box {
+    background-color: rgba(255, 255, 255, 0.7); /* Hvit med 30% gjennomsiktighet */
+    border-radius: 30px; /* Avrundede hjørner */
+    /*background-color: rgba(255, 255, 255, 0.6);
+    */
     padding: 60px 1px;
     width: 100%;
     max-width: 1000px;
+    /*
     border-radius: 15px;
+    */
     margin-bottom: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: black;
 }
-.category ul {
+.category_box ul {
     list-style: none;
     padding: 0;
 }
 
-.category li {
+.category_box li {
     font-size: 20px;
     padding: 10px 20%;
     display: flex;
     justify-content: space-between;
 }
 
-.category li span {
+.category_box li span {
     margin-right: 0;
     padding: 0;
+}
+
+.pricing_btn{
+    padding: 1.25rem 6.25rem;
+    background-color: #43718b;
+    border-radius: 40px;
+    color: whitesmoke;
+    transition: background-color 0.5s ease; /* Add transition for background color */
+    text-decoration: none;
+}
+
+.pricing_btn:hover{
+   background-color:#ee751c;
+}
+
+
+a.pricing_btn{
+    font-family:"Raleway";
+    font-size: 3vmin;
+    letter-spacing: 1.1px;
+    text-decoration: none;
 }
 
 
