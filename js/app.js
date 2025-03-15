@@ -12,9 +12,11 @@ hamMenu.addEventListener('click', () => {
     if(offScreenMenu.classList.contains('active')) {
         unreveal();  // Deactivation of the revealing of images
         body.classList.add('no-scroll');  // We do not want the page to be scrollable when ham is open
+        content_kontakt_map.classList.add('background-effect'); // map fades away when ham menu opens
     } else {
         reveal();
         body.classList.remove('no-scroll');  // Else remove no-scroll, and images can be revealed
+        content_kontakt_map.classList.remove('background-effect');
     }
 })
 
@@ -69,24 +71,13 @@ window.addEventListener('load', updateClass);
 window.addEventListener('resize', updateClass);
 
 
-
-
-
-function updateMap() {
-    var elements = document.querySelectorAll('.map_reveal');
-    if (window.innerWidth >= 320 && window.innerWidth <= 768) { // Size for mobile and tablet view
-        elements.forEach(function(element) {
-            element.classList.add('reveal'); // Adds the elements to the 'reveal' class
-        });
-    } else {
-        elements.forEach(function(element) {
-            element.classList.remove('reveal'); // Remove the elements from the reveal class
-        });
+// We want the ham-menu to close if the screen is resized
+window.addEventListener('resize', function() {
+    if(offScreenMenu.classList.contains('active')) {
+        hamMenu.click();
     }
-}
-//The function is called every time the page is loaded or resized
-window.addEventListener('load', updateMap);
-window.addEventListener('resize', updateMap);
+});
+
 
 
 
@@ -183,7 +174,7 @@ function switchImage(currentImage){
 }
 
 
-/******* I have to check into this more, but it works for no  *****/
+/******* I have to check into this more, but it works for now  *****/
 // Map
 function initMap() {
     var center = {lat: 60.39360, lng: 5.33260}; // Coordinates for S7vende hårsalong

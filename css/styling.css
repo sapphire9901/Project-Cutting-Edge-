@@ -42,10 +42,10 @@ body{
 }
 
 .nav-links ul{
-    max-width: 2000px; /* Begrenser maksimal bredde for store skjermer */
+    max-width: 2000px;
     display: flex;
     justify-content: space-around;
-    align-items: center; /* Sentrerer elementene vertikalt */
+    align-items: center; 
     width: 100%;
 }
 
@@ -559,6 +559,11 @@ ul li svg path {
 
 
 
+/* used to hide map */
+.background-effect{
+    opacity: 0;  
+    transition: all 0.3s ease;
+}
 
 
 
@@ -1097,8 +1102,6 @@ ul li svg path {
         border-radius: 30px;
         margin-bottom: 25px;
         margin-top: 30px;
-        padding-left: 15px;
-        padding-right: 15px;
         padding-bottom: 60px;
     }
 
@@ -1107,6 +1110,7 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         gap: 5%; /* Gap between images*/
+        width: 100%;
     }
 
     .content img {
@@ -1184,7 +1188,7 @@ ul li svg path {
         margin-bottom: 6.5rem;
     }
     #content_kontakt_map {
-        flex-grow: 1; /* Tar opp all ledig plass */
+        flex-grow: 1;
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1211,16 +1215,13 @@ ul li svg path {
     }
     .direction_buttons{
         display: flex;
-        justify-content: center; /* Center horizontally */
+        justify-content: center;
         margin-top: 10px;
         margin-bottom: 25px;
     }
     .direction_buttons .btn{
         padding: 1.25rem 6rem;
     }
-    /* css for kontakt.html ends here */
-    
-
 }
 
 /* Medium Screens */
