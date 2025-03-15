@@ -71,6 +71,25 @@ window.addEventListener('resize', updateClass);
 
 
 
+
+function updateMap() {
+    var elements = document.querySelectorAll('.map_reveal');
+    if (window.innerWidth >= 320 && window.innerWidth <= 768) { // Size for mobile and tablet view
+        elements.forEach(function(element) {
+            element.classList.add('reveal'); // Adds the elements to the 'reveal' class
+        });
+    } else {
+        elements.forEach(function(element) {
+            element.classList.remove('reveal'); // Remove the elements from the reveal class
+        });
+    }
+}
+//The function is called every time the page is loaded or resized
+window.addEventListener('load', updateMap);
+window.addEventListener('resize', updateMap);
+
+
+
  /*GALLERY-SLIDER*/
 
  /*Access the images*/
