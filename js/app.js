@@ -164,23 +164,24 @@ function switchImage(currentImage){
 }
 
 
+/******* I have to check into this more, but it works for no  *****/
 // Map
 function initMap() {
-    var center = {lat: 60.39360, lng: 5.33260}; // Koordinater for S7vende hårsalong
+    var center = {lat: 60.39360, lng: 5.33260}; // Coordinates for S7vende hårsalong
     var mapOptions = {
         zoom: 14,
         center: center
     };
 
-    var mapElement = document.getElementById('white_box_two_kontakt');
+    var mapElement = document.getElementById('content_kontakt_map');
 
-    // Oppretter kartet
+    // Creates map
     var map = new google.maps.Map(mapElement, mapOptions);
 
-    // Legger til en markør på kartet
+    // Adds pin
     var marker = new google.maps.Marker({
-        position: center, // Bruker samme koordinater som senteret for kartet
-        map: map, // Definerer hvilket kart markøren skal vises på
-        title: 'S7vende Hårsalong' // Tekst som vises når man holder musen over markøren
+        position: center,
+        map: map, 
+        title: 'S7vende Hårsalong' // text that shows when pin is hovered
     });
 }
