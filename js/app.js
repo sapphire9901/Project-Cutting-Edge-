@@ -164,3 +164,23 @@ function switchImage(currentImage){
 }
 
 
+// Map
+function initMap() {
+    var center = {lat: 60.39360, lng: 5.33260}; // Koordinater for S7vende hårsalong
+    var mapOptions = {
+        zoom: 14,
+        center: center
+    };
+
+    var mapElement = document.getElementById('white_box_two_kontakt');
+
+    // Oppretter kartet
+    var map = new google.maps.Map(mapElement, mapOptions);
+
+    // Legger til en markør på kartet
+    var marker = new google.maps.Marker({
+        position: center, // Bruker samme koordinater som senteret for kartet
+        map: map, // Definerer hvilket kart markøren skal vises på
+        title: 'S7vende Hårsalong' // Tekst som vises når man holder musen over markøren
+    });
+}
