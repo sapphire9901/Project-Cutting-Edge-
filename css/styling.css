@@ -774,11 +774,11 @@ ul li svg path {
         align-items: center;
         text-align: center;
         transition: .3s ease;
-        z-index: 3;
+    
     }
     .nav-links ul {
         flex-direction: column;
-        gap:15px;
+        gap:20px;
     }
 
     .nav-links li a{
@@ -787,11 +787,8 @@ ul li svg path {
     }
 
     .nav-links li a { 
-        font-size: 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .nav-links li{
-        padding: 5%;
+        font-size: 2rem;
+        font-family: "DM Serif Text", serif;
     }
 
     .nav-links.active {
@@ -815,7 +812,7 @@ ul li svg path {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s ease;
-        z-index: 4;
+        
     }
     /* menu ham lines */
     .ham-menu span:nth-child(1) {
@@ -1244,7 +1241,7 @@ ul li svg path {
         text-align: center;
         font-size: 3rem;
         transition: .3s ease;
-        z-index: 3;
+  
 
     }
     .nav-links ul {
@@ -1278,7 +1275,7 @@ ul li svg path {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s ease;
-        z-index: 4;
+
     }
     .ham-menu span:nth-child(1) {
         top: 25%;
@@ -1835,7 +1832,6 @@ ul li svg path {
   
     .nav-links{
         width: 70%;
-        z-index: 3;
 
     }
 
