@@ -62,7 +62,9 @@ body{
 }
 
 .navbar li a:hover {
-    text-decoration: underline #FFD3AC;
+    text-decoration: underline #FFD3AC;  
+    text-underline-offset: 7px;
+    transition: text-decoration-color 0.5s ease-in-out;
 }
 /*navbar ends here*/
 
@@ -186,7 +188,7 @@ line-height: 1.6;
     margin: 0 auto; /*Centers the content*/
     justify-content: space-between;
     background-color: #e6d5bf;
-    gap: 100px; /*Space between elements*/
+    gap: 50px; /*Space between elements*/
 }
 
 
@@ -204,11 +206,17 @@ line-height: 1.6;
     font-family: "Oooh Baby", cursive;
 }
 
+.inspo{
+    width:100%;
+    background-color: #e6d5bf;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+
 
 .camera-icon{
-    bottom: 40px;
     display: flex;
-    width: 100%;
     justify-content: center;
 }
 
@@ -264,47 +272,68 @@ line-height: 1.6;
     justify-content: center;
     align-items: center;
     background-image: url('../media/index.html/Bakgrunn_bak_galleri.webp');
+    background-repeat: no-repeat;
     padding-bottom: 100px;
 }
 
 .slide-container{
     position: relative;
     width: 600px;
-    height: 700px;
+    height: 830px;
     border: 3px solid #e6d5bf;
     box-shadow: 0 0 8px 2px rgba(0,0,0,0.1); /*Some shadow around the border of the slider*/
     background-color: #fff;
-    padding: 50px 30px 100px 30px;
-}
-
-.slide-container .slides{
-    width:100%;
-    height: calc(100% - 40px);
-    position: relative;
     overflow: hidden;
 }
 
+.slide-container .slides .card{
+    position:absolute;
+    width: 84%;
+    height: 80%;
+    margin: 50px;
+    top: -50px;
+    padding-top:70px;
+}
 
-.slide-container .slides img{
+
+.slide-container .slides .card img{
     width: 100%;
     height: 100%;
-    position: absolute;
     object-fit: cover;
 }
 
 
-.slide-container .slides img:not(.active){
-    top: 0;
+.slide-container .slides .card:not(.active){
     left: -100%;
 }
+
+
+.caption{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: bold;
+    bottom: -45px;
+    background-image: url('../media/index.html/etikett.webp');
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 span.next, span.prev{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 14px;
-    color: #eee;
-    font-size: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    color: #222;
+    font-size: 50px;
     font-weight: bold;
     transition: 0.5s;
     border-radius: 3px;
@@ -324,12 +353,12 @@ span.prev{
 span.next:hover, span.prev:hover{
     background-color: #ffffff;
     opacity: 0.8;
-    color: #222;
+    color: #ee751c;
 }
 
 .dotsContainer{
     position: absolute;
-    bottom: 60px;
+    top: 730px;
     z-index: 3;
     left: 50%;
     transform: translateX(-50%); 
@@ -499,23 +528,142 @@ a.pricing_btn{
 
 
 /*About us starts here*/
-.about-us-header{
+
+.about-us-section{
     width:100wv;
     height:100vh;
-    background-image: url('../media/omOss.html/Bakgrunnsbilde_omOss.webp');
-    background-position: top;
-    background-size: cover;
+    background-color:#e6d5bf;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+.about-us-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto; /*Centers the content*/
+    background-color: #e6d5bf;
+    position: relative;
+}
+
+.about-us-box img{
+    width:55%;
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+}
+
+
+.colorful-decor-box{
+    background-color: #718080;
+    width: 60%;
+    height: 100%;
+    position:absolute;
+    top:80px;
+    left:10px;
+    z-index: 1; /*Puts it behind*/
+    border-radius: 25px;
+}
+
+.about-us-title{
+    font-size: 5rem;
+    font-family: "DM Serif Text", serif;
+    text-align: center;
+    z-index: 2;
+    margin-left:90px;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
+}
+
 /*About us ends here*/
 
 
+/*Bestill time - starts here*/
+
+.txt-box{
+    background-color: #f3eae0;
+    width: 660px;
+    height: 400px;
+    padding: 45px;
+    padding-top:100px;
+    border-radius: 25px;
+}
+
+.txt-box h2{
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", serif;
+}
+
+
+.row .txt-first-img-second-with-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+
+.telephone-txt{
+    margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+}
+
+.phone-number{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.dtn{
+    max-width: fit-content;
+    padding: 10px 30px;
+    background-color: #43718b;
+    color: #fffff4;
+    border-radius:320px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.dtn:hover{
+    background-color: #ee751c; /*Changing background color when hovered*/
+    transition: background-color 0.6s ease-in-out;
+   
+}
+
+
+.faq{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.faq-txt{
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+
+
+.faq-h2{
+    font-family: "DM Serif Text", serif;
+    text-align: center;
+    font-size: 2.5rem;
+}
 
 
 
+/*Bestill time - ends here*/
 
 
 
@@ -575,6 +723,9 @@ footer li a:hover{
 }
 
 
+
+
+
 ul li svg path {
     fill: white; /* Change the color of the icons to white */
 }
@@ -622,12 +773,19 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 3rem;
         transition: .3s ease;
+        z-index: 3;
     }
     .nav-links ul {
         flex-direction: column;
+        gap:15px;
     }
+
+    .nav-links li a{
+        font-size: 2rem;
+        font-family: "DM Serif Text", serif;
+    }
+
     .nav-links li a { 
         font-size: 30px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -635,6 +793,7 @@ ul li svg path {
     .nav-links li{
         padding: 5%;
     }
+
     .nav-links.active {
         right: 0;
     }
@@ -656,6 +815,7 @@ ul li svg path {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s ease;
+        z-index: 4;
     }
     /* menu ham lines */
     .ham-menu span:nth-child(1) {
@@ -707,6 +867,7 @@ ul li svg path {
 
     .row{
         flex-direction: column;
+        width: 90%;
     }
 
     .txt-first-img-second{
@@ -744,22 +905,109 @@ ul li svg path {
         margin: 0 auto;
     }
 
-
-    .gallery-section{
-        padding-bottom: 0px;
-    }
-
-
+  
     .slide-container{
-        width: 500px;
+        width: 370px;
         height: 600px;
-        padding: 50px 15px 80px 15px;
+        background-color: #ffffff;
+    }
+
+    
+    .slide-container .slides{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    
+    .slide-container .slides .card{
+        width: 75%;
+        height: auto;
     }
 
 
+    .slide-container .slides .card.active {
+    left: 0;
+}
+
+   
+    .dotsContainer{
+        top: 550px;
+    }
+    
+
+    span.next, span.prev{
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    span.next{
+        right: 0px;
+    }
+    
+    span.prev{
+        left: 0px;
+    }
 
 
+    .caption{
+        padding: 5px;
+        font-size: 1.4rem;
+    }
+    
     /*Main content ends here*/
+
+
+    /*About Us adjustsments here*/
+    
+.about-us-section{
+   width:100%;
+   height: 70vh;
+}
+
+    
+.about-us-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-box img{
+    width:100%;
+}
+
+
+.colorful-decor-box{
+    width: 70%;
+    height: 60%;
+    position:absolute;
+    left: -10px;
+    z-index: 1; /*Puts it behind*/
+}
+
+.about-us-title{
+    font-size: 3rem;
+    z-index: 2;
+    top:100px;
+    text-align: center;
+    margin-left:10px;
+
+}
+
+/*Adjustsments for bestill-side*/
+
+.faq-h2{
+    font-size: 2.5rem;
+}
+
+.txt-box{
+    background-color: #f3eae0;
+    width: 350px;
+    height: 450px;
+    padding: 45px;
+    border-radius: 25px;
+}
+
 
 
 
@@ -791,8 +1039,6 @@ ul li svg path {
         font-size: 1rem;
     }
 
-
-
     footer h3{
         margin-bottom:20px;
         padding-top: 20px;
@@ -801,6 +1047,7 @@ ul li svg path {
     }
     /*Footer content ends here*/
 
+    /*footer content ends here*/
 
     /* css for galleri.html starts here */
     .content_top h1{
@@ -958,13 +1205,6 @@ ul li svg path {
 
 
 
-
-
-
-
-
-
-
 /* iPads and Tablets */
 @media (min-width:481px) and (max-width:768px){
     /* css for index page starts here */
@@ -1004,6 +1244,8 @@ ul li svg path {
         text-align: center;
         font-size: 3rem;
         transition: .3s ease;
+        z-index: 3;
+
     }
     .nav-links ul {
         flex-direction: column;
@@ -1036,6 +1278,7 @@ ul li svg path {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: .3s ease;
+        z-index: 4;
     }
     .ham-menu span:nth-child(1) {
         top: 25%;
@@ -1166,6 +1409,80 @@ ul li svg path {
         font-size: 28px;
     }
     /* css for galleri.html ends here */
+
+    /*Adjustsments for bestill-time*/
+    .txt-box{
+        width: 600px;
+    }
+
+
+
+    /*Footer adjustsments starts here*/
+    footer{
+        display:flex;
+        flex-direction: row;
+        padding: 0 50px;
+
+    }
+
+    .footer-section{
+        margin: 20px auto;
+        width: 40%;
+        padding: 0 5px;
+    
+    }
+
+
+    footer ul li {
+        margin: 5px 0; /* Adds space above and below each link */
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    footer a{
+        font-size: 1rem;
+    }
+
+    footer h3{
+        margin-bottom:20px;
+        padding-top: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    /*Footer adjustsments ends here*/
+
+    /*Adjustments for article*/
+
+    .row{
+        flex-direction: column;
+    }
+
+    .txt-first-img-second{
+        order: 1;
+    }
+
+    .article{
+        margin-top: 80px;
+    }
+
+    .article img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+
+    .quote{
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+
+
+    .quote p{
+        font-size: 3.5rem;
+        text-align: center;
+    }
 
 
     /* css for kontakt.html starts here */
@@ -1388,6 +1705,41 @@ ul li svg path {
     /* css for galleri.html ends here */
 
 
+    
+    /*Adjustments for article*/
+
+    .row{
+        flex-direction: column;
+    }
+
+    .txt-first-img-second{
+        order: 1;
+    }
+
+    .article{
+        margin-top: 80px;
+    }
+
+    .article img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+
+    .quote{
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+
+
+    .quote p{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+
     /* css for kontakt.html starts here */
     .parent_container_kontakt{
         display: flex;
@@ -1466,13 +1818,25 @@ ul li svg path {
 
     }
     /* css for kontakt.html ends here */
+
 }
+
+
+
+
+
+
+
+
+
 
 /* Large Screen */
 @media (min-width: 1025px) {
   
     .nav-links{
         width: 70%;
+        z-index: 3;
+
     }
 
     /* css for galleri.html starts here */

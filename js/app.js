@@ -84,7 +84,7 @@ window.addEventListener('resize', function() {
  /*GALLERY-SLIDER*/
 
  /*Access the images*/
- let slideImages = document.querySelectorAll('.slides img');
+ let slideImages = document.querySelectorAll('.slides .card');
 
  /*Access the next and prev buttons*/
  let next = document.querySelector('.next');
@@ -125,6 +125,7 @@ function slidePrev(){
 }
 
 
+
 /*Auto sliding*/
 function autoSliding(){
     deletInterval = setInterval(timer,3000);
@@ -152,23 +153,24 @@ function indicators(){
     dots[counter].className += ' active';
 }
 
+
 /*Add click event to indicators */
 
 function switchImage(currentImage){
     currentImage.classList.add('active');
     var imageId = currentImage.getAttribute('attr');
     if(imageId > counter){
-        slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'next1 0.7s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'next2 0.7s ease-in forwards';
     } 
     else if(imageId == counter){
         return;
     }
     else{
-        slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'prev1 0.7s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'prev2 0.7s ease-in forwards';
     }
     indicators();
 }
