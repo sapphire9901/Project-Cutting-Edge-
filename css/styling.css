@@ -781,13 +781,9 @@ ul li svg path {
         gap:20px;
     }
 
-    .nav-links li a{
-        font-size: 2rem;
-        font-family: "DM Serif Text", serif;
-    }
 
     .nav-links li a { 
-        font-size: 1.7rem;
+        font-size: 2rem;
         font-family: "DM Serif Text", serif;
 
     }
