@@ -607,7 +607,7 @@ ul li svg path {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .nav-links li{
-        padding: 5%;
+        padding: 3%;
     }
     .nav-links.active {
         right: 0;
@@ -865,7 +865,7 @@ ul li svg path {
         padding: 2rem 2rem;
         margin-top: 20px;
     }
-    .white_box_two_kontakt #content_kontakt_map {
+    .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
@@ -886,9 +886,6 @@ ul li svg path {
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 30px;
-    }
-    #content_kontakt_map {
-        flex-grow: 1; /* Tar opp all ledig plass */
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1165,7 +1162,7 @@ ul li svg path {
         padding: 2rem 2rem;
         margin-bottom: 25px;
     }
-    .white_box_two_kontakt #content_kontakt_map {
+    .white_box_two_kontakt iframe {
         width: 80%;
         height: 15rem;
         border-radius: 30px;
@@ -1186,9 +1183,6 @@ ul li svg path {
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 6.5rem;
-    }
-    #content_kontakt_map {
-        flex-grow: 1;
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1383,7 +1377,7 @@ ul li svg path {
         padding: 2rem 2rem;
         height: 19rem;
     }
-    .white_box_two_kontakt #content_kontakt_map{
+    .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
@@ -1538,7 +1532,8 @@ ul li svg path {
         padding: 2rem 2rem;
         height: 22rem;
     }
-    .white_box_two_kontakt #content_kontakt_map{
+    .white_box_two_kontakt iframe{
+        width: 100%;
         height: 22rem;
         border-radius: 30px;
     }
