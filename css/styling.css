@@ -774,11 +774,15 @@ ul li svg path {
         align-items: center;
         text-align: center;
         transition: .3s ease;
-    
+        z-index: 3;
+        overflow-y: auto;
     }
     .nav-links ul {
         flex-direction: column;
         gap:20px;
+        overflow-y: auto;
+        padding-top: 15vw;
+        padding-bottom: 15vw;
     }
 
 
@@ -798,6 +802,7 @@ ul li svg path {
         margin-left: auto;
         position: relative;
         margin-right: 2rem;
+        z-index: 4;
     }
     .ham-menu span {
         height: 5px;
@@ -1234,11 +1239,14 @@ ul li svg path {
         text-align: center;
         font-size: 3rem;
         transition: .3s ease;
-  
-
+        z-index: 3;
+        overflow-y: auto;
     }
     .nav-links ul {
         flex-direction: column;
+        overflow-y: auto;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
     }
     .nav-links li a { 
         font-size: 22px;
@@ -1257,6 +1265,7 @@ ul li svg path {
         margin-left: auto;
         position: relative;
         margin-right: 2rem;
+        z-index: 4;
     }
     .ham-menu span {
         height: 5px;
@@ -1272,6 +1281,7 @@ ul li svg path {
     }
     .ham-menu span:nth-child(1) {
         top: 25%;
+        
     }
     .ham-menu span:nth-child(3) {
         top: 75%;
