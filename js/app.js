@@ -172,15 +172,3 @@ function switchImage(currentImage){
     }
     indicators();
 }
-
-function openInMaps() {
-    var userChoice = confirm("Vil du åpne adressen i Google Maps?");
-    var address = "Din faktiske adresse her"; // Erstatt med faktisk adresse
-    if (userChoice) {
-        // Åpne i Google Maps
-        window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`, "_blank");
-    } else {
-        // Åpne i standard nettleserkart
-        window.open(`https://www.openstreetmap.org/search?query=${encodeURIComponent(address)}`, "_blank");
-    }
-}
