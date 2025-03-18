@@ -786,13 +786,8 @@ ul li svg path {
         font-family: "DM Serif Text", serif;
     }
 
-    .nav-links li{
-        padding: 3%;
-    }
-
-
     .nav-links li a { 
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-family: "DM Serif Text", serif;
 
     }
