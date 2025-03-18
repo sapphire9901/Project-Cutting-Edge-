@@ -770,7 +770,7 @@ ul li svg path {
         right: -450px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         transition: .3s ease;
@@ -778,16 +778,14 @@ ul li svg path {
     }
     .nav-links ul {
         flex-direction: column;
-        gap:20px;
+        gap:5vw;
+        margin-top: calc(6vh + 50px); /* Kombinerer vh og fast px-verdi */
+        margin-bottom: 5vh; 
     }
 
-    .nav-links li a{
-        font-size: 2rem;
-        font-family: "DM Serif Text", serif;
-    }
 
     .nav-links li a { 
-        font-size: 1.7rem;
+        font-size: 8vw;
         font-family: "DM Serif Text", serif;
 
     }
