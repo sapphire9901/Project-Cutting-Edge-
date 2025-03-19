@@ -1916,8 +1916,6 @@ ul li svg path {
     }
 
     /*css for bahandlinger.html ends here*/
-    
-=======
 
     
     /*Adjustments for article*/
@@ -2147,13 +2145,22 @@ ul li svg path {
         border-radius: 30px; /* Avrundede hjørner */
         gap: 50px; /*Space between elements*/
         padding: 40px 40px;
-        width: 100%;
-        max-width: 1000px;
+        width: 80%;
+        max-width: 1400px;
         /*
         border-radius: 15px;
         */
         margin-bottom: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .behandlinger_row p{
+        width: 70%;
+        margin-left: 20%;
+    }
+    .behandlinger_row h2{
+        width: 70%;
+        margin-left: 20%;
+
     }
 
     /*css for behandlinger ends here*/
