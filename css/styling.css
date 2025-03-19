@@ -467,7 +467,7 @@ span.next:hover, span.prev:hover{
 }
 
 .pricing .category_box {
-    background-color: rgba(255, 255, 255, 0.7); /* Hvit med 30% gjennomsiktighet */
+    background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
     /*background-color: rgba(255, 255, 255, 0.6);
     */
@@ -1118,7 +1118,7 @@ ul li svg path {
         width: 90%; /* Juster disse prosentene basert på ditt behov */
         max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
         height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         padding: 0 30px; /* Innvendig plass */
         box-sizing: border-box; /* Inkluder padding i bredden */
@@ -1178,15 +1178,17 @@ ul li svg path {
     .content img {  
         border-radius: 40px;
         margin-top: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .content_top {
+    .content_top { /* this class is also used for kontakt.html */
         width: 90%;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5px 30px;
         margin: 20px auto;
         margin-bottom: 0;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .parent_container_galleri{
         display: flex;
@@ -1196,12 +1198,13 @@ ul li svg path {
     .white_box_two {
         width: 90%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 3%;
         padding-bottom: 8%;
         margin-bottom: 30px;
         margin-top: 25px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1242,15 +1245,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-top: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -1264,10 +1269,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1478,11 +1484,12 @@ ul li svg path {
         width: 86%;
         max-width: 1500px;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.5); 
         border-radius: 30px;
         margin-bottom: 25px;
         margin-top: 30px;
         padding-bottom: 60px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -1499,15 +1506,17 @@ ul li svg path {
         height: auto;  /* hight is adjusted by width */
         margin-top: 5%;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .white_box_two {
         width: 70%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5%;
         margin-bottom: 50px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1538,7 +1547,7 @@ ul li svg path {
         width: 90%; /* Juster disse prosentene basert på ditt behov */
         max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
         height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         padding: 0 30px; /* Innvendig plass */
         box-sizing: border-box; /* Inkluder padding i bredden */
@@ -1667,15 +1676,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 25px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe {
         width: 80%;
         height: 15rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -1689,14 +1700,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 6.5rem;
-    }
-    .white_box_two_kontakt {
-        display: flex;
-        flex-direction: column;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt ul{
         list-style-type: none;
@@ -1823,12 +1831,12 @@ ul li svg path {
         width: 86%; 
         max-width: 1500px;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         margin-bottom: 60px;
         margin-top: 30px;
         padding-bottom: 60px;
-
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -1844,15 +1852,17 @@ ul li svg path {
         height: auto;  /* hight is adjusted by width */
         margin-top: 40px;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .white_box_two {
         width: 70%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 8%;
         margin-bottom: 70px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1873,7 +1883,7 @@ ul li svg path {
         margin: 40px auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         gap: 1px; /*Space between elements*/
         width: 86%;
@@ -1969,16 +1979,18 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 32%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -1992,10 +2004,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 32%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt{
         display: flex;
@@ -2077,12 +2090,13 @@ ul li svg path {
         width: 84%; 
         max-width: 1500px; 
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.5); 
         border-radius: 30px;
         padding: 40px; 
         margin-bottom: 60px;
         margin-top: 40px;
         padding-bottom: 60px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -2098,14 +2112,16 @@ ul li svg path {
         height: auto;
         margin-top: 60px;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two {
         width: 50%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5rem 2rem;
         margin-bottom: 70px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -2142,12 +2158,12 @@ ul li svg path {
         margin: 0 auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         gap: 50px; /*Space between elements*/
         padding: 40px 40px;
         width: 80%;
-        max-width: 1400px;
+        max-width: 1500px;
         /*
         border-radius: 15px;
         */
@@ -2172,15 +2188,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 30%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 22rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 22rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         width: 30%;
@@ -2190,10 +2208,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 30%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 22rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt{
         display: flex;
