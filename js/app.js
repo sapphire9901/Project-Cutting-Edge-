@@ -1,19 +1,23 @@
 // hamburger menu
 // from https://www.youtube.com/watch?v=aNDqzlAKmZc
+// also added a no-scroll when hamburger menu is active
 const hamMenu = document.querySelector('.ham-menu');
-
 const offScreenMenu = document.querySelector('.nav-links');
+const body = document.body;  // Variable to get access to the body element
 
 hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     offScreenMenu.classList.toggle('active');
-    if(offScreenMenu.classList.contains('active')){ // added a check to see if hamburger menu is open
-        unreveal(); // if it is open, we want to unreveal the images
-    }
-    else{
+
+    if(offScreenMenu.classList.contains('active')) {
+        unreveal();  // Deactivation of the revealing of images
+        body.classList.add('no-scroll');  // We do not want the page to be scrollable when ham is open
+        content_kontakt_map.classList.add('background-effect'); // map fades away when ham menu opens
+    } else {
         reveal();
+        body.classList.remove('no-scroll');  // Else remove no-scroll, and images can be revealed
+        content_kontakt_map.classList.remove('background-effect');
     }
-    
 })
 
 
@@ -48,9 +52,31 @@ function unreveal(){
 
 
 
+// Code that adds the reveal class to all of the images besides for the first image in mobile view
+// The fuction updateClass() was developed with help from chatGPT
+function updateClass() {
+    var elements = document.querySelectorAll('.phone_reveal'); // We want to change all of the elements in the class phone_reveal
+    if (window.innerWidth >= 320 && window.innerWidth <= 480) { // Size for mobile view
+        elements.forEach(function(element) {
+            element.classList.add('reveal'); // Adds the elements to the 'reveal' class
+        });
+    } else {
+        elements.forEach(function(element) {
+            element.classList.remove('reveal'); // Remove the elements from the reveal class
+        });
+    }
+}
+//The function is called every time the page is loaded or resized
+window.addEventListener('load', updateClass);
+window.addEventListener('resize', updateClass);
 
 
-
+// We want the ham-menu to close if the screen is resized
+window.addEventListener('resize', function() {
+    if(offScreenMenu.classList.contains('active')) {
+        hamMenu.click();
+    }
+});
 
 
 
@@ -58,7 +84,7 @@ function unreveal(){
  /*GALLERY-SLIDER*/
 
  /*Access the images*/
- let slideImages = document.querySelectorAll('.slides img');
+ let slideImages = document.querySelectorAll('.slides .card');
 
  /*Access the next and prev buttons*/
  let next = document.querySelector('.next');
@@ -99,6 +125,7 @@ function slidePrev(){
 }
 
 
+
 /*Auto sliding*/
 function autoSliding(){
     deletInterval = setInterval(timer,3000);
@@ -126,25 +153,24 @@ function indicators(){
     dots[counter].className += ' active';
 }
 
+
 /*Add click event to indicators */
 
 function switchImage(currentImage){
     currentImage.classList.add('active');
     var imageId = currentImage.getAttribute('attr');
     if(imageId > counter){
-        slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'next1 0.7s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'next2 0.7s ease-in forwards';
     } 
     else if(imageId == counter){
         return;
     }
     else{
-        slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'prev1 0.7s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+        slideImages[counter].style.animation = 'prev2 0.7s ease-in forwards';
     }
     indicators();
 }
-
-
