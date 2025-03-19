@@ -495,6 +495,63 @@ a.pricing_btn{
 /*Pricing ends here*/
 
 /*Behandlinger starts here*/
+.behandlinger_header h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    margin-bottom: 10px;
+    
+}
+
+
+.behandlinger_article{
+    width:100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+   
+}
+    
+
+.behandlinger_row .behandlinger-txt-first-img-second{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.behandlinger-article-image img{
+    width: 400px;
+    border-radius: 30px;
+   
+}
+
+
+/*For the reverse version with image first, then text*/
+
+.behandlinger-img-first-txt-second{
+    order: 2;
+}
+
+
+.behandlinger-article-img-reverse{
+    order:1;
+    width: 400px;
+    border-radius: 30px    
+}
+
+.behandlinger-row .behandlinger-img-first-txt-second{
+    display: flex;
+    flex-direction: column;
+}
+
+.behandlinger-article-image-reverse img{
+    width: 400px;
+    border-radius: 30px;
+    
+}
+
+
 
 /*Behandlinger ends here*/
 
@@ -791,6 +848,70 @@ ul li svg path {
         font-size: 1.5rem;
     }
 
+    /*css for behandlinger.html starts here*/
+
+    /*.behandlinger_row{
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+        padding: 20px 20px;
+        display: flex;
+
+    }
+        */
+    
+    .behandlinger_article{
+        margin-top: 20px;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+
+    }
+    
+
+    .behandlinger-txt-first-img-second,
+    .behandlinger-img-first-txt-second,
+    .behandlinger-txt-first-img-second{
+        width: 90%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 0 30px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+
+        
+        
+    }
+
+    .behandlinger-txt-first-img-second{
+        order: 1;
+    }
+
+    .behandlinger-article-image{
+        order: 2;
+    }
+    .behandlinger-article-image-reverse{
+        order: 2;
+    }
+
+    .behandlinger_article img{
+        order: 2;
+        width: 90%;
+        border-radius: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        
+    }
+
+
+
+    /*css for behandlinger.html ends here*/
+
 
     /* css for galleri.html starts here */
     .content_top p{
@@ -981,6 +1102,58 @@ ul li svg path {
         margin-bottom: 150px;
     }
     /* css for galleri.html ends here */
+
+    /*css for bahandlinger.html starts here*/
+    .behandlinger_article{
+        margin-top: 20px;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+
+    }
+    
+
+    .behandlinger-txt-first-img-second,
+    .behandlinger-img-first-txt-second,
+    .behandlinger-txt-first-img-second{
+        width: 90%; /* Juster disse prosentene basert på ditt behov */
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 0 30px; /* Innvendig plass */
+        box-sizing: border-box; /* Inkluder padding i bredden */
+        margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+
+        
+        
+    }
+
+    .behandlinger-txt-first-img-second{
+        order: 1;
+    }
+
+    .behandlinger-article-image{
+        order: 2;
+    }
+    .behandlinger-article-image-reverse{
+        order: 2;
+    }
+
+    .behandlinger_article img{
+        order: 2;
+        width: 90%;
+        border-radius: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        
+    }
+
+
+    /*css for bahandlinger.html ends here*/
     
 
 }
@@ -1069,6 +1242,60 @@ ul li svg path {
         margin-bottom: 150px;
     }
     /* css for galleri.html ends here */
+
+    /*css for bahandlinger.html starts here*/
+    .behandlinger_row{
+        display: flex;
+        align-items: center;
+        /*width: 80%;*/
+        margin: 40px auto; /*Centers the content*/
+        justify-content: space-between;
+        /*background-color: #e6d5bf;*/
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        gap: 1px; /*Space between elements*/
+        width: 86%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        height: auto; /* Gjør boksen mindre eller større etter behov */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 60px;
+    }
+
+    .behandlinger_article{
+        margin-top: 40px;
+        flex-direction:column;
+        text-align: left;
+        display: flex;
+
+    }
+    
+
+    .behandlinger-txt-first-img-second{
+        order: 1;
+        padding: 20px 20px 20px;
+    }
+
+    .behandlinger-article-image{
+        order: 2;
+    }
+    .behandlinger-article-image-reverse{
+        order: 2;
+    }
+
+    .behandlinger_article img{
+        order: 2;
+        width: 80%;
+        border-radius: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        
+    }
+
+    /*css for bahandlinger.html ends here*/
+    
 }
 
 /* Large Screen */
@@ -1132,6 +1359,31 @@ ul li svg path {
         margin-bottom: 150px;
     }
     /* css for galleri.html ends here */
+
+
+    /*css for behandlinger starts here*/
+    
+    .behandlinger_row{
+        display: flex;
+        align-items: center;
+        /*width: 80%;*/
+        margin: 0 auto; /*Centers the content*/
+        justify-content: space-between;
+        /*background-color: #e6d5bf;*/
+        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        gap: 50px; /*Space between elements*/
+        padding: 40px 40px;
+        width: 100%;
+        max-width: 1000px;
+        /*
+        border-radius: 15px;
+        */
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /*css for behandlinger ends here*/
 }
 
 
