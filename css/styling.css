@@ -82,48 +82,53 @@ body{
 
 
 /*Main banner*/
-header{
-    width:100wv;
-    height:100vh;
-    background-image: url('../media/index.html/Bakgrunnsbilde.webp');
-    background-position: bottom;
+.home{
+    position: relative;
+    background-image: url(../media/index.html/Bakgrunnsbilde.webp);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.home .main-site-box{
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
-/*The white transparent box on top of the main banner*/
+.home .main-site-box h1{
+    font-size: 5rem;
+    color: #180505;
+    margin-bottom: 60px;
+     font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+
+
 .transparent-box{
-    width: 100wv;
+    margin-top: 100px;
     background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
-    padding:8rem 10rem;
-    border-radius: 20px;
-    text-align: center;
-   
+    width: 60%;
+    height: 50vh;
+    padding: 6% 0;
+    border-radius: 25px;
+
 }
 
-.header-content a{
-text-decoration: none;
-}
-
-.header-content{
-    margin-bottom: 12rem;
-    color: #000000;
-}
-
-.header-content h1{
-    font-family:"Oswald", serif;
-    font-size: 12vmin;
-    margin-bottom: 8%;
-}
 
 .btn{
-    padding: 1.25rem 6.25rem;
+    padding: 20px 40px;
     background-color: #43718b;
     border-radius: 40px;
     color: whitesmoke;
     transition: background-color 0.5s ease; /* Add transition for background color */
+    text-decoration: none;
 }
 
 .btn:hover{
@@ -181,6 +186,13 @@ line-height: 1.6;
     margin-top: 150px;
     margin-bottom: 150px;
 }
+
+.article h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 
 .row{
     display: flex;
@@ -588,41 +600,41 @@ a.pricing_btn{
 /*About us starts here*/
 
 .about-us-section{
-    width:100wv;
-    height:100vh;
-    background-color:#e6d5bf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top:90px;
 }
 
-
 .about-us-box{
+    max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 0 auto; /*Centers the content*/
     background-color: #e6d5bf;
-    position: relative;
+    gap:100px;
 }
 
 .about-us-box img{
-    width:55%;
-    position: relative;
+    width:40%;
+    position: absolute;
     z-index: 2;
     border-radius: 25px;
 }
 
 
 .colorful-decor-box{
+    position:relative;
     background-color: #718080;
-    width: 60%;
-    height: 100%;
-    position:absolute;
-    top:80px;
-    left:10px;
-    z-index: 1; /*Puts it behind*/
+    margin-top:200px;
+    margin-left:300px;
+    width: 500px;
+    height: 50vh;
+    z-index: 1;
     border-radius: 25px;
 }
 
@@ -630,12 +642,17 @@ a.pricing_btn{
     font-size: 5rem;
     font-family: "DM Serif Text", serif;
     text-align: center;
-    z-index: 2;
-    margin-left:90px;
+    margin-left:200px;
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
 }
+
+
+
+
+
+
 
 /*About us ends here*/
 
@@ -714,9 +731,10 @@ a.pricing_btn{
 
 
 .faq-h2{
-    font-family: "DM Serif Text", serif;
-    text-align: center;
-    font-size: 2.5rem;
+        font-family: "Raleway", sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
 }
 
 
@@ -791,7 +809,6 @@ ul li svg path {
 /*Footer ends here*/
 
 
-
 /* Mobile Screen */
 @media (min-width: 320px) and (max-width: 480px){
     /* navbar and hamburger menu mobile view starts here */
@@ -833,7 +850,6 @@ ul li svg path {
 
     .nav-links li a { 
         font-size: 2rem;
-        font-family: "DM Serif Text", serif;
 
     }
 
@@ -889,19 +905,28 @@ ul li svg path {
     /*Header content starts here*/
     /* css for index page starts here */
     .transparent-box{
-        width: 80vw;
-        height: 90vw;
-        padding: 2rem 3rem 2.5rem;
+        width: 80%;
+        height: 50vh;
+        padding: 5% 0;
+        border-radius: 25px;
+        margin-top: 10px;
     }
+
+    .home .main-site-box h1{
+        font-size: 2.5rem;
+        padding: 10px;
+        margin: 10px 0;
+        margin-bottom: 30px;
+        color: #180505;
+    }
+
     .btn{
-        padding: 1.5rem;
+        padding: 1rem; /*button size*/
+       
     }
-    .header-content h1{
-        font-size: 14vmin;
-        padding-bottom: 25px;
-    }
+    
     a.btn{
-        font-size: 7vmin;
+        font-size: 4vmin;
     }
     /* css for index page starts here */
     /*Header content ends here*/
@@ -997,7 +1022,7 @@ ul li svg path {
         padding: 5px;
         font-size: 1.4rem;
     }
-    
+
     /*Main content ends here*/
 
 
@@ -1006,36 +1031,49 @@ ul li svg path {
     .about-us-section{
     width:100%;
     height: 70vh;
+    margin-top:0px;
     }
 
         
     .about-us-box{
-        width: 80%;
+        max-width: 90%;
         display: flex;
         flex-direction: column;
+        background-color: #e6d5bf;   
+        gap:50px;
     }
 
-    .about-us-box img{
-        width:100%;
-    }
+    
+.about-us-box img{
+    width:80%;
+    position: absolute;
+    z-index: 2;
+    border-radius: 25px;
+}
 
 
-    .colorful-decor-box{
-        width: 70%;
-        height: 60%;
-        position:absolute;
-        left: -10px;
-        z-index: 1; /*Puts it behind*/
-    }
+.colorful-decor-box{
+    background-color: #718080;
+    width: 80%;
+    height: 30vh;
+    z-index: 1;
+    border-radius: 25px;
+    margin-top:100px;
+    margin-right:200px;
+}
 
-    .about-us-title{
-        font-size: 3rem;
-        z-index: 2;
-        top:100px;
-        text-align: center;
-        margin-left:10px;
+.about-us-title{
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", serif;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
+    text-align: center;
+    margin-left:0px;
+}
 
-    }
+
+
 
     /*Adjustsments for bestill-side*/
 
@@ -1093,15 +1131,6 @@ ul li svg path {
 
     /*css for behandlinger.html starts here*/
 
-    /*.behandlinger_row{
-        flex-direction: column;
-        width: 80%;
-        text-align: center;
-        padding: 20px 20px;
-        display: flex;
-
-    }
-        */
     
     .behandlinger_article{
         margin-top: 20px;
@@ -1321,15 +1350,29 @@ ul li svg path {
 @media (min-width:481px) and (max-width:768px){
     /* css for index page starts here */
     .transparent-box{
-        width: 80vw;
-        height: 50vw;
-        padding: 4rem 5rem 4.5rem;
+        width: 80%;
+        height: 45vh;
+        padding: 7% 0;
+        border-radius: 25px;
+        margin-top: 10px;
     }
+
+    .home .main-site-box h1{
+        font-size: 4.5rem;
+        padding: 30px;
+        margin: 10px 0;
+        margin-bottom: 30px;
+        color: #180505;
+    }
+
     .btn{
-        padding: 1rem;
+        padding: 2rem; /*button size*/
+
+       
     }
-    .header-content h1{
-        font-size: 11vmin;
+    
+    a.btn{
+        font-size: 4vmin;
     }
     /* css for index page ends here */
 
@@ -1367,7 +1410,7 @@ ul li svg path {
     }
     .nav-links li a { 
         font-size: 22px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Raleway", sans-serif;
     }
     .nav-links li{
         padding: 4%;
@@ -1587,6 +1630,56 @@ ul li svg path {
     .txt-box{
         width: 600px;
     }
+
+
+    /*Adjustsments for Om oss starts here*/
+    .about-us-section{
+        width:100%;
+        height: 70vh;
+        margin-top:0px;
+        }
+    
+            
+        .about-us-box{
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: #e6d5bf;   
+        }
+    
+        
+    .about-us-box img{
+        width:70%;
+        position: absolute;
+        z-index: 2;
+        border-radius: 25px;
+    }
+    
+    
+    .colorful-decor-box{
+        background-color: #718080;
+        width: 80%;
+        height: 40vh;
+        z-index: 1;
+        border-radius: 25px;
+        margin-top:100px;
+        margin-right:200px;
+    }
+    
+    .about-us-title{
+        font-size: 3rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        text-align: center;
+        margin-left:0px;
+    }
+
+
+    /*Adjustsments for Om oss ends here*/
+
+
 
 
 
@@ -2248,6 +2341,12 @@ ul li svg path {
     }
     
     /* css for kontakt.html ends here */
+
+
+    
+
+
+
 
 }
 
