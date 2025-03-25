@@ -648,7 +648,17 @@ a.pricing_btn{
     text-decoration-color: #ee751c;
 }
 
+.article-image-omoss{
+    width: 100%;
+    height: auto;
+}
 
+.article-image-omoss img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 25px;
+}
 
 
 
@@ -730,13 +740,19 @@ a.pricing_btn{
 }
 
 
-.faq-h2{
+.faq-txt h2{
         font-family: "Raleway", sans-serif;
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
 }
 
+.faq-txt h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
 
 
 /*Bestill time - ends here*/
