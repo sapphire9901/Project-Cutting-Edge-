@@ -10,7 +10,7 @@ body{
 }
 
 
-/*test*/
+
 
 /*For the fading effect*/
 
@@ -905,15 +905,6 @@ ul li svg path {
         height: 90vw;
         padding: 2rem 3rem 2.5rem;
     }
-
-    .home .main-site-box h1{
-        font-size: 3.7rem;
-        padding: 10px;
-        margin: 10px 0;
-        margin-bottom: 30px;
-        color: #180505;
-    }
-
     .btn{
         padding: 1.5rem;
     }
