@@ -12,11 +12,9 @@ hamMenu.addEventListener('click', () => {
     if(offScreenMenu.classList.contains('active')) {
         unreveal();  // Deactivation of the revealing of images
         body.classList.add('no-scroll');  // We do not want the page to be scrollable when ham is open
-        content_kontakt_map.classList.add('background-effect'); // map fades away when ham menu opens
     } else {
         reveal();
         body.classList.remove('no-scroll');  // Else remove no-scroll, and images can be revealed
-        content_kontakt_map.classList.remove('background-effect');
     }
 })
 
