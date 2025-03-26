@@ -51,14 +51,15 @@ body{
 
 .navbar ul {
     list-style: none; /* Removes bullet points from the list */
-    font-size: 20px;
 }
 
 
 .navbar li a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23px;
     color: white;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 400;
 }
 
 .navbar li a:hover {
@@ -781,15 +782,15 @@ footer{
     display: flex;
     flex-wrap: nowrap;
     background-color: #718080;
-    align-items: flex-start; /* Starter elementene på toppen av containeren */
+    align-items: flex-start; 
     padding: 70px 40px 100px 30px;
-    width: 100%; /* Sørger for at footer strekker seg over hele bredden */
+    width: 100%;
     color: white;
 
    
 }
 footer h3, footer ul {
-    margin: 0 10px; /* Gir litt margin på sidene */
+    margin: 0 10px;
     list-style-type: none;
     font-family: sans-serif;
     font-size: 15px;
@@ -837,7 +838,6 @@ footer li a:hover{
 
 
 
-
 ul li svg path {
     fill: white; /* Change the color of the icons to white */
 }
@@ -877,7 +877,7 @@ ul li svg path {
     }
     .nav-links ul {
         flex-direction: column;
-        gap:20px;
+        gap:8vw;
         overflow-y: auto;
         padding-top: 15vw;
         padding-bottom: 15vw;
@@ -885,6 +885,7 @@ ul li svg path {
 
 
     .nav-links li a { 
+        font-family: "Raleway", sans-serif;
         font-size: 2rem;
 
     }
@@ -1065,9 +1066,9 @@ ul li svg path {
     /*About Us adjustsments here*/
     
     .about-us-section{
-    width:100%;
-    height: 70vh;
-    margin-top:0px;
+        width:100%;
+        height: 70vh;
+        margin-top:0px;
     }
 
         
@@ -1080,33 +1081,33 @@ ul li svg path {
     }
 
     
-.about-us-box img{
-    width:80%;
-    position: absolute;
-    z-index: 2;
-    border-radius: 25px;
-}
+    .about-us-box img{
+        width:80%;
+        position: absolute;
+        z-index: 2;
+        border-radius: 25px;
+    }
 
 
-.colorful-decor-box{
-    background-color: #718080;
-    width: 80%;
-    height: 30vh;
-    z-index: 1;
-    border-radius: 25px;
-    margin-top:100px;
-    margin-right:200px;
-}
+    .colorful-decor-box{
+        background-color: #718080;
+        width: 80%;
+        height: 30vh;
+        z-index: 1;
+        border-radius: 25px;
+        margin-top:100px;
+        margin-right:200px;
+    }
 
-.about-us-title{
-    font-size: 2.5rem;
-    font-family: "DM Serif Text", serif;
-    text-decoration: underline;
-    text-underline-offset: 30px;
-    text-decoration-color: #ee751c;
-    text-align: center;
-    margin-left:0px;
-}
+    .about-us-title{
+        font-size: 2.5rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        text-align: center;
+        margin-left:0px;
+    }
 
 
 
@@ -1149,11 +1150,11 @@ ul li svg path {
     footer ul li {
         margin: 5px 0; /* Adds space above and below each link */
         text-align: left;
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     footer a{
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     footer h3{
@@ -1284,6 +1285,7 @@ ul li svg path {
     }
     .white_box_two h2{
         font-size: 28px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     .content a{
         font-size: 20px;
@@ -1292,6 +1294,7 @@ ul li svg path {
         font-size: 28px;
         margin-top: 10px;
         margin-bottom: 17px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -1343,6 +1346,7 @@ ul li svg path {
         padding: 2rem 2rem;
         margin-bottom: 30px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: right;
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1357,6 +1361,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 24px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -1449,7 +1454,7 @@ ul li svg path {
         margin-bottom: 5vw;
     }
     .nav-links li a { 
-        font-size: 22px;
+        font-size: 28px;
         font-family: "Raleway", sans-serif;
     }
     .nav-links li{
@@ -1615,6 +1620,7 @@ ul li svg path {
     }
     .white_box_two h2{
         font-size: 28px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -1843,6 +1849,7 @@ ul li svg path {
         padding: 2rem 2rem;
         margin-bottom: 6.5rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: right;
     }
     .content_kontakt ul{
         list-style-type: none;
@@ -1853,6 +1860,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 27px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -1896,7 +1904,7 @@ ul li svg path {
     .navbar li a {
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .navbar{
@@ -1942,7 +1950,7 @@ ul li svg path {
         margin-bottom:20px;
         padding-top: 20px;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     /*Footer content ends here*/
 
@@ -2014,6 +2022,7 @@ ul li svg path {
     .white_box_two h2{
         font-size: 32px;
         margin-bottom: 9px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -2151,6 +2160,7 @@ ul li svg path {
         padding: 2rem 2rem;
         height: 19rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: right;
     }
     .content_kontakt{
         display: flex;
@@ -2165,6 +2175,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 24px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -2275,6 +2286,7 @@ ul li svg path {
     .white_box_two h2{
         font-size: 38px;
         margin-bottom: 9px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -2357,6 +2369,7 @@ ul li svg path {
         padding: 2rem 2rem;
         height: 22rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: right;
     }
     .content_kontakt{
         display: flex;
@@ -2371,6 +2384,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 27px;
+        font-family: "Bricolage Grotesque", sans-serif;
     }
     .sosiale_medier_ikoner{
         margin: 10px;
