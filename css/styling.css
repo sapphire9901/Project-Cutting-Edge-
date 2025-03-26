@@ -82,47 +82,53 @@ body{
 
 
 /*Main banner*/
-header{
-    width:100wv;
-    height:100vh;
-    background-image: url('../media/index.html/Bakgrunnsbilde.webp');
-    background-position: bottom;
+.home{
+    position: relative;
+    background-image: url(../media/index.html/Bakgrunnsbilde.webp);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*The white transparent box on top of the main banner*/
-.transparent-box{
-    width: 100wv;
-    background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
-    padding:8rem 10rem;
-    border-radius: 20px;
+    background-position: center;
     text-align: center;
 }
 
-.header-content a{
-text-decoration: none;
+.home .main-site-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.header-content{
-    margin-bottom: 12rem;
-    color: #000000;
+.home .main-site-box h1{
+    font-size: 5rem;
+    color: #180505;
+    margin-bottom: 60px;
+     font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-.header-content h1{
-    font-family:"Oswald", serif;
-    font-size: 12vmin;
-    margin-bottom: 8%;
+
+
+.transparent-box{
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
+    width: 60%;
+    height: 50vh;
+    padding: 6% 0;
+    border-radius: 25px;
+
 }
+
 
 .btn{
-    padding: 1.25rem 6.25rem;
+    padding: 20px 40px;
     background-color: #43718b;
     border-radius: 40px;
     color: whitesmoke;
     transition: background-color 0.5s ease; /* Add transition for background color */
+    text-decoration: none;
 }
 
 .btn:hover{
@@ -180,6 +186,13 @@ line-height: 1.6;
     margin-top: 150px;
     margin-bottom: 150px;
 }
+
+.article h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 
 .row{
     display: flex;
@@ -264,6 +277,7 @@ line-height: 1.6;
 
 
 /*Index gallery starts here */
+/*Base code learnt from this video: https://youtu.be/57pXPbTRhCc?feature=shared*/
 
 .gallery-section{
     display: flex;
@@ -454,9 +468,14 @@ span.next:hover, span.prev:hover{
 .prisliste_container h1{
     text-align: center;
     margin-top: 30px;
-    font-size: 50px;
+    font-size: 3rem;
     margin-bottom: 10px;
+    font-family: "DM Serif Text", serif;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
 }
+
 
 .prisliste_container h2{
     text-align: center;
@@ -466,7 +485,7 @@ span.next:hover, span.prev:hover{
 }
 
 .pricing .category_box {
-    background-color: rgba(255, 255, 255, 0.7); /* Hvit med 30% gjennomsiktighet */
+    background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
     /*background-color: rgba(255, 255, 255, 0.6);
     */
@@ -526,9 +545,12 @@ a.pricing_btn{
 .behandlinger_header h1{
     text-align: center;
     margin-top: 30px;
-    font-size: 50px;
-    margin-bottom: 10px;
-    
+    font-size: 3rem;
+    font-family: "DM Serif Text", serif;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
+    margin-bottom: 50px;
 }
 
 
@@ -587,41 +609,41 @@ a.pricing_btn{
 /*About us starts here*/
 
 .about-us-section{
-    width:100wv;
-    height:100vh;
-    background-color:#e6d5bf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-top:90px;
 }
 
-
 .about-us-box{
+    max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 0 auto; /*Centers the content*/
     background-color: #e6d5bf;
-    position: relative;
+    gap:100px;
 }
 
 .about-us-box img{
-    width:55%;
-    position: relative;
+    width:40%;
+    position: absolute;
     z-index: 2;
     border-radius: 25px;
 }
 
 
 .colorful-decor-box{
+    position:relative;
     background-color: #718080;
-    width: 60%;
-    height: 100%;
-    position:absolute;
-    top:80px;
-    left:10px;
-    z-index: 1; /*Puts it behind*/
+    margin-top:200px;
+    margin-left:300px;
+    width: 500px;
+    height: 50vh;
+    z-index: 1;
     border-radius: 25px;
 }
 
@@ -629,12 +651,27 @@ a.pricing_btn{
     font-size: 5rem;
     font-family: "DM Serif Text", serif;
     text-align: center;
-    z-index: 2;
-    margin-left:90px;
+    margin-left:200px;
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
 }
+
+.article-image-omoss{
+    width: 100%;
+    height: auto;
+}
+
+.article-image-omoss img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+
+
 
 /*About us ends here*/
 
@@ -653,6 +690,10 @@ a.pricing_btn{
 .txt-box h2{
     font-size: 2.5rem;
     font-family: "DM Serif Text", serif;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
+    text-align: center;
 }
 
 
@@ -712,12 +753,19 @@ a.pricing_btn{
 }
 
 
-.faq-h2{
-    font-family: "DM Serif Text", serif;
-    text-align: center;
-    font-size: 2.5rem;
+.faq-txt h2{
+        font-family: "Raleway", sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
 }
 
+.faq-txt h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
 
 
 /*Bestill time - ends here*/
@@ -779,6 +827,13 @@ footer li a:hover{
     margin: 0 50px;
 }
 
+.footer-wave{
+    background-image: url(../media/footer/decorative-wave.webp);
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -788,20 +843,6 @@ ul li svg path {
 }
 
 /*Footer ends here*/
-
-
-
-
-
-/* used to hide map */
-.background-effect{
-    opacity: 0;  
-    transition: all 0.3s ease;
-}
-
-
-
-
 
 
 /* Mobile Screen */
@@ -845,7 +886,6 @@ ul li svg path {
 
     .nav-links li a { 
         font-size: 2rem;
-        font-family: "DM Serif Text", serif;
 
     }
 
@@ -901,19 +941,28 @@ ul li svg path {
     /*Header content starts here*/
     /* css for index page starts here */
     .transparent-box{
-        width: 80vw;
-        height: 90vw;
-        padding: 2rem 3rem 2.5rem;
+        width: 80%;
+        height: 50vh;
+        padding: 5% 0;
+        border-radius: 25px;
+        margin-top: 10px;
     }
+
+    .home .main-site-box h1{
+        font-size: 2.5rem;
+        padding: 10px;
+        margin: 10px 0;
+        margin-bottom: 30px;
+        color: #180505;
+    }
+
     .btn{
-        padding: 1.5rem;
+        padding: 1rem; /*button size*/
+       
     }
-    .header-content h1{
-        font-size: 14vmin;
-        padding-bottom: 25px;
-    }
+    
     a.btn{
-        font-size: 7vmin;
+        font-size: 4vmin;
     }
     /* css for index page starts here */
     /*Header content ends here*/
@@ -1009,7 +1058,7 @@ ul li svg path {
         padding: 5px;
         font-size: 1.4rem;
     }
-    
+
     /*Main content ends here*/
 
 
@@ -1018,36 +1067,49 @@ ul li svg path {
     .about-us-section{
     width:100%;
     height: 70vh;
+    margin-top:0px;
     }
 
         
     .about-us-box{
-        width: 80%;
+        max-width: 90%;
         display: flex;
         flex-direction: column;
+        background-color: #e6d5bf;   
+        gap:50px;
     }
 
-    .about-us-box img{
-        width:100%;
-    }
+    
+.about-us-box img{
+    width:80%;
+    position: absolute;
+    z-index: 2;
+    border-radius: 25px;
+}
 
 
-    .colorful-decor-box{
-        width: 70%;
-        height: 60%;
-        position:absolute;
-        left: -10px;
-        z-index: 1; /*Puts it behind*/
-    }
+.colorful-decor-box{
+    background-color: #718080;
+    width: 80%;
+    height: 30vh;
+    z-index: 1;
+    border-radius: 25px;
+    margin-top:100px;
+    margin-right:200px;
+}
 
-    .about-us-title{
-        font-size: 3rem;
-        z-index: 2;
-        top:100px;
-        text-align: center;
-        margin-left:10px;
+.about-us-title{
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", serif;
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-color: #ee751c;
+    text-align: center;
+    margin-left:0px;
+}
 
-    }
+
+
 
     /*Adjustsments for bestill-side*/
 
@@ -1100,20 +1162,14 @@ ul li svg path {
         text-align: left;
         font-size: 1.5rem;
     }
+
+
+    
     /*Footer content ends here*/
 
 
     /*css for behandlinger.html starts here*/
 
-    /*.behandlinger_row{
-        flex-direction: column;
-        width: 80%;
-        text-align: center;
-        padding: 20px 20px;
-        display: flex;
-
-    }
-        */
     
     .behandlinger_article{
         margin-top: 20px;
@@ -1130,7 +1186,7 @@ ul li svg path {
         width: 90%; /* Juster disse prosentene basert på ditt behov */
         max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
         height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         padding: 0 30px; /* Innvendig plass */
         box-sizing: border-box; /* Inkluder padding i bredden */
@@ -1176,6 +1232,7 @@ ul li svg path {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         padding: 5% 0;
     }
+    
     .content_top p{
         font-size: 20px;
     }
@@ -1190,15 +1247,17 @@ ul li svg path {
     .content img {  
         border-radius: 40px;
         margin-top: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .content_top {
+    .content_top { /* this class is also used for kontakt.html */
         width: 90%;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5px 30px;
         margin: 20px auto;
         margin-bottom: 0;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .parent_container_galleri{
         display: flex;
@@ -1208,12 +1267,13 @@ ul li svg path {
     .white_box_two {
         width: 90%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 3%;
         padding-bottom: 8%;
         margin-bottom: 30px;
         margin-top: 25px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1254,15 +1314,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-top: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -1276,10 +1338,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1327,15 +1390,29 @@ ul li svg path {
 @media (min-width:481px) and (max-width:768px){
     /* css for index page starts here */
     .transparent-box{
-        width: 80vw;
-        height: 50vw;
-        padding: 4rem 5rem 4.5rem;
+        width: 80%;
+        height: 45vh;
+        padding: 7% 0;
+        border-radius: 25px;
+        margin-top: 10px;
     }
+
+    .home .main-site-box h1{
+        font-size: 4.5rem;
+        padding: 30px;
+        margin: 10px 0;
+        margin-bottom: 30px;
+        color: #180505;
+    }
+
     .btn{
-        padding: 1rem;
+        padding: 2rem; /*button size*/
+
+       
     }
-    .header-content h1{
-        font-size: 11vmin;
+    
+    a.btn{
+        font-size: 4vmin;
     }
     /* css for index page ends here */
 
@@ -1373,7 +1450,7 @@ ul li svg path {
     }
     .nav-links li a { 
         font-size: 22px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Raleway", sans-serif;
     }
     .nav-links li{
         padding: 4%;
@@ -1465,8 +1542,12 @@ ul li svg path {
 
     /* css for galleri.html starts here */
     .content_top h1{
-        font-size: 32px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2.5rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        margin-bottom: 30px;
         padding: 10% 0;
     }
     .content_top p{
@@ -1477,6 +1558,7 @@ ul li svg path {
         margin-left: 10%;
         margin-right: 10%;
     }
+
 
     /* White transparent boxes */
     .parent_container_galleri {
@@ -1490,11 +1572,12 @@ ul li svg path {
         width: 86%;
         max-width: 1500px;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.5); 
         border-radius: 30px;
         margin-bottom: 25px;
         margin-top: 30px;
         padding-bottom: 60px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -1511,15 +1594,17 @@ ul li svg path {
         height: auto;  /* hight is adjusted by width */
         margin-top: 5%;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .white_box_two {
         width: 70%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5%;
         margin-bottom: 50px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1550,14 +1635,13 @@ ul li svg path {
         width: 90%; /* Juster disse prosentene basert på ditt behov */
         max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
         height: auto; /* Gjør boksen mindre eller større etter behov */
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         padding: 0 30px; /* Innvendig plass */
         box-sizing: border-box; /* Inkluder padding i bredden */
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
         padding-top: 20px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 
 
         
@@ -1591,6 +1675,56 @@ ul li svg path {
     .txt-box{
         width: 600px;
     }
+
+
+    /*Adjustsments for Om oss starts here*/
+    .about-us-section{
+        width:100%;
+        height: 70vh;
+        margin-top:0px;
+        }
+    
+            
+        .about-us-box{
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: #e6d5bf;   
+        }
+    
+        
+    .about-us-box img{
+        width:70%;
+        position: absolute;
+        z-index: 2;
+        border-radius: 25px;
+    }
+    
+    
+    .colorful-decor-box{
+        background-color: #718080;
+        width: 80%;
+        height: 40vh;
+        z-index: 1;
+        border-radius: 25px;
+        margin-top:100px;
+        margin-right:200px;
+    }
+    
+    .about-us-title{
+        font-size: 3rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        text-align: center;
+        margin-left:0px;
+    }
+
+
+    /*Adjustsments for Om oss ends here*/
+
+
 
 
 
@@ -1680,15 +1814,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 25px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe {
         width: 80%;
         height: 15rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -1702,14 +1838,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 80%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         margin-bottom: 6.5rem;
-    }
-    .white_box_two_kontakt {
-        display: flex;
-        flex-direction: column;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt ul{
         list-style-type: none;
@@ -1815,8 +1948,12 @@ ul li svg path {
 
     /* css for galleri.html starts here */
     .content_top h1{
-        font-size: 37px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 2.5rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        margin-bottom: 30px;
         padding: 10% 0;
     }
     .content_top p{
@@ -1836,12 +1973,12 @@ ul li svg path {
         width: 86%; 
         max-width: 1500px;
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         margin-bottom: 60px;
         margin-top: 30px;
         padding-bottom: 60px;
-
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -1857,15 +1994,17 @@ ul li svg path {
         height: auto;  /* hight is adjusted by width */
         margin-top: 40px;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .white_box_two {
         width: 70%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 8%;
         margin-bottom: 70px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -1886,7 +2025,7 @@ ul li svg path {
         margin: 40px auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         gap: 1px; /*Space between elements*/
         width: 86%;
@@ -1930,8 +2069,6 @@ ul li svg path {
     }
 
     /*css for bahandlinger.html ends here*/
-    
-
 
     
     /*Adjustments for article*/
@@ -1984,16 +2121,18 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 32%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 15rem;
         border-radius: 30px;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         display: flex;
@@ -2007,10 +2146,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 32%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 19rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt{
         display: flex;
@@ -2046,7 +2186,8 @@ ul li svg path {
 
     }
     /* css for kontakt.html ends here */
-} 
+
+}
 
 
 
@@ -2067,10 +2208,12 @@ ul li svg path {
 
     /* css for galleri.html starts here */
     .content_top h1{
-        font-size: 42px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        padding-top: 10%;
-        padding-bottom: 6%;
+        font-size: 3.4rem;
+        font-family: "DM Serif Text", serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        padding: 10% 0;
     }
     .content_top p{
         font-size: 24px;
@@ -2091,12 +2234,13 @@ ul li svg path {
         width: 84%; 
         max-width: 1500px; 
         height: auto; 
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.5); 
         border-radius: 30px;
         padding: 40px; 
         margin-bottom: 60px;
         margin-top: 40px;
         padding-bottom: 60px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .content {
@@ -2112,14 +2256,16 @@ ul li svg path {
         height: auto;
         margin-top: 60px;
         border-radius: 5%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two {
         width: 50%;
         height: auto;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 5rem 2rem;
         margin-bottom: 70px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two .content {
         display: flex;
@@ -2156,17 +2302,26 @@ ul li svg path {
         margin: 0 auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
-        background-color: rgba(255, 255, 255, 0.3); /* Hvit med 30% gjennomsiktighet */
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
         gap: 50px; /*Space between elements*/
         padding: 40px 40px;
-        width: 100%;
-        max-width: 1000px;
+        width: 80%;
+        max-width: 1500px;
         /*
         border-radius: 15px;
         */
         margin-bottom: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .behandlinger_row p{
+        width: 70%;
+        margin-left: 20%;
+    }
+    .behandlinger_row h2{
+        width: 70%;
+        margin-left: 20%;
+
     }
 
     /*css for behandlinger ends here*/
@@ -2177,15 +2332,17 @@ ul li svg path {
         align-items: center;
         text-align: center;
         width: 30%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 22rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
         height: 22rem;
         border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
         width: 30%;
@@ -2195,10 +2352,11 @@ ul li svg path {
         flex-direction: column;
         align-items: center;
         width: 30%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
         height: 22rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .content_kontakt{
         display: flex;
@@ -2234,6 +2392,12 @@ ul li svg path {
     }
     
     /* css for kontakt.html ends here */
+
+
+    
+
+
+
 
 }
 
