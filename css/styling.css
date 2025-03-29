@@ -480,63 +480,74 @@ span.next:hover, span.prev:hover{
 
 .prisliste_container h2{
     text-align: center;
-    margin-top: 30px;
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 35px;
+    margin-bottom: 50px;
 }
 
-.pricing .category_box {
+.pricing .category_box{
     background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
-    /*background-color: rgba(255, 255, 255, 0.6);
-    */
-    padding: 60px 1px;
-    width: 100%;
-    max-width: 1000px;
-    /*
-    border-radius: 15px;
-    */
+    padding: 50px 1px;
+    width: 86%;
+    max-width: 1500px;
     margin-bottom: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: black;
 }
+
 .category_box ul {
     list-style: none;
     padding: 0;
 }
 
 .category_box li {
-    font-size: 20px;
-    padding: 10px 20%;
+    font-size: 25px;
+    padding: 30px 10%;
     display: flex;
     justify-content: space-between;
+    text-align: left;
+    
+
 }
 
 .category_box li span {
     margin-right: 0;
+    margin-left: 10%;
     padding: 0;
+    font-weight: bold;
+    text-align: right;
+   
+    
+}
+.category_box_merk{
+    background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
+    border-radius: 30px; /* Avrundede hjørner */
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black; 
+    
+
 }
 
-.pricing_btn{
-    padding: 1.25rem 6.25rem;
-    background-color: #43718b;
-    border-radius: 40px;
-    color: whitesmoke;
-    transition: background-color 0.5s ease; /* Add transition for background color */
+a.a_kontakt{
+    color: #43718b;
     text-decoration: none;
+    font-weight: bold;
+     
 }
 
-.pricing_btn:hover{
-   background-color:#ee751c;
-}
-
-
-a.pricing_btn{
-    font-family:"Raleway";
-    font-size: 3vmin;
-    letter-spacing: 1.1px;
-    text-decoration: none;
+a.a_kontakt:hover{
+    color: #ee751c;
+    text-decoration: underline #FEAC1C;
+    text-underline-offset: 0.4rem; 
+    transition:  0.6s ease-in-out;
+    
 }
 
 
@@ -560,15 +571,17 @@ a.pricing_btn{
     margin-top: 30px;
     margin-bottom: 50px;
     
+    
    
 }
+
     
 
 .behandlinger_row .behandlinger-txt-first-img-second{
     display: flex;
     flex-direction: column;
+   
 }
-
 
 
 .behandlinger-article-image img{
@@ -1179,6 +1192,18 @@ ul li svg path {
         display: flex;
 
     }
+
+    .behandlinger-row p{
+        text-align: left;
+
+    }
+
+    .behandlinger_article h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+     
     
 
     .behandlinger-txt-first-img-second,
@@ -1194,14 +1219,14 @@ ul li svg path {
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
         padding-top: 20px;
-
-
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         
         
     }
 
     .behandlinger-txt-first-img-second{
-        order: 1;
+        order: 1;   
+       
     }
 
     .behandlinger-article-image{
@@ -1633,6 +1658,17 @@ ul li svg path {
         display: flex;
 
     }
+
+    .behandlinger_row p{
+        text-align: left;
+    }
+
+    .behandlinger_article h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    
     
 
     .behandlinger-txt-first-img-second,
@@ -1648,9 +1684,7 @@ ul li svg path {
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
         padding-top: 20px;
-
-
-        
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         
     }
 
@@ -2030,7 +2064,6 @@ ul li svg path {
     .behandlinger_row{
         display: flex;
         align-items: center;
-        /*width: 80%;*/
         margin: 40px auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
@@ -2318,11 +2351,8 @@ ul li svg path {
         border-radius: 30px; /* Avrundede hjørner */
         gap: 50px; /*Space between elements*/
         padding: 40px 40px;
-        width: 80%;
+        width: 86%;
         max-width: 1500px;
-        /*
-        border-radius: 15px;
-        */
         margin-bottom: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
