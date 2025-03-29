@@ -488,7 +488,7 @@ span.next:hover, span.prev:hover{
 .pricing .category_box{
     background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
-    padding: 50px 1px;
+    padding: 50px 20px;
     width: 86%;
     max-width: 1500px;
     margin-bottom: 20px;
@@ -504,7 +504,7 @@ span.next:hover, span.prev:hover{
 
 .category_box li {
     font-size: 25px;
-    padding: 30px 10%;
+    padding: 30px 20%;
     display: flex;
     justify-content: space-between;
     text-align: left;
@@ -1181,6 +1181,46 @@ ul li svg path {
     
     /*Footer content ends here*/
 
+    /*css for pricing.html starts here*/
+    .pricing .category_box{
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 50px 1px;
+        width: 86%;
+        max-width: 1500px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: black;
+    }
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 30px 10%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-right: 0;
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
+
 
     /*css for behandlinger.html starts here*/
 
@@ -1193,7 +1233,7 @@ ul li svg path {
 
     }
 
-    .behandlinger-row p{
+    .behandlinger_row p{
         text-align: left;
 
     }
