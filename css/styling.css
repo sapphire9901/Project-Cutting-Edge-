@@ -222,6 +222,7 @@ p{
     align-items: center;
     width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -1173,7 +1174,7 @@ ul li svg path {
 
     .footer-section {
         flex: 1 1 calc(50% - 20px);  /* 2 per row on mobile */
-        align-items: center;
+        align-items: left;
     }
 
 
@@ -2425,13 +2426,6 @@ ul li svg path {
         padding: 1.25rem 1.3rem;
     }
     
-    /* css for kontakt.html ends here */
-
-
-    
-
-
-
 
 }
 
