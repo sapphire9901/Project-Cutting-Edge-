@@ -1168,6 +1168,7 @@ ul li svg path {
 
     footer{
         padding: 0;
+        gap:20px;
         padding-top:10px;
     }
    
