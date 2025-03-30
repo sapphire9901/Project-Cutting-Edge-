@@ -1174,7 +1174,7 @@ ul li svg path {
 
     .footer-section {
         flex: 1 1 calc(50% - 20px);  /* 2 per row on mobile */
-        align-items: left;
+        text-align:center;
     }
 
 
