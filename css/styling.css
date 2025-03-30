@@ -963,7 +963,7 @@ ul li svg path {
     }
 
     .home .main-site-box h1{
-        font-size: 2.5rem;
+        font-size: 3.7rem;
         padding: 10px;
         margin: 10px 0;
         margin-bottom: 30px;
@@ -1162,19 +1162,18 @@ ul li svg path {
 
     footer ul li {
         margin: 5px 0; /* Adds space above and below each link */
-        text-align: left;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     footer a{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     footer h3{
         margin-bottom:20px;
         padding-top: 20px;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
 
