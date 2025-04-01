@@ -1207,16 +1207,25 @@ ul li svg path {
 
     /*css for pricing.html starts here*/
     .pricing .category_box{
-        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 50px 1px;
-        width: 86%;
-        max-width: 1500px;
-        margin-bottom: 20px;
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        color: black;
     }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 5vmin;
+    }
+    
     
     .category_box ul {
         list-style: none;
@@ -1225,16 +1234,16 @@ ul li svg path {
     
     .category_box li {
         font-size: 25px;
-        padding: 30px 10%;
+        padding: 15px 2%;
         display: flex;
         justify-content: space-between;
         text-align: left;
+        margin-left: 0;
         
     
     }
     
     .category_box li span {
-        margin-right: 0;
         margin-left: 10%;
         padding: 0;
         font-weight: bold;
@@ -1700,6 +1709,55 @@ ul li svg path {
     }
     /* css for galleri.html ends here */
 
+     /*css for pricing.html starts here*/
+     .pricing .category_box{
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 4.5vmin;
+    }
+    
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 15px 2%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 0;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
+
 
     /*css for bahandlinger.html starts here*/
     .behandlinger_article{
@@ -2067,6 +2125,54 @@ ul li svg path {
         font-family: var(--main-font);
     }
     /* css for galleri.html ends here */
+     /*css for pricing.html starts here*/
+     .pricing .category_box{
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 4vmin;
+    }
+    
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 15px 2%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 0;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
 
     /*css for bahandlinger.html starts here*/
     .behandlinger_row{
