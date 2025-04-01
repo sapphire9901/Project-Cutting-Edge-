@@ -486,6 +486,7 @@ span.next:hover, span.prev:hover{
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
+    padding: 3% 0;
 }
 
 
@@ -574,6 +575,8 @@ a.a_kontakt:hover{
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
     margin-bottom: 50px;
+    padding: 3% 0;
+    
 }
 
 
