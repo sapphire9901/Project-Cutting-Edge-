@@ -1,3 +1,13 @@
+:root {
+    --header-font:"DM Serif Text", serif; /*Font to the titles of the pages*/
+    --main-font:"Raleway", sans-serif; /*Main font used in navbar, buttons, h2, p, footer*/
+    --text-in-box-on-index:"Yanone Kaffeesatz", sans-serif;
+    --footer-title:"Indie Flower", serif;
+    --handwriting:"Oooh Baby", cursive;
+    --polaroid-font:"Nothing You Could Do", cursive;
+}
+
+
 *{
     margin: 0; /*Removes default margin & padding*/
     padding: 0;
@@ -58,7 +68,7 @@ body{
     text-decoration: none;
     font-size: 23px;
     color: white;
-    font-family: "Bricolage Grotesque", sans-serif;
+    font-family:var(--main-font); /*font to navigation links*/
     font-weight: 400;
 }
 
@@ -107,7 +117,7 @@ body{
     font-size: 5rem;
     color: #180505;
     margin-bottom: 60px;
-     font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: var(--text-in-box-on-index);
 }
 
 
@@ -138,7 +148,7 @@ body{
 
 
 a.btn{
-    font-family:"Raleway";
+    font-family:var(--main-font);
     font-size: 3vmin;
     letter-spacing: 1.1px;
 }
@@ -146,7 +156,7 @@ a.btn{
 
 
 h2{
-    font-family: "Oswald", serif;
+    font-family: var(--main-font);
     font-weight: 600;
     line-height: 1;
     margin-bottom: 1em;
@@ -155,10 +165,10 @@ h2{
 
 
 p{
-font-size: 1.3rem;
-margin-bottom: 2rem;
-font-family: "Oswald", serif;
-line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-family: var(--main-font);
+    line-height: 1.6;
 }
 
 
@@ -172,6 +182,7 @@ line-height: 1.6;
     border-radius:320px;
     text-decoration: none;
     font-size: 1.3rem;
+    font-family: var(--main-font);
 }
 
 .ctn:hover{
@@ -189,8 +200,8 @@ line-height: 1.6;
 }
 
 .article h2{
-    font-family: "Raleway", sans-serif;
-    font-size: 2rem;
+    font-family: var(--main-font);
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -211,13 +222,14 @@ line-height: 1.6;
     align-items: center;
     width: 100%;
     justify-content: center;
+    text-align: center;
 }
 
 
 
 .quote p{
     font-size: 5rem;
-    font-family: "Oooh Baby", cursive;
+    font-family: var(--handwriting);
 }
 
 .inspo{
@@ -330,7 +342,7 @@ line-height: 1.6;
     width: 100%;
     text-align: center;
     font-size: 2rem;
-    font-family: "Nothing You Could Do", cursive;
+    font-family: var(--polaroid-font);
     font-weight: bold;
     bottom: -45px;
     background-image: url('../media/index.html/etikett.webp');
@@ -444,7 +456,6 @@ span.next:hover, span.prev:hover{
     text-align: center;
     justify-content: center;
     font-size: large;
-    font-family: sans-serif;
     line-height: 1.6;
 }
 
@@ -471,7 +482,7 @@ span.next:hover, span.prev:hover{
     margin-top: 30px;
     font-size: 3rem;
     margin-bottom: 10px;
-    font-family: "DM Serif Text", serif;
+    font-family: var(--header-font);
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
@@ -480,63 +491,74 @@ span.next:hover, span.prev:hover{
 
 .prisliste_container h2{
     text-align: center;
-    margin-top: 30px;
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 35px;
+    margin-bottom: 50px;
 }
 
-.pricing .category_box {
+.pricing .category_box{
     background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
-    /*background-color: rgba(255, 255, 255, 0.6);
-    */
-    padding: 60px 1px;
-    width: 100%;
-    max-width: 1000px;
-    /*
-    border-radius: 15px;
-    */
+    padding: 50px 20px;
+    width: 86%;
+    max-width: 1500px;
     margin-bottom: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: black;
 }
+
 .category_box ul {
     list-style: none;
     padding: 0;
 }
 
 .category_box li {
-    font-size: 20px;
-    padding: 10px 20%;
+    font-size: 25px;
+    padding: 30px 20%;
     display: flex;
     justify-content: space-between;
+    text-align: left;
+    
+
 }
 
 .category_box li span {
     margin-right: 0;
+    margin-left: 10%;
     padding: 0;
+    font-weight: bold;
+    text-align: right;
+   
+    
+}
+.category_box_merk{
+    background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
+    border-radius: 30px; /* Avrundede hjørner */
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black; 
+    
+
 }
 
-.pricing_btn{
-    padding: 1.25rem 6.25rem;
-    background-color: #43718b;
-    border-radius: 40px;
-    color: whitesmoke;
-    transition: background-color 0.5s ease; /* Add transition for background color */
+a.a_kontakt{
+    color: #43718b;
     text-decoration: none;
+    font-weight: bold;
+     
 }
 
-.pricing_btn:hover{
-   background-color:#ee751c;
-}
-
-
-a.pricing_btn{
-    font-family:"Raleway";
-    font-size: 3vmin;
-    letter-spacing: 1.1px;
-    text-decoration: none;
+a.a_kontakt:hover{
+    color: #ee751c;
+    text-decoration: underline #FEAC1C;
+    text-underline-offset: 0.4rem; 
+    transition:  0.6s ease-in-out;
+    
 }
 
 
@@ -547,7 +569,7 @@ a.pricing_btn{
     text-align: center;
     margin-top: 30px;
     font-size: 3rem;
-    font-family: "DM Serif Text", serif;
+    font-family: var(--header-font);
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
@@ -560,15 +582,17 @@ a.pricing_btn{
     margin-top: 30px;
     margin-bottom: 50px;
     
+    
    
 }
+
     
 
 .behandlinger_row .behandlinger-txt-first-img-second{
     display: flex;
     flex-direction: column;
+   
 }
-
 
 
 .behandlinger-article-image img{
@@ -650,7 +674,7 @@ a.pricing_btn{
 
 .about-us-title{
     font-size: 5rem;
-    font-family: "DM Serif Text", serif;
+    font-family:var(--header-font);
     text-align: center;
     margin-left:200px;
     text-decoration: underline;
@@ -690,9 +714,9 @@ a.pricing_btn{
 
 .txt-box h2{
     font-size: 2.5rem;
-    font-family: "DM Serif Text", serif;
+    font-family: var(--header-font);
     text-decoration: underline;
-    text-underline-offset: 30px;
+    text-underline-offset: 20px;
     text-decoration-color: #ee751c;
     text-align: center;
 }
@@ -727,6 +751,7 @@ a.pricing_btn{
     border-radius:320px;
     text-decoration: none;
     font-size: 1.5rem;
+    font-family: var(--main-font);
 }
 
 .dtn:hover{
@@ -755,17 +780,18 @@ a.pricing_btn{
 
 
 .faq-txt h2{
-        font-family: "Raleway", sans-serif;
+        font-family:var(--main-font);
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
 }
 
 .faq-txt h3{
-    font-family: "Raleway", sans-serif;
+    font-family: var(--main-font);
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 
@@ -779,34 +805,33 @@ a.pricing_btn{
 
 
 footer{
-    display: flex;
-    flex-wrap: nowrap;
     background-color: #718080;
-    align-items: flex-start; 
-    padding: 70px 40px 100px 30px;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     color: white;
-
-   
+    padding: 0 50px;
+    padding-top:100px; 
 }
-footer h3, footer ul {
-    margin: 0 10px;
+
+footer ul {
     list-style-type: none;
-    font-family: sans-serif;
-    font-size: 15px;
+
 }
 
-footer ul li {
-    margin: 10px 0; /* Adds space above and below each link */
-    font-size: 1rem;
+footer li {
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+    font-family:var(--main-font);
 }
 
 footer h3{
+    padding-bottom: 30px;
     color: #E6D5BF;
-    font-family:"Indie Flower", serif;
-    font-size: 2.5rem;
+    font-family:var(--footer-title);
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom:20px;
+    
 }
 
 footer li a {
@@ -823,9 +848,12 @@ footer li a:hover{
 .footer-section{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    line-height: 1.8;
-    margin: 0 50px;
+    flex: 1 1 calc(25% - 20px);  /* 4 elements per row on desktop */
+    text-align: center;
+    margin-bottom: 20px;
+    height: 100%;
+    font-family:var(--main-font);
+
 }
 
 .footer-wave{
@@ -837,9 +865,16 @@ footer li a:hover{
 }
 
 
-
 ul li svg path {
-    fill: white; /* Change the color of the icons to white */
+    fill: white; /* Change the color of the social media icons to white */
+}
+
+.footer-socialmedia-icons{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 /*Footer ends here*/
@@ -885,7 +920,7 @@ ul li svg path {
 
 
     .nav-links li a { 
-        font-family: "Raleway", sans-serif;
+        font-family:var(--main-font);
         font-size: 2rem;
 
     }
@@ -950,7 +985,7 @@ ul li svg path {
     }
 
     .home .main-site-box h1{
-        font-size: 2.5rem;
+        font-size: 3.7rem;
         padding: 10px;
         margin: 10px 0;
         margin-bottom: 30px;
@@ -1063,7 +1098,7 @@ ul li svg path {
     /*Main content ends here*/
 
 
-    /*About Us adjustsments here*/
+    /*About Us adjustments here*/
     
     .about-us-section{
         width:100%;
@@ -1101,7 +1136,7 @@ ul li svg path {
 
     .about-us-title{
         font-size: 2.5rem;
-        font-family: "DM Serif Text", serif;
+        font-family:var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
@@ -1112,7 +1147,7 @@ ul li svg path {
 
 
 
-    /*Adjustsments for bestill-side*/
+    /*Adjustments for bestill-side*/
 
     .faq-h2{
         font-size: 2.5rem;
@@ -1132,41 +1167,69 @@ ul li svg path {
     /*Footer content starts here*/
 
     footer{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding: 50px 0;
-
+        padding: 0;
+        padding-top:10px;
     }
+   
 
-    .footer-section{
-        margin: 20px auto;
-        width: 40%;
-        padding: 0 5px;
-    
+    .footer-section {
+        flex: 1 1 calc(50% - 20px);  /* 2 per row on mobile */
+        text-align:center;
     }
 
 
-    footer ul li {
-        margin: 5px 0; /* Adds space above and below each link */
-        text-align: left;
-        font-size: 2rem;
+
+    .footer-section span.time{
+        display: block;
     }
 
-    footer a{
-        font-size: 2rem;
+    .footer-socialmedia-icons{
+        flex-direction: column;
+        gap:1px;
     }
-
-    footer h3{
-        margin-bottom:20px;
-        padding-top: 20px;
-        text-align: left;
-        font-size: 1.5rem;
-    }
-
 
     
     /*Footer content ends here*/
+
+    /*css for pricing.html starts here*/
+    .pricing .category_box{
+        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
+        border-radius: 30px; /* Avrundede hjørner */
+        padding: 50px 1px;
+        width: 86%;
+        max-width: 1500px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: black;
+    }
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 30px 10%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-right: 0;
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
 
 
     /*css for behandlinger.html starts here*/
@@ -1179,6 +1242,18 @@ ul li svg path {
         display: flex;
 
     }
+
+    .behandlinger_row p{
+        text-align: left;
+
+    }
+
+    .behandlinger_article h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+     
     
 
     .behandlinger-txt-first-img-second,
@@ -1194,14 +1269,14 @@ ul li svg path {
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
         padding-top: 20px;
-
-
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         
         
     }
 
     .behandlinger-txt-first-img-second{
-        order: 1;
+        order: 1;   
+       
     }
 
     .behandlinger-article-image{
@@ -1220,17 +1295,15 @@ ul li svg path {
         
     }
 
-
-
     /*css for behandlinger.html ends here*/
 
-    /*footer content ends here*/
+
 
 
     /* css for galleri.html starts here */
     .content_top h1{
+        font-family: var(--header-font);
         font-size: 30px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         padding: 5% 0;
     }
     
@@ -1285,7 +1358,6 @@ ul li svg path {
     }
     .white_box_two h2{
         font-size: 28px;
-        font-family: "Bricolage Grotesque", sans-serif;
     }
     .content a{
         font-size: 20px;
@@ -1294,7 +1366,6 @@ ul li svg path {
         font-size: 28px;
         margin-top: 10px;
         margin-bottom: 17px;
-        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -1361,7 +1432,6 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 24px;
-        font-family: "Bricolage Grotesque", sans-serif;
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -1455,7 +1525,7 @@ ul li svg path {
     }
     .nav-links li a { 
         font-size: 28px;
-        font-family: "Raleway", sans-serif;
+        font-family: var(--main-font);
     }
     .nav-links li{
         padding: 4%;
@@ -1505,42 +1575,32 @@ ul li svg path {
     /* navbar and hamburger menu for ipad/tablets ends here */
 
 
+
     /*Footer content starts here*/
 
     footer{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding: 50px 0;
-
+        padding: 0;
+        gap:20px;
+        padding-top:10px;
     }
+   
 
-    .footer-section{
-        margin: 20px auto;
-        width: 40%;
-        padding: 0 5px;
-    
-    }
-
-
-    footer ul li {
-        margin: 5px 0; /* Adds space above and below each link */
-        text-align: left;
-        font-size: 1rem;
-    }
-
-    footer a{
-        font-size: 1rem;
+    .footer-section {
+        flex: 1 1 calc(50% - 20px);  /*2 elements per row*/
+        align-items: center;
     }
 
 
 
-    footer h3{
-        margin-bottom:20px;
-        padding-top: 20px;
-        text-align: left;
-        font-size: 1.5rem;
+    .footer-section span.time{
+        display: block;
     }
+
+    .footer-socialmedia-icons{
+        flex-direction: column;
+        gap:1px;
+    }
+  
     /*Footer content ends here*/
 
 
@@ -1548,7 +1608,7 @@ ul li svg path {
     /* css for galleri.html starts here */
     .content_top h1{
         font-size: 2.5rem;
-        font-family: "DM Serif Text", serif;
+        font-family: var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
@@ -1620,7 +1680,6 @@ ul li svg path {
     }
     .white_box_two h2{
         font-size: 28px;
-        font-family: "Bricolage Grotesque", sans-serif;
     }
     /* css for galleri.html ends here */
 
@@ -1633,6 +1692,17 @@ ul li svg path {
         display: flex;
 
     }
+
+    .behandlinger_row p{
+        text-align: left;
+    }
+
+    .behandlinger_article h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    
     
 
     .behandlinger-txt-first-img-second,
@@ -1648,9 +1718,7 @@ ul li svg path {
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
         padding-top: 20px;
-
-
-        
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         
     }
 
@@ -1675,7 +1743,7 @@ ul li svg path {
     }
 
 
-    /*css for bahandlinger.html ends here*/
+    /*css for behandlinger.html ends here*/
 
     /*Adjustsments for bestill-time*/
     .txt-box{
@@ -1719,7 +1787,7 @@ ul li svg path {
     
     .about-us-title{
         font-size: 3rem;
-        font-family: "DM Serif Text", serif;
+        font-family: var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
@@ -1727,46 +1795,10 @@ ul li svg path {
         margin-left:0px;
     }
 
-
     /*Adjustsments for Om oss ends here*/
 
 
 
-
-
-    /*Footer adjustsments starts here*/
-    footer{
-        display:flex;
-        flex-direction: row;
-        padding: 0 50px;
-
-    }
-
-    .footer-section{
-        margin: 20px auto;
-        width: 40%;
-        padding: 0 5px;
-    
-    }
-
-
-    footer ul li {
-        margin: 5px 0; /* Adds space above and below each link */
-        text-align: left;
-        font-size: 1rem;
-    }
-
-    footer a{
-        font-size: 1rem;
-    }
-
-    footer h3{
-        margin-bottom:20px;
-        padding-top: 20px;
-        text-align: left;
-        font-size: 1.5rem;
-    }
-    /*Footer adjustsments ends here*/
 
     /*Adjustments for article*/
 
@@ -1859,8 +1891,8 @@ ul li svg path {
         line-height: 1.5;
     }
     .content_kontakt h2 {
-        font-size: 27px;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 30px;
+        font-family: var(--main-font);
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -1918,46 +1950,39 @@ ul li svg path {
 
     /*Footer content starts here*/
 
+
+    /*Footer content starts here*/
+
     footer{
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding: 50px 0;
-
+        padding: 0;
+        gap:20px;
+        padding-top:10px;
     }
+   
 
-    .footer-section{
-        margin: 20px auto;
-        width: 40%;
-        padding: 0 5px;
-    
-    }
-
-
-    footer ul li {
-        margin: 5px 0; /* Adds space above and below each link */
-        text-align: left;
-        font-size: 1rem;
-    }
-
-    footer a{
-        font-size: 1rem;
+    .footer-section {
+        flex: 1 1 calc(25% - 20px);  
+        align-items: center;
     }
 
 
 
-    footer h3{
-        margin-bottom:20px;
-        padding-top: 20px;
-        text-align: left;
-        font-size: 2rem;
+    .footer-section span.time{
+        display: block;
     }
+
+    .footer-socialmedia-icons{
+        flex-direction: column;
+        gap:1px;
+    }
+  
+
     /*Footer content ends here*/
 
     /* css for galleri.html starts here */
     .content_top h1{
         font-size: 2.5rem;
-        font-family: "DM Serif Text", serif;
+        font-family: var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
@@ -2022,7 +2047,7 @@ ul li svg path {
     .white_box_two h2{
         font-size: 32px;
         margin-bottom: 9px;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-family: var(--main-font);
     }
     /* css for galleri.html ends here */
 
@@ -2030,7 +2055,6 @@ ul li svg path {
     .behandlinger_row{
         display: flex;
         align-items: center;
-        /*width: 80%;*/
         margin: 40px auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
@@ -2175,7 +2199,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 24px;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-family: var(--main-font);
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -2220,7 +2244,7 @@ ul li svg path {
     /* css for galleri.html starts here */
     .content_top h1{
         font-size: 3.4rem;
-        font-family: "DM Serif Text", serif;
+        font-family: var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
@@ -2286,7 +2310,7 @@ ul li svg path {
     .white_box_two h2{
         font-size: 38px;
         margin-bottom: 9px;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-family: var(--main-font);
     }
     /* css for galleri.html ends here */
 
@@ -2318,11 +2342,8 @@ ul li svg path {
         border-radius: 30px; /* Avrundede hjørner */
         gap: 50px; /*Space between elements*/
         padding: 40px 40px;
-        width: 80%;
+        width: 86%;
         max-width: 1500px;
-        /*
-        border-radius: 15px;
-        */
         margin-bottom: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -2384,7 +2405,7 @@ ul li svg path {
     }
     .content_kontakt h2 {
         font-size: 27px;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-family: var(--main-font);
     }
     .sosiale_medier_ikoner{
         margin: 10px;
@@ -2405,13 +2426,6 @@ ul li svg path {
         padding: 1.25rem 1.3rem;
     }
     
-    /* css for kontakt.html ends here */
-
-
-    
-
-
-
 
 }
 
