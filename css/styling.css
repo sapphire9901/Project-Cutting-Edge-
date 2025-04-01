@@ -869,6 +869,17 @@ ul li svg path {
     fill: white; /* Change the color of the social media icons to white */
 }
 
+.social-kontakt ul li svg path {
+    fill: black; /* Change the color of the social media icons to white */
+}
+.social-kontakt ul li{
+    padding: 10px;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer-socialmedia-icons{
     display: flex;
     gap:20px;
@@ -1299,14 +1310,24 @@ ul li svg path {
 
 
 
+    /* css for kontakt.html and galleri.html starts here */
+    .h1-styling h1{
+        font-size: 2.3rem;
+        font-family: var(--header-font);
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        margin-bottom: 30px;
+        padding: 10% 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    /* css for kontakt.html and galleri.html ends here */
+
+
 
     /* css for galleri.html starts here */
-    .content_top h1{
-        font-family: var(--header-font);
-        font-size: 30px;
-        padding: 5% 0;
-    }
-    
     .content_top p{
         font-size: 20px;
     }
@@ -1323,12 +1344,13 @@ ul li svg path {
         margin-top: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .content_top { /* this class is also used for kontakt.html */
+    .content_top {
         width: 90%;
         height: auto; 
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
-        padding: 5px 30px;
+        padding: 25px;
+        padding-top: 50px;
         margin: 20px auto;
         margin-bottom: 0;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -1379,7 +1401,7 @@ ul li svg path {
         justify-content: center;
         width: 90%;
         margin: 0 auto;
-        gap: 20px;
+        gap: 50px;
         margin-bottom: 16px;
     }
     .white_box_one_kontakt {
@@ -1417,7 +1439,7 @@ ul li svg path {
         padding: 2rem 2rem;
         margin-bottom: 30px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: right;
+        text-align: center;
     }
     .white_box_two_kontakt {
         display: flex;
@@ -1433,20 +1455,10 @@ ul li svg path {
     .content_kontakt h2 {
         font-size: 24px;
     }
-    .sosiale_medier_ikoner{
-        margin: 10px;
-    }
-    .sosiale_medier_ikoner a {
-        margin-right: 6px; /* adds space between icons */
-    }
-    .sosiale_medier_ikoner a:last-child {
-        margin-right: 0; /* Removes the margin for the last icon */
-    }
     .direction_buttons{
         display: flex;
         justify-content: center; /* Center horizontally */
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin-top: 25px;
     }
     .direction_buttons .btn{
         font-size: 20px;
@@ -1634,30 +1646,29 @@ ul li svg path {
     }
     /* holding content_top and all of the images */
     .white_box_one {
-        width: 86%;
-        max-width: 1500px;
+        width: 90%;
         height: auto; 
         background-color: rgba(255, 255, 255, 0.5); 
         border-radius: 30px;
         margin-bottom: 25px;
         margin-top: 30px;
-        padding-bottom: 60px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
     }
 
     .content {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 5%; /* Gap between images*/
+        gap: 10px; /* Gap between images*/
         width: 100%;
     }
 
     .content img {
-        flex: 1 0 calc(33.333% - 60px); /* we measure width, -60px because of the gaps */
-        max-width: calc(33.333% - 60px); /* we make sure the image do not exceed this width */
+        flex: 1 0 calc(33.333% - 10px); /* we measure width, -10px because of the gaps */
+        max-width: calc(33.333% - 10px); /* we make sure the image do not exceed this width */
         height: auto;  /* hight is adjusted by width */
-        margin-top: 5%;
+        margin-top: 10px;
         border-radius: 5%;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -1680,6 +1691,9 @@ ul li svg path {
     }
     .white_box_two h2{
         font-size: 28px;
+    }
+    .content .btn {
+        padding: 1.25rem 3rem;
     }
     /* css for galleri.html ends here */
 
@@ -1759,13 +1773,13 @@ ul li svg path {
         }
     
             
-        .about-us-box{
-            max-width: 90%;
-            display: flex;
-            flex-direction: column;
-            background-color: #e6d5bf;   
-        }
-    
+    .about-us-box{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: #e6d5bf;   
+    }
+
         
     .about-us-box img{
         width:70%;
@@ -1835,14 +1849,25 @@ ul li svg path {
 
 
     /* css for kontakt.html starts here */
+    .h1-styling h1{
+        font-size: 2.5rem;
+        font-family: var(--header-font);
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        margin-bottom: 30px;
+        padding: 10% 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
     .parent_container_kontakt {
         display: flex;
         flex-direction: column; 
         align-items: center;
         justify-content: center;
-        width: 95%;
         margin: 0 auto;
-        gap: 20px;
+        gap: 30px;
         margin-bottom: 16px;
         width: 100%;
     }
@@ -1879,9 +1904,8 @@ ul li svg path {
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
-        margin-bottom: 6.5rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: right;
+        text-align: center;
     }
     .content_kontakt ul{
         list-style-type: none;
@@ -1894,20 +1918,11 @@ ul li svg path {
         font-size: 30px;
         font-family: var(--main-font);
     }
-    .sosiale_medier_ikoner{
-        margin: 10px;
-    }
-    .sosiale_medier_ikoner a {
-        margin-right: 6px; /* adds space between icons */
-    }
-    .sosiale_medier_ikoner a:last-child {
-        margin-right: 0; /* Removes the margin for the last icon */
-    }
     .direction_buttons{
         display: flex;
         justify-content: center;
-        margin-top: 10px;
-        margin-bottom: 25px;
+        margin-top: 45px;
+        margin-bottom: 35px;
     }
     .direction_buttons .btn{
         padding: 1.25rem 6rem;
@@ -1981,12 +1996,11 @@ ul li svg path {
 
     /* css for galleri.html starts here */
     .content_top h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-family: var(--header-font);
         text-decoration: underline;
         text-underline-offset: 30px;
         text-decoration-color: #ee751c;
-        margin-bottom: 30px;
         padding: 10% 0;
     }
     .content_top p{
@@ -2139,32 +2153,43 @@ ul li svg path {
 
 
     /* css for kontakt.html starts here */
-    .parent_container_kontakt{
-        display: flex;
-        flex-direction: row; 
+    .h1-styling h1{
+        font-size: 3rem;
+        font-family: var(--header-font);
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        padding: 10% 0;
         justify-content: center;
-        width: 97%;
+        align-items: center;
+        display: flex;
+    }
+    .parent_container_kontakt {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        width: 95%;
         margin: 0 auto;
-        gap: 10px;
-        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 16px;
     }
     .white_box_one_kontakt {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 32%;
+        width: 60%;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
-        height: 19rem;
+        margin-bottom: 25px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .white_box_two_kontakt iframe{
-        width: 100%;
-        height: 15rem;
+    .white_box_two_kontakt iframe {
+        width: 60%;
+        height: 25rem;
         border-radius: 30px;
-        height: 19rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt{
@@ -2172,53 +2197,40 @@ ul li svg path {
         flex-direction: column; 
         align-items: center;
         justify-content: center;
-        width: 32%;
+        width: 100%;
     }
     .white_box_three_kontakt {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 32%;
+        width: 60%;
+        height: auto;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
-        padding: 2rem 2rem;
-        height: 19rem;
+        padding: 3rem;
+        margin-bottom: 4.5rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: right;
-    }
-    .content_kontakt{
-        display: flex;
-        flex-direction: column;
+        text-align: center;
     }
     .content_kontakt ul{
         list-style-type: none;
     }
     .content_kontakt li {
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 2;
     }
     .content_kontakt h2 {
-        font-size: 24px;
+        font-size: 30px;
         font-family: var(--main-font);
-    }
-    .sosiale_medier_ikoner{
-        margin: 10px;
-    }
-    .sosiale_medier_ikoner a {
-        margin-right: 6px; /* adds space between icons */
-    }
-    .sosiale_medier_ikoner a:last-child {
-        margin-right: 0; /* Removes the margin for the last icon */
     }
     .direction_buttons{
         display: flex;
-        justify-content: center; /* Center horizontally */
-        margin-bottom: 70px;
-        margin-top: 10px;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 35px;
     }
     .direction_buttons .btn{
-        padding: 1.25rem 0.5rem;
-
+        padding: 1.25rem 6rem;
     }
     /* css for kontakt.html ends here */
 
@@ -2356,8 +2368,27 @@ ul li svg path {
         margin-left: 20%;
 
     }
+    /*css for behandlinger.html ends here*/
 
-    /*css for behandlinger ends here*/
+
+    /*css for kontakt.html starts here*/
+    .h1-styling h1{
+        font-size: 3.4rem;
+        font-family: var(--header-font);
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        text-decoration-color: #ee751c;
+        padding-top: 9rem;
+        padding-bottom: 6rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .parent_container_kontakt {
+        width: 95%;
+    }
+
 
     .white_box_one_kontakt {
         display: flex;
@@ -2368,12 +2399,12 @@ ul li svg path {
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
-        height: 22rem;
+        height: 23rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
     .white_box_two_kontakt iframe{
         width: 100%;
-        height: 22rem;
+        height: 23rem;
         border-radius: 30px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
@@ -2388,9 +2419,9 @@ ul li svg path {
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 30px;
         padding: 2rem 2rem;
-        height: 22rem;
+        height: 23rem;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: right;
+        text-align: center;
     }
     .content_kontakt{
         display: flex;
@@ -2407,24 +2438,16 @@ ul li svg path {
         font-size: 27px;
         font-family: var(--main-font);
     }
-    .sosiale_medier_ikoner{
-        margin: 10px;
-    }
-    .sosiale_medier_ikoner a {
-        margin-right: 6px; /* adds space between icons */
-    }
-    .sosiale_medier_ikoner a:last-child {
-        margin-right: 0; /* Removes the margin for the last icon */
-    }
     .direction_buttons{
         display: flex;
         justify-content: center; /* Center horizontally */
-        margin-bottom: 70px;
+        margin-bottom: 4rem;
     }
     .direction_buttons .btn {
-        margin-top: 10px;
+        margin-top: 40px;
         padding: 1.25rem 1.3rem;
     }
+    /*css for kontakt.html ends here*/
     
 
 }
