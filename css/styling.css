@@ -41,7 +41,7 @@ body{
 
 /* navbar */
 .navbar{
-    background-color: #718080;
+    background-color: #556463;
     display: flex; /* displays the elements horizontally */
     justify-content: center;
     padding: 35px 20px;
@@ -94,23 +94,33 @@ body{
 
 /*Main banner*/
 .home{
-    position: relative;
     background-image: url(../media/index.html/Bakgrunnsbilde.webp);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .home .main-site-box{
-    width: 100%;
-    display: flex;
+    display:flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    min-width: 200px;
+    max-width: 90%;
+    min-height: 150px;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin-top:30px;
+    margin-bottom:30px;
 }
 
 .home .main-site-box h1{
@@ -122,19 +132,9 @@ body{
 
 
 
-.transparent-box{
-    margin-top: 100px;
-    background: rgba(255, 255, 255, 0.7); /* Transparent white, adjust the last digit to adjust the transparency */
-    width: 60%;
-    height: 50vh;
-    padding: 6% 0;
-    border-radius: 25px;
-
-}
-
-
 .btn{
     padding: 20px 40px;
+    margin-bottom:30px;
     background-color: #43718b;
     border-radius: 40px;
     color: whitesmoke;
@@ -290,7 +290,7 @@ p{
 
 
 /*Index gallery starts here */
-/*Base code learnt from this video: https://youtu.be/57pXPbTRhCc?feature=shared*/
+/*Gallery slider is from this video: https://youtu.be/57pXPbTRhCc?feature=shared*/
 
 .gallery-section{
     display: flex;
@@ -486,6 +486,7 @@ span.next:hover, span.prev:hover{
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
+    padding: 3% 0;
 }
 
 
@@ -574,6 +575,8 @@ a.a_kontakt:hover{
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
     margin-bottom: 50px;
+    padding: 3% 0;
+    
 }
 
 
@@ -633,69 +636,50 @@ a.a_kontakt:hover{
 
 /*About us starts here*/
 
-.about-us-section{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    margin-top:90px;
-}
-
 .about-us-box{
-    max-width: 90%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #e6d5bf;
-    gap:100px;
+    height: 100vh;
+    position: relative;
 }
 
+
 .about-us-box img{
-    width:40%;
-    position: absolute;
-    z-index: 2;
+    width:600px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
     border-radius: 25px;
 }
 
 
 .colorful-decor-box{
-    position:relative;
-    background-color: #718080;
-    margin-top:200px;
-    margin-left:300px;
-    width: 500px;
-    height: 50vh;
-    z-index: 1;
+    top:180px;
+    left:380px;
+    background-color: #556463;
+    width: 600px;
+    height: 500px;
+    position:absolute;
+    z-index: 0;
     border-radius: 25px;
 }
 
 .about-us-title{
-    font-size: 5rem;
+    font-size: 4rem;
     font-family:var(--header-font);
-    text-align: center;
-    margin-left:200px;
     text-decoration: underline;
     text-underline-offset: 30px;
     text-decoration-color: #ee751c;
-}
-
-.article-image-omoss{
-    width: 100%;
-    height: auto;
+    text-align: center;
+    margin-top:50px;
+    z-index: 2;
 }
 
 .article-image-omoss img{
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 25px;
+    border-radius: 25px;   
 }
-
-
-
 
 
 /*About us ends here*/
@@ -703,34 +687,45 @@ a.a_kontakt:hover{
 
 /*Bestill time - starts here*/
 
-.txt-box{
-    background-color: #f3eae0;
-    width: 660px;
-    height: 400px;
-    padding: 45px;
-    padding-top:100px;
-    border-radius: 25px;
-}
-
-.txt-box h2{
-    font-size: 2.5rem;
-    font-family: var(--header-font);
-    text-decoration: underline;
-    text-underline-offset: 20px;
-    text-decoration-color: #ee751c;
-    text-align: center;
-}
-
-
-.row .txt-first-img-second-with-bg{
+.bestill-box{
+    margin-top:100px;
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+}
+
+.bestill-txt{
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    min-width: 200px;
+    max-width: 90%;
+    min-height: 150px;
+    padding:35px;
+    border-radius: 25px;
+    border: solid #566464 8px;
+    order:1;
 }
 
+.bestill-txt h1{
+    font-size: 2.5rem;
+    font-family: var(--header-font);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #ee751c;
+    margin-bottom: 14px;
+}
+
+.bestill-img{
+    border-radius: 25px;
+    order:2;
+}
 
 .telephone-txt{
     margin-top: 20px;
@@ -745,12 +740,12 @@ a.a_kontakt:hover{
 
 .dtn{
     max-width: fit-content;
-    padding: 10px 30px;
+    padding: 15px 30px;
     background-color: #43718b;
     color: #fffff4;
     border-radius:320px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: var(--main-font);
 }
 
@@ -805,7 +800,7 @@ a.a_kontakt:hover{
 
 
 footer{
-    background-color: #718080;
+    background-color: #556463;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -821,7 +816,7 @@ footer ul {
 
 footer li {
     margin-bottom: 40px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family:var(--main-font);
 }
 
@@ -848,8 +843,8 @@ footer li a:hover{
 .footer-section{
     display: flex;
     flex-direction: column;
-    flex: 1 1 calc(25% - 20px);  /* 4 elements per row on desktop */
     text-align: center;
+    flex: 1 1 calc(25% - 20px);  /* 4 elements per row on desktop */
     margin-bottom: 20px;
     height: 100%;
     font-family:var(--main-font);
@@ -905,7 +900,7 @@ ul li svg path {
     }
     /* code for ham-menu is from this video https://www.youtube.com/watch?v=aNDqzlAKmZc */
     .nav-links{
-        background-color: #718080;
+        background-color: #556463;
         height: 100vh;
         width: 100%;
         max-width: 450px;
@@ -987,29 +982,29 @@ ul li svg path {
     
     /*Header content starts here*/
     /* css for index page starts here */
-    .transparent-box{
-        width: 80%;
-        height: 50vh;
-        padding: 5% 0;
-        border-radius: 25px;
-        margin-top: 10px;
+    
+    .home{
+        background-image: url(../media/index.html/Bakgrunnsbilde_mobil.webp);
     }
 
+    .home .main-site-box{
+        min-width: 200px;
+        max-width: 90%;
+        min-height: 90px;
+        padding: 30px;
+    }
     .home .main-site-box h1{
-        font-size: 3.7rem;
-        padding: 10px;
-        margin: 10px 0;
-        margin-bottom: 30px;
-        color: #180505;
+        font-size: 17vmin;
+        
     }
 
     .btn{
-        padding: 1rem; /*button size*/
+        padding: 1.5rem; /*button size*/
        
     }
     
     a.btn{
-        font-size: 4vmin;
+        font-size: 5vmin;
     }
     /* css for index page starts here */
     /*Header content ends here*/
@@ -1057,21 +1052,18 @@ ul li svg path {
         margin: 0 auto;
     }
 
+    section.gallery-section img {
+        width: 100%;  /* Makes the image take up 100% of the width of its parent */
+        height: auto; /* Maintains the aspect ratio */
+      }
   
     .slide-container{
         width: 370px;
-        height: 600px;
+        height: 550px;
         background-color: #ffffff;
     }
 
-    
-    .slide-container .slides{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-    }
-    
+        
     .slide-container .slides .card{
         width: 75%;
         height: auto;
@@ -1083,7 +1075,7 @@ ul li svg path {
 
    
     .dotsContainer{
-        top: 550px;
+        top: 450px;
     }
     
 
@@ -1109,71 +1101,36 @@ ul li svg path {
     /*Main content ends here*/
 
 
-    /*About Us adjustments here*/
-    
-    .about-us-section{
-        width:100%;
-        height: 70vh;
-        margin-top:0px;
-    }
-
-        
-    .about-us-box{
-        max-width: 90%;
-        display: flex;
-        flex-direction: column;
-        background-color: #e6d5bf;   
-        gap:50px;
-    }
-
-    
-    .about-us-box img{
-        width:80%;
-        position: absolute;
-        z-index: 2;
-        border-radius: 25px;
-    }
-
-
-    .colorful-decor-box{
-        background-color: #718080;
-        width: 80%;
-        height: 30vh;
-        z-index: 1;
-        border-radius: 25px;
-        margin-top:100px;
-        margin-right:200px;
-    }
-
-    .about-us-title{
-        font-size: 2.5rem;
-        font-family:var(--header-font);
-        text-decoration: underline;
-        text-underline-offset: 30px;
-        text-decoration-color: #ee751c;
-        text-align: center;
-        margin-left:0px;
-    }
-
-
-
 
     /*Adjustments for bestill-side*/
+
+    .bestill-box{
+        flex-direction: column;
+        margin-top:40px;
+       
+    }
+
+    .bestill-txt{
+        order:1;
+        border: solid #566464 5px;
+        padding:10px;
+    }
+
+    .bestill-img{
+        max-width: 90%;
+    }
+
+
+    .phone-number{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
     .faq-h2{
         font-size: 2.5rem;
     }
 
-    .txt-box{
-        background-color: #f3eae0;
-        width: 350px;
-        height: 450px;
-        padding: 45px;
-        border-radius: 25px;
-    }
-
-
-
+    /*Adjustsments for bestill side ends here*/
 
     /*Footer content starts here*/
 
@@ -1204,16 +1161,25 @@ ul li svg path {
 
     /*css for pricing.html starts here*/
     .pricing .category_box{
-        background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding: 50px 1px;
-        width: 86%;
-        max-width: 1500px;
-        margin-bottom: 20px;
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        color: black;
     }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 5vmin;
+    }
+    
     
     .category_box ul {
         list-style: none;
@@ -1222,16 +1188,16 @@ ul li svg path {
     
     .category_box li {
         font-size: 25px;
-        padding: 30px 10%;
+        padding: 15px 2%;
         display: flex;
         justify-content: space-between;
         text-align: left;
+        margin-left: 0;
         
     
     }
     
     .category_box li span {
-        margin-right: 0;
         margin-left: 10%;
         padding: 0;
         font-weight: bold;
@@ -1449,6 +1415,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 1.5;
     }
@@ -1466,6 +1433,38 @@ ul li svg path {
     }
     /* css for kontakt.html ends here */
 
+
+/*Adjustsments for om oss starts here*/
+
+
+
+.about-us-box{
+    height: 70vh;
+}
+
+
+.about-us-box img{
+    width:80%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.colorful-decor-box{
+    top:160px;
+    left:16px;
+    width: 75%;
+    height: 50%;
+}
+
+.about-us-title{
+    font-size: 3rem;
+}
+
+
+/*Adjustments for om oss ends here*/
+
+
     
 }
 
@@ -1476,13 +1475,7 @@ ul li svg path {
 /* iPads and Tablets */
 @media (min-width:481px) and (max-width:768px){
     /* css for index page starts here */
-    .transparent-box{
-        width: 80%;
-        height: 45vh;
-        padding: 7% 0;
-        border-radius: 25px;
-        margin-top: 10px;
-    }
+   
 
     .home .main-site-box h1{
         font-size: 4.5rem;
@@ -1697,6 +1690,55 @@ ul li svg path {
     }
     /* css for galleri.html ends here */
 
+     /*css for pricing.html starts here*/
+     .pricing .category_box{
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 4.5vmin;
+    }
+    
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 15px 2%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 0;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
+
 
     /*css for bahandlinger.html starts here*/
     .behandlinger_article{
@@ -1756,63 +1798,7 @@ ul li svg path {
         
     }
 
-
     /*css for behandlinger.html ends here*/
-
-    /*Adjustsments for bestill-time*/
-    .txt-box{
-        width: 600px;
-    }
-
-
-    /*Adjustsments for Om oss starts here*/
-    .about-us-section{
-        width:100%;
-        height: 70vh;
-        margin-top:0px;
-        }
-    
-            
-    .about-us-box{
-        max-width: 90%;
-        display: flex;
-        flex-direction: column;
-        background-color: #e6d5bf;   
-    }
-
-        
-    .about-us-box img{
-        width:70%;
-        position: absolute;
-        z-index: 2;
-        border-radius: 25px;
-    }
-    
-    
-    .colorful-decor-box{
-        background-color: #718080;
-        width: 80%;
-        height: 40vh;
-        z-index: 1;
-        border-radius: 25px;
-        margin-top:100px;
-        margin-right:200px;
-    }
-    
-    .about-us-title{
-        font-size: 3rem;
-        font-family: var(--header-font);
-        text-decoration: underline;
-        text-underline-offset: 30px;
-        text-decoration-color: #ee751c;
-        text-align: center;
-        margin-left:0px;
-    }
-
-    /*Adjustsments for Om oss ends here*/
-
-
-
 
     /*Adjustments for article*/
 
@@ -1911,6 +1897,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 1.5;
     }
@@ -1927,17 +1914,66 @@ ul li svg path {
     .direction_buttons .btn{
         padding: 1.25rem 6rem;
     }
+
+
+    /*Adjustsments for bestill time starts here*/
+    .bestill-box{
+        flex-direction: column;
+        margin-top:40px;
+       
+    }
+
+    .bestill-txt{
+        order:1;
+        border: solid #566464 5px;
+        padding:10px;
+    }
+
+    .bestill-img{
+        max-width: 90%;
+    }
+
+
+    .phone-number{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+    /*Adjustments for bestill time ends here*/
+
+/*Adjustsments for om oss starts here*/
+
+.about-us-box{
+    height: 80vh;
+}
+
+
+.about-us-box img{
+    width:70%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.colorful-decor-box{
+    top:150px;
+    left:50px;
+    width:65%;
+    height: 60%;
+}
+
+
+/*Adjustments for om oss ends here*/
+
+ 
+
 }
 
 /* Medium Screens */
 @media (min-width: 769px) and (max-width: 1024px) {
 
     /* css for index page starts here */
-    .transparent-box{
-        width: 90vw;
-        height: 40vw;
-        padding: 4rem 5rem 4.5rem;
-    }
+  
     .header-content h1{
         font-size: 11vmin;
     }
@@ -2064,6 +2100,54 @@ ul li svg path {
         font-family: var(--main-font);
     }
     /* css for galleri.html ends here */
+     /*css for pricing.html starts here*/
+     .pricing .category_box{
+        width: 100%;
+        height: auto; 
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        padding-top: 50px;
+        margin: auto;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+     
+
+    .pricing .btn{
+        padding: 1.1rem; /*button size*/
+       
+    }
+    
+    a.btn{
+        font-size: 4vmin;
+    }
+    
+    
+    .category_box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .category_box li {
+        font-size: 25px;
+        padding: 15px 2%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        margin-left: 0;
+        
+    
+    }
+    
+    .category_box li span {
+        margin-left: 10%;
+        padding: 0;
+        font-weight: bold;
+        text-align: right;
+       
+        
+    }
+    /**css for pricing ends here*/
+
 
     /*css for bahandlinger.html starts here*/
     .behandlinger_row{
@@ -2118,8 +2202,10 @@ ul li svg path {
     /*css for bahandlinger.html ends here*/
 
     
+    
+ 
     /*Adjustments for article*/
-
+    
     .row{
         flex-direction: column;
     }
@@ -2136,6 +2222,8 @@ ul li svg path {
         width: 100%;
         border-radius: 1rem;
     }
+    
+    /*Adjustments for article*/
 
 
     .quote{
@@ -2216,6 +2304,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 2;
     }
@@ -2234,19 +2323,63 @@ ul li svg path {
     }
     /* css for kontakt.html ends here */
 
+
+        /*Adjustsments for bestill time starts here*/
+        .bestill-box{
+            flex-direction: column;
+            margin-top:40px;
+           
+        }
+    
+        .bestill-txt{
+            order:1;
+            border: solid #566464 5px;
+            padding:10px;
+        }
+    
+        .bestill-img{
+            max-width: 90%;
+        }
+    
+    
+        .phone-number{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    
+        /*Adjustments for bestill time ends here*/
+
+    /*Adjustsments for om oss starts here*/
+
+    .about-us-box{
+        height: 80vh;
+    }
+    
+    
+    .about-us-box img{
+        width:60%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    
+    .colorful-decor-box{
+        top:100px;
+        left:90px;
+        width: 60%;
+        height: 85%;
+    }
+
+
+    
+    /*Adjustsments for om oss ends here*/
+
 }
 
 
 
-
-
-
-
-
-
-
 /* Large Screen */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   
     .nav-links{
         width: 70%;
@@ -2366,7 +2499,6 @@ ul li svg path {
     .behandlinger_row h2{
         width: 70%;
         margin-left: 20%;
-
     }
     /*css for behandlinger.html ends here*/
 
@@ -2432,6 +2564,7 @@ ul li svg path {
     }
     .content_kontakt li {
         font-size: 21px;
+        font-family: var(--main-font);
         line-height: 1.5;
     }
     .content_kontakt h2 {
@@ -2447,8 +2580,8 @@ ul li svg path {
         margin-top: 40px;
         padding: 1.25rem 1.3rem;
     }
+
     /*css for kontakt.html ends here*/
-    
 
 }
 
