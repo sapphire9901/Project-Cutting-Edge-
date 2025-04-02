@@ -900,7 +900,7 @@ ul li svg path {
     }
     /* code for ham-menu is from this video https://www.youtube.com/watch?v=aNDqzlAKmZc */
     .nav-links{
-        background-color: #718080;
+        background-color: #556463;
         height: 100vh;
         width: 100%;
         max-width: 450px;
@@ -1415,6 +1415,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 1.5;
     }
@@ -1454,6 +1455,10 @@ ul li svg path {
     left:16px;
     width: 75%;
     height: 50%;
+}
+
+.about-us-title{
+    font-size: 3rem;
 }
 
 
@@ -1892,6 +1897,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 1.5;
     }
@@ -2298,6 +2304,7 @@ ul li svg path {
         list-style-type: none;
     }
     .content_kontakt li {
+        font-family: var(--main-font);
         font-size: 18px;
         line-height: 2;
     }
@@ -2557,6 +2564,7 @@ ul li svg path {
     }
     .content_kontakt li {
         font-size: 21px;
+        font-family: var(--main-font);
         line-height: 1.5;
     }
     .content_kontakt h2 {
