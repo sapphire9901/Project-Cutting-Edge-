@@ -3,16 +3,31 @@
 // also added a no-scroll when hamburger menu is active
 const hamMenu = document.querySelector('.ham-menu');
 const offScreenMenu = document.querySelector('.nav-links');
+const navList = document.querySelector('.nav-links ul'); // variable to get access to the list
 const body = document.body;  // Variable to get access to the body element
 
 hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     offScreenMenu.classList.toggle('active');
 
+    const indexLink = document.getElementById('index-link');
+
     if(offScreenMenu.classList.contains('active')) {
+
+        // We add a index-link to our nav-links when hamburger menu is open
+        if (!indexLink) {
+            const li = document.createElement('li');
+            li.id = 'index-link';
+            li.innerHTML = '<a href="index.html">Hjem</a>';
+            navList.insertBefore(li, navList.firstChild); // We put the index-link first
+        }
         unreveal();  // Deactivation of the revealing of images
         body.classList.add('no-scroll');  // We do not want the page to be scrollable when ham is open
     } else {
+        // We remove index-link when hamburger menu is closed
+        if (indexLink) {
+            indexLink.remove();
+        }
         reveal();
         body.classList.remove('no-scroll');  // Else remove no-scroll, and images can be revealed
     }
