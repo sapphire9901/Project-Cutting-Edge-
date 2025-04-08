@@ -475,6 +475,8 @@ span.next:hover, span.prev:hover{
     align-items: center;
     gap: 20px;
     padding: 40px 20px;
+    font-family: var(--main-font)
+   
 }
 
 /*Category box for Pricing page*/
