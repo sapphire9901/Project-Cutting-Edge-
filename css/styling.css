@@ -475,6 +475,8 @@ span.next:hover, span.prev:hover{
     align-items: center;
     gap: 20px;
     padding: 40px 20px;
+    font-family: var(--main-font)
+   
 }
 
 /*Category box for Pricing page*/
@@ -517,7 +519,7 @@ span.next:hover, span.prev:hover{
 
 .category_box li {
     font-size: 25px;
-    padding: 30px 20%;
+    padding: 20px 25%;
     display: flex;
     justify-content: space-between;
     text-align: left;
@@ -563,6 +565,14 @@ a.a_kontakt:hover{
     
 }
 
+.pris_btn{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 /*Pricing ends here*/
 
@@ -600,7 +610,7 @@ a.a_kontakt:hover{
 
 
 .behandlinger-article-image img{
-    width: 400px;
+   /* width: 400px;*/
     border-radius: 30px;
    
 }
@@ -615,7 +625,7 @@ a.a_kontakt:hover{
 
 .behandlinger-article-img-reverse{
     order:1;
-    width: 400px;
+   /* width: 400px;*/
     border-radius: 30px    
 }
 
@@ -625,7 +635,7 @@ a.a_kontakt:hover{
 }
 
 .behandlinger-article-image-reverse img{
-    width: 400px;
+    /*width: 400px;*/
     border-radius: 30px;
     
 }
@@ -1720,7 +1730,7 @@ ul li svg path {
     
     .category_box li {
         font-size: 25px;
-        padding: 15px 2%;
+        padding: 20px 15%;
         display: flex;
         justify-content: space-between;
         text-align: left;
@@ -1730,7 +1740,7 @@ ul li svg path {
     }
     
     .category_box li span {
-        margin-left: 10%;
+        margin-left: 20%;
         padding: 0;
         font-weight: bold;
         text-align: right;
@@ -1766,11 +1776,11 @@ ul li svg path {
     .behandlinger-img-first-txt-second,
     .behandlinger-txt-first-img-second{
         width: 90%; /* Juster disse prosentene basert på ditt behov */
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
+        max-width: 768px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
         height: auto; /* Gjør boksen mindre eller større etter behov */
         background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
-        padding: 0 30px; /* Innvendig plass */
+        padding: 20px 30px; /* Innvendig plass */
         box-sizing: border-box; /* Inkluder padding i bredden */
         margin: 20px auto; /* Sentrerer boksen horisontalt og gir margin top/bottom */
         padding-bottom: 20px;
@@ -2130,7 +2140,7 @@ ul li svg path {
     
     .category_box li {
         font-size: 25px;
-        padding: 15px 2%;
+        padding: 15px 20%;
         display: flex;
         justify-content: space-between;
         text-align: left;
@@ -2154,50 +2164,26 @@ ul li svg path {
     .behandlinger_row{
         display: flex;
         align-items: center;
-        margin: 40px auto; /*Centers the content*/
+        /*width: 80%;*/
+        margin: 0 auto; /*Centers the content*/
         justify-content: space-between;
         /*background-color: #e6d5bf;*/
         background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
         border-radius: 30px; /* Avrundede hjørner */
-        gap: 1px; /*Space between elements*/
+        gap: 50px; /*Space between elements*/
+        padding: 40px 40px;
         width: 86%;
+        max-width: 1500px;
+        margin-bottom: 20px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        max-width: 1500px; /* Maksimumsbredde for å forhindre at boksen blir for bred */
-        height: auto; /* Gjør boksen mindre eller større etter behov */
-        border-radius: 30px; /* Avrundede hjørner */
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 60px;
     }
-
-    .behandlinger_article{
-        margin-top: 40px;
-        flex-direction:column;
-        text-align: left;
-        display: flex;
-
+    .behandlinger_row p{
+        width: 70%;
+        margin-left: 20%;
     }
-    
-
-    .behandlinger-txt-first-img-second{
-        order: 1;
-        padding: 20px 20px 20px;
-    }
-
-    .behandlinger-article-image{
-        order: 2;
-    }
-    .behandlinger-article-image-reverse{
-        order: 2;
-    }
-
-    .behandlinger_article img{
-        order: 2;
-        width: 80%;
-        border-radius: 30px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        
+    .behandlinger_row h2{
+        width: 70%;
+        margin-left: 20%;
     }
 
     /*css for bahandlinger.html ends here*/
