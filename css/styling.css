@@ -550,21 +550,6 @@ span.next:hover, span.prev:hover{
 
 }
 
-a.a_kontakt{
-    color: #43718b;
-    text-decoration: none;
-    font-weight: bold;
-     
-}
-
-a.a_kontakt:hover{
-    color: #ee751c;
-    text-decoration: underline #FEAC1C;
-    text-underline-offset: 0.4rem; 
-    transition:  0.6s ease-in-out;
-    
-}
-
 .pris_btn{
     position: fixed;
     left: 50%;
