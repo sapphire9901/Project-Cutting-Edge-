@@ -18,7 +18,7 @@ hamMenu.addEventListener('click', () => {
         if (!indexLink) {
             const li = document.createElement('li');
             li.id = 'index-link';
-            li.innerHTML = '<a href="index.html">Hjem</a>';
+            li.innerHTML = '<a href="../">Hjem</a>';
             navList.insertBefore(li, navList.firstChild); // We put the index-link first
         }
         unreveal();  // Deactivation of the revealing of images
