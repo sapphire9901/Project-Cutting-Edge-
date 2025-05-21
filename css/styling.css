@@ -229,7 +229,7 @@ p{
 
 
 .quote p{
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: var(--handwriting);
 }
 
@@ -1287,7 +1287,7 @@ ul li svg path {
 
 
     /* css for kontakt.html and galleri.html starts here */
-    .h1-styling h1{
+    .top_styling h1{
         font-size: 2.3rem;
         font-family: var(--header-font);
         text-decoration: underline;
@@ -1298,6 +1298,12 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         display: flex;
+    }
+    .top_styling{
+        justify-content: center;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     /* css for kontakt.html and galleri.html ends here */
 
@@ -1370,6 +1376,12 @@ ul li svg path {
 
 
     /* css for kontakt.html starts here */
+    .top_styling{
+        justify-content: center;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .parent_container_kontakt {
         display: flex;
         flex-direction: column; 
@@ -1380,6 +1392,8 @@ ul li svg path {
         gap: 50px;
         margin-bottom: 16px;
     }
+    
+   
     .white_box_one_kontakt {
         display: flex;
         flex-direction: column;
@@ -1845,7 +1859,7 @@ ul li svg path {
 
 
     /* css for kontakt.html starts here */
-    .h1-styling h1{
+    .top_styling h1{
         font-size: 2.5rem;
         font-family: var(--header-font);
         text-decoration: underline;
@@ -1856,6 +1870,12 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         display: flex;
+    }
+    .top_styling{
+        justify-content: center;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .parent_container_kontakt {
         display: flex;
@@ -2227,7 +2247,7 @@ ul li svg path {
 
 
     /* css for kontakt.html starts here */
-    .h1-styling h1{
+    .top_styling h1{
         font-size: 3rem;
         font-family: var(--header-font);
         text-decoration: underline;
@@ -2237,6 +2257,12 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         display: flex;
+    }
+    .top_styling{
+        justify-content: center;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .parent_container_kontakt {
         display: flex;
@@ -2456,7 +2482,7 @@ ul li svg path {
         margin: 0 auto;
         gap: 20px;
     }
-
+ 
     /* css for galleri.html ends here */
 
 
@@ -2490,7 +2516,7 @@ ul li svg path {
 
 
     /*css for kontakt.html starts here*/
-    .h1-styling h1{
+    .top_styling h1{
         font-size: 3.4rem;
         font-family: var(--header-font);
         text-decoration: underline;
@@ -2501,6 +2527,13 @@ ul li svg path {
         justify-content: center;
         align-items: center;
         display: flex;
+    }
+    .top_styling p{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .parent_container_kontakt {
