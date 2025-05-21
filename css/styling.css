@@ -517,6 +517,7 @@ span.next:hover, span.prev:hover{
     padding: 0;
 }
 
+
 .category_box li {
     font-size: 25px;
     padding: 20px 25%;
@@ -526,7 +527,7 @@ span.next:hover, span.prev:hover{
     
 
 }
-
+/*
 .category_box li span {
     margin-right: 0;
     margin-left: 10%;
@@ -535,7 +536,20 @@ span.next:hover, span.prev:hover{
     text-align: right;
    
     
+}*/
+.pris{
+    margin-right: 0;
+    margin-left: 10%;
+    padding: 0;
+    font-weight: bold;
+    text-align: right;
 }
+.fra{ 
+    font-size: 18px;
+    margin-right: 10%;
+}
+
+
 .category_box_merk{
     background-color: rgba(255, 255, 255, 0.5); /* Hvit med 30% gjennomsiktighet */
     border-radius: 30px; /* Avrundede hjørner */
@@ -1193,7 +1207,7 @@ ul li svg path {
     
     }
     
-    .category_box li span {
+    .pris {
         margin-left: 10%;
         padding: 0;
         font-weight: bold;
@@ -1724,7 +1738,7 @@ ul li svg path {
     
     }
     
-    .category_box li span {
+    .pris {
         margin-left: 20%;
         padding: 0;
         font-weight: bold;
@@ -2134,7 +2148,7 @@ ul li svg path {
     
     }
     
-    .category_box li span {
+    .pris {
         margin-left: 10%;
         padding: 0;
         font-weight: bold;
